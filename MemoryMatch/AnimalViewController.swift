@@ -12,7 +12,7 @@ class AnimalViewController: UIViewController {
     
     @IBOutlet weak var image1: UIImageView!
     let recognizer = UITapGestureRecognizer()
-    
+   
     func image1HasBeenTapped(){
         image1.fadeOut(completion: {
             (finished: Bool) -> Void in
@@ -21,12 +21,20 @@ class AnimalViewController: UIViewController {
         })
 
     }
+    @IBOutlet weak var image2: UIImageView!
+    @IBOutlet weak var image3: UIImageView!
+    @IBOutlet weak var image4: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController!.navigationBar.translucent = false
+        self.navigationController!.navigationBar.barTintColor = UIColor.blackColor()
         assignbackground()
-        image1.userInteractionEnabled = true
         image1.image = UIImage(named: "card")
+        image2.image = UIImage(named: "card")
+        image3.image = UIImage(named: "card")
+        image4.image = UIImage(named: "card")
+        image1.userInteractionEnabled = true
         recognizer.addTarget(self, action: "image1HasBeenTapped")
         image1.addGestureRecognizer(recognizer)
     }
