@@ -16,6 +16,7 @@
 		985744701CE63FC30006D852 /* MemoryMatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9857446F1CE63FC30006D852 /* MemoryMatchTests.swift */; };
 		9857447B1CE63FC30006D852 /* MemoryMatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9857447A1CE63FC30006D852 /* MemoryMatchUITests.swift */; };
 		985744891CE64A780006D852 /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985744881CE64A780006D852 /* AnimalViewController.swift */; };
+		988CBD971CE6DAFF0092ACFF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988CBD961CE6DAFF0092ACFF /* Card.swift */; };
 		98E567701CE659850058B56B /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E5676F1CE659850058B56B /* UIViewExtensions.swift */; };
 		BE850C0ACD5F4FC05E3EAFD3 /* Pods_MemoryMatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B905207591951E631375EE6 /* Pods_MemoryMatch.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		9857447A1CE63FC30006D852 /* MemoryMatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryMatchUITests.swift; sourceTree = "<group>"; };
 		9857447C1CE63FC30006D852 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		985744881CE64A780006D852 /* AnimalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
+		988CBD961CE6DAFF0092ACFF /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		98E5676F1CE659850058B56B /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		CD9AD4F1D24E5BE7CC921A0E /* Pods-MemoryMatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryMatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryMatch/Pods-MemoryMatch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +124,7 @@
 				985744571CE63FC30006D852 /* AppDelegate.swift */,
 				985744591CE63FC30006D852 /* ViewController.swift */,
 				985744881CE64A780006D852 /* AnimalViewController.swift */,
+				988CBD961CE6DAFF0092ACFF /* Card.swift */,
 				98E5676F1CE659850058B56B /* UIViewExtensions.swift */,
 				9857445B1CE63FC30006D852 /* Main.storyboard */,
 				985744611CE63FC30006D852 /* Assets.xcassets */,
@@ -344,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				985744601CE63FC30006D852 /* MemoryMatch.xcdatamodeld in Sources */,
+				988CBD971CE6DAFF0092ACFF /* Card.swift in Sources */,
 				98E567701CE659850058B56B /* UIViewExtensions.swift in Sources */,
 				985744891CE64A780006D852 /* AnimalViewController.swift in Sources */,
 				9857445A1CE63FC30006D852 /* ViewController.swift in Sources */,
