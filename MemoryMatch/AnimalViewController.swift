@@ -67,6 +67,7 @@ class AnimalViewController: UIViewController {
     @IBOutlet weak var image29: UIImageView!
     @IBOutlet weak var image30: UIImageView!
     
+    @IBOutlet weak var winnerLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         assignbackground()
@@ -92,6 +93,7 @@ class AnimalViewController: UIViewController {
         imageView.center = view.center
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
+        self.view.bringSubviewToFront(winnerLabel)
     }
     func resetDeck(){
         animalsDeck = [Card]()
@@ -188,9 +190,11 @@ class AnimalViewController: UIViewController {
                     scoreLabel.text = score
                     if count == 15 {
                         if playerOneScore > playerTwoScore {
-                            print("player1 wins!")
+                            scoreLabel.text = "Player 1 Wins!"
+                            scoreLabel.hidden = false
                         } else {
-                            print("player2 wins!")
+                            scoreLabel.text = "Player 2 Wins!"
+                            scoreLabel.hidden = false
                         }
                     }
                 } else {
@@ -203,9 +207,11 @@ class AnimalViewController: UIViewController {
                     scoreLabel.text = score
                     if count == 15 {
                         if playerTwoScore > playerOneScore {
-                            print("player1 wins!")
+                            scoreLabel.text = "Player 1 Wins!"
+                            scoreLabel.hidden = false
                         } else {
-                            print("player2 wins!")
+                            scoreLabel.text = "Player 2 Wins!"
+                            scoreLabel.hidden = false
                         }
                     }
                 }
