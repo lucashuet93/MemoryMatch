@@ -9,7 +9,11 @@
 import UIKit
 
 class AnimalViewController: UIViewController {
-    
+    var player = String()
+    var turn = Int()
+    var playerOneScore = Int()
+    var playerTwoScore = Int()
+    var score = String()
     var animalsDeck = [Card]()
     var imagesArray = [UIImageView]()
     var recognizersArray = [UIGestureRecognizer]()
@@ -29,6 +33,7 @@ class AnimalViewController: UIViewController {
     let turtle = Card(flippedCard: UIImage(named: "Turtle-48")!, value: 13)
     let unicorn = Card(flippedCard: UIImage(named: "Unicorn-48")!, value: 14)
     let wolf = Card(flippedCard: UIImage(named: "Wolf-48")!, value: 15)
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var image2: UIImageView!
     @IBOutlet weak var image3: UIImageView!
@@ -68,6 +73,12 @@ class AnimalViewController: UIViewController {
         resetDeck()
         initializeImagesArray()
         setRecognizers()
+        player = "P1"
+        turn = 1
+        playerOneScore = 0
+        playerTwoScore = 0
+        score = ("/(playerOneScore) - /(playerTwoScore)")
+        scoreLabel.text = score
     }
     
     func assignbackground(){
