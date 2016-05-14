@@ -40,6 +40,16 @@ class AnimalViewController: UIViewController {
     @IBOutlet weak var image18: UIImageView!
     @IBOutlet weak var image19: UIImageView!
     @IBOutlet weak var image20: UIImageView!
+    @IBOutlet weak var image21: UIImageView!
+    @IBOutlet weak var image22: UIImageView!
+    @IBOutlet weak var image23: UIImageView!
+    @IBOutlet weak var image24: UIImageView!
+    @IBOutlet weak var image25: UIImageView!
+    @IBOutlet weak var image26: UIImageView!
+    @IBOutlet weak var image27: UIImageView!
+    @IBOutlet weak var image28: UIImageView!
+    @IBOutlet weak var image29: UIImageView!
+    @IBOutlet weak var image30: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +76,16 @@ class AnimalViewController: UIViewController {
         image18.image = UIImage(named: "card")
         image19.image = UIImage(named: "card")
         image20.image = UIImage(named: "card")
+        image21.image = UIImage(named: "card")
+        image22.image = UIImage(named: "card")
+        image23.image = UIImage(named: "card")
+        image24.image = UIImage(named: "card")
+        image25.image = UIImage(named: "card")
+        image26.image = UIImage(named: "card")
+        image27.image = UIImage(named: "card")
+        image28.image = UIImage(named: "card")
+        image29.image = UIImage(named: "card")
+        image30.image = UIImage(named: "card")
         image1.userInteractionEnabled = true
         recognizer.addTarget(self, action: "image1HasBeenTapped")
         image1.addGestureRecognizer(recognizer)

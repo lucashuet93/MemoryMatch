@@ -61,15 +61,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRl-BJ-ntv">
-                                <rect key="frame" x="20" y="28" width="11" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="20" y="28" width="12" height="22"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzL-LM-PaH">
-                                <rect key="frame" x="569" y="28" width="11" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="568" y="28" width="12" height="22"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oMy-xT-aTk">
@@ -149,8 +149,8 @@
                                 </variation>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bkx-dH-sc5">
-                                <rect key="frame" x="20" y="57" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="20" y="58" width="52" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="JRi-tT-Uin"/>
                                     <constraint firstAttribute="width" constant="50" id="huB-9K-0gv"/>
@@ -163,7 +163,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2x-ec-FBG">
                                 <rect key="frame" x="325" y="57" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8VR-my-Ivr"/>
                                     <constraint firstAttribute="width" constant="50" id="Pfc-N2-lSq"/>
@@ -180,7 +180,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70X-Mz-C08">
                                 <rect key="frame" x="427" y="57" width="51" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="8fa-dn-7v8"/>
                                     <constraint firstAttribute="height" constant="50" id="bEo-n1-oMY"/>
@@ -192,8 +192,8 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zDv-Tk-TnN">
-                                <rect key="frame" x="528" y="57" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="528" y="58" width="52" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="C5K-qO-wHK"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="iwb-Np-rdL"/>
@@ -210,7 +210,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAQ-SB-yL3">
                                 <rect key="frame" x="223" y="57" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="7fB-LO-Go8"/>
                                     <constraint firstAttribute="height" constant="50" id="Fu5-7H-pLG"/>
@@ -227,7 +227,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ov-Ba-GfC">
                                 <rect key="frame" x="122" y="57" width="51" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="5Qg-Pi-4ph"/>
                                     <constraint firstAttribute="width" constant="50" id="Dvt-T2-vXN"/>
@@ -346,8 +346,8 @@
                                 </variation>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Rr-iF-yp6">
-                                <rect key="frame" x="20" y="115" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="20" y="116" width="52" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8eE-Rt-MDB"/>
                                     <constraint firstAttribute="width" constant="50" id="WvQ-YN-Lqh"/>
@@ -360,7 +360,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xwf-Wp-M6V">
                                 <rect key="frame" x="325" y="115" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6GB-MS-IVM"/>
                                     <constraint firstAttribute="height" constant="50" id="MbK-B7-Q2p"/>
@@ -377,7 +377,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIQ-OS-Jqt">
                                 <rect key="frame" x="427" y="115" width="51" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9Wh-5N-whv"/>
                                     <constraint firstAttribute="width" constant="50" id="MG4-qC-nRC"/>
@@ -389,8 +389,8 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dnx-uh-CZS">
-                                <rect key="frame" x="528" y="115" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="528" y="116" width="52" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="D5x-6o-U0H"/>
                                     <constraint firstAttribute="height" constant="50" id="dKU-mC-xpC"/>
@@ -407,7 +407,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mWH-vy-Zkf">
                                 <rect key="frame" x="223" y="115" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="1V7-aC-742"/>
                                     <constraint firstAttribute="height" constant="50" id="343-bL-M2N"/>
@@ -424,7 +424,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sED-Ks-Shy">
                                 <rect key="frame" x="122" y="115" width="51" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3OS-ka-KtQ"/>
                                     <constraint firstAttribute="height" constant="50" id="SmX-l6-NDL"/>
@@ -543,8 +543,8 @@
                                 </variation>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDm-C1-2wY">
-                                <rect key="frame" x="20" y="173" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="20" y="174" width="52" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="7wp-yh-kzA"/>
                                     <constraint firstAttribute="height" constant="50" id="LTk-T3-h1x"/>
@@ -557,7 +557,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GY4-JE-7ud">
                                 <rect key="frame" x="325" y="173" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3eb-ED-Ukv"/>
                                     <constraint firstAttribute="width" constant="50" id="GXa-ya-qfn"/>
@@ -574,7 +574,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4FB-zA-QQ0">
                                 <rect key="frame" x="427" y="173" width="51" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="QUI-gO-IET"/>
                                     <constraint firstAttribute="height" constant="50" id="m9b-Jx-c8K"/>
@@ -586,8 +586,8 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nzl-J7-n58">
-                                <rect key="frame" x="528" y="173" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="528" y="174" width="52" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="4D2-K0-LkI"/>
                                     <constraint firstAttribute="height" constant="50" id="f2R-cJ-nWG"/>
@@ -604,7 +604,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPP-2b-SG9">
                                 <rect key="frame" x="223" y="173" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Oru-WS-4LG"/>
                                     <constraint firstAttribute="width" constant="50" id="UI6-qD-w1g"/>
@@ -621,7 +621,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nup-J2-Sbd">
                                 <rect key="frame" x="122" y="173" width="51" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Oiu-D7-r9f"/>
                                     <constraint firstAttribute="height" constant="50" id="T3X-wN-EOo"/>
@@ -740,8 +740,8 @@
                                 </variation>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vxV-dN-gQO">
-                                <rect key="frame" x="20" y="231" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="20" y="232" width="52" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="9ap-9h-jRz"/>
                                     <constraint firstAttribute="height" constant="50" id="yJ7-gi-7Gd"/>
@@ -754,7 +754,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4M-DR-Jhu">
                                 <rect key="frame" x="325" y="231" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BGK-at-sNa"/>
                                     <constraint firstAttribute="width" constant="50" id="Rrl-Mc-WH5"/>
@@ -771,7 +771,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfR-gq-mud">
                                 <rect key="frame" x="427" y="231" width="51" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="1tZ-WQ-9R5"/>
                                     <constraint firstAttribute="height" constant="50" id="FJX-Ju-4KE"/>
@@ -783,8 +783,8 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jrs-tH-BQ1">
-                                <rect key="frame" x="528" y="231" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="528" y="232" width="52" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="NwO-10-YUw"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="ONz-IA-yvE"/>
@@ -801,7 +801,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I2f-Qf-Hqb">
                                 <rect key="frame" x="223" y="231" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="94i-gf-wq9"/>
                                     <constraint firstAttribute="height" constant="50" id="9GH-Ef-bY4"/>
@@ -818,7 +818,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXX-fS-git">
                                 <rect key="frame" x="122" y="231" width="51" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Agn-dG-YSP"/>
                                     <constraint firstAttribute="width" constant="50" id="Oku-zb-ySq"/>
@@ -937,8 +937,8 @@
                                 </variation>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCe-3k-kW1">
-                                <rect key="frame" x="20" y="289" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="20" y="290" width="52" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="I1P-01-TKs"/>
                                     <constraint firstAttribute="height" constant="50" id="Prm-hr-qJb"/>
@@ -951,7 +951,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nS7-Zy-kLC">
                                 <rect key="frame" x="325" y="289" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="D0A-DQ-Tae"/>
                                     <constraint firstAttribute="width" constant="50" id="PXL-pZ-eqb"/>
@@ -968,7 +968,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CLo-Xc-cf1">
                                 <rect key="frame" x="427" y="289" width="51" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="bBE-dm-Kmk"/>
                                     <constraint firstAttribute="width" constant="50" id="yFZ-Aa-PiB"/>
@@ -980,8 +980,8 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baz-KX-6di">
-                                <rect key="frame" x="528" y="289" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="528" y="290" width="52" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9ct-0i-lI9"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Jdv-QV-8gp"/>
@@ -998,7 +998,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fX-FV-HQh">
                                 <rect key="frame" x="223" y="289" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9aU-wk-O0z"/>
                                     <constraint firstAttribute="height" constant="50" id="ER8-O8-oY2"/>
@@ -1015,7 +1015,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dtZ-0X-n7J">
                                 <rect key="frame" x="122" y="289" width="51" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="F9C-To-UYI"/>
                                     <constraint firstAttribute="height" constant="50" id="SM2-P6-jsI"/>
@@ -1134,8 +1134,8 @@
                                 </variation>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rgh-Fc-5sX">
-                                <rect key="frame" x="20" y="347" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="20" y="348" width="52" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gk2-Bq-dl8"/>
                                     <constraint firstAttribute="width" constant="50" id="mnN-SC-JQi"/>
@@ -1148,7 +1148,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ek8-k3-PUq">
                                 <rect key="frame" x="325" y="347" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="5tu-hl-dDU"/>
                                     <constraint firstAttribute="height" constant="50" id="9UB-oW-bmH"/>
@@ -1165,7 +1165,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2UY-GP-Yde">
                                 <rect key="frame" x="427" y="347" width="51" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="C7i-aw-Xt4"/>
                                     <constraint firstAttribute="width" constant="50" id="CD1-5d-46P"/>
@@ -1177,8 +1177,8 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88T-ll-0W3">
-                                <rect key="frame" x="528" y="347" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="528" y="348" width="52" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="08f-LL-O1l"/>
                                     <constraint firstAttribute="height" constant="50" id="1Ux-xV-RrL"/>
@@ -1195,7 +1195,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJ2-WR-4Yg">
                                 <rect key="frame" x="223" y="347" width="52" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8vd-uE-8f6"/>
                                     <constraint firstAttribute="width" constant="50" id="JZP-aL-zqb"/>
@@ -1212,7 +1212,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8GJ-Nb-tLi">
                                 <rect key="frame" x="122" y="347" width="51" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="8EL-p0-01E"/>
                                     <constraint firstAttribute="width" constant="50" id="G8G-1g-MRa"/>
@@ -1595,7 +1595,17 @@
                         <outlet property="image19" destination="0jn-ga-nSh" id="O5c-LT-GKq"/>
                         <outlet property="image2" destination="SM0-OW-rhH" id="ela-cr-fxC"/>
                         <outlet property="image20" destination="bV4-nj-w7Z" id="O35-Yl-PHY"/>
+                        <outlet property="image21" destination="ewC-aw-zNP" id="OKd-TZ-305"/>
+                        <outlet property="image22" destination="ZYA-aA-qov" id="IW3-Km-ggr"/>
+                        <outlet property="image23" destination="iGy-Ss-Crp" id="Gmw-s9-GJS"/>
+                        <outlet property="image24" destination="hIs-RP-AYI" id="1Pd-Nw-3mX"/>
+                        <outlet property="image25" destination="p37-tP-O3B" id="CHM-5F-dIP"/>
+                        <outlet property="image26" destination="ZSX-hQ-zaI" id="Rci-3k-xkv"/>
+                        <outlet property="image27" destination="4lL-BB-CAw" id="cgZ-Sc-dX1"/>
+                        <outlet property="image28" destination="H24-2N-JGK" id="4nv-4x-eny"/>
+                        <outlet property="image29" destination="Yod-Lv-XLg" id="roL-xz-CMP"/>
                         <outlet property="image3" destination="gBQ-1d-g7Z" id="UKF-Hx-mhw"/>
+                        <outlet property="image30" destination="0po-H5-Idc" id="lXK-sz-TSP"/>
                         <outlet property="image4" destination="Fqm-Cf-UC4" id="e6s-NY-9l9"/>
                         <outlet property="image5" destination="FKJ-yz-Lz9" id="e7G-Df-QSV"/>
                         <outlet property="image6" destination="SDN-yu-OUh" id="XTZ-E5-zoF"/>
