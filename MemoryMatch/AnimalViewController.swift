@@ -24,16 +24,28 @@ class AnimalViewController: UIViewController {
     @IBOutlet weak var image2: UIImageView!
     @IBOutlet weak var image3: UIImageView!
     @IBOutlet weak var image4: UIImageView!
+    @IBOutlet weak var image5: UIImageView!
+    @IBOutlet weak var image6: UIImageView!
+    @IBOutlet weak var image7: UIImageView!
+    @IBOutlet weak var image8: UIImageView!
+    @IBOutlet weak var image9: UIImageView!
+    @IBOutlet weak var image10: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController!.navigationBar.translucent = false
-        self.navigationController!.navigationBar.barTintColor = UIColor.blackColor()
+//        self.navigationController!.navigationBar.translucent = false
+//        self.navigationController!.navigationBar.barTintColor = UIColor.blackColor()
         assignbackground()
         image1.image = UIImage(named: "card")
         image2.image = UIImage(named: "card")
         image3.image = UIImage(named: "card")
         image4.image = UIImage(named: "card")
+        image5.image = UIImage(named: "card")
+        image6.image = UIImage(named: "card")
+        image7.image = UIImage(named: "card")
+        image8.image = UIImage(named: "card")
+        image9.image = UIImage(named: "card")
+        image10.image = UIImage(named: "card")
         image1.userInteractionEnabled = true
         recognizer.addTarget(self, action: "image1HasBeenTapped")
         image1.addGestureRecognizer(recognizer)
