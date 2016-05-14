@@ -66,8 +66,6 @@ class AnimalViewController: UIViewController {
     @IBOutlet weak var image28: UIImageView!
     @IBOutlet weak var image29: UIImageView!
     @IBOutlet weak var image30: UIImageView!
-    
-    @IBOutlet weak var winnerLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         assignbackground()
@@ -81,6 +79,7 @@ class AnimalViewController: UIViewController {
         count = 0
         score = ("\(playerOneScore) - \(playerTwoScore)")
         scoreLabel.text = score
+//        winnerLabel.hidden = true
     }
     
     func assignbackground(){
@@ -93,7 +92,7 @@ class AnimalViewController: UIViewController {
         imageView.center = view.center
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
-        self.view.bringSubviewToFront(winnerLabel)
+//        self.view.bringSubviewToFront(winnerLabel)
     }
     func resetDeck(){
         animalsDeck = [Card]()
@@ -188,15 +187,15 @@ class AnimalViewController: UIViewController {
                     cardValuesDrawn = [Int]()
                     score = ("\(playerOneScore) - \(playerTwoScore)")
                     scoreLabel.text = score
-                    if count == 15 {
-                        if playerOneScore > playerTwoScore {
-                            scoreLabel.text = "Player 1 Wins!"
-                            scoreLabel.hidden = false
-                        } else {
-                            scoreLabel.text = "Player 2 Wins!"
-                            scoreLabel.hidden = false
-                        }
-                    }
+//                    if count == 15 {
+//                        if playerTwoScore > playerOneScore {
+//                            winnerLabel.text = "Player 1 Wins!"
+//                            winnerLabel.hidden = false
+//                        } else {
+//                            winnerLabel.text = "Player 2 Wins!"
+//                            winnerLabel.hidden = false
+//                        }
+//                    }
                 } else {
                     playerTwoScore += 1
                     turn = 1
@@ -205,15 +204,15 @@ class AnimalViewController: UIViewController {
                     cardValuesDrawn = [Int]()
                     score = ("\(playerOneScore) - \(playerTwoScore)")
                     scoreLabel.text = score
-                    if count == 15 {
-                        if playerTwoScore > playerOneScore {
-                            scoreLabel.text = "Player 1 Wins!"
-                            scoreLabel.hidden = false
-                        } else {
-                            scoreLabel.text = "Player 2 Wins!"
-                            scoreLabel.hidden = false
-                        }
-                    }
+//                    if count == 15 {
+//                        if playerTwoScore > playerOneScore {
+//                            winnerLabel.text = "Player 1 Wins!"
+//                            winnerLabel.hidden = false
+//                        } else {
+//                            winnerLabel.text = "Player 2 Wins!"
+//                            winnerLabel.hidden = false
+//                        }
+//                    }
                 }
             } else {
                 fadeSecond(imagesArray[cardValuesDrawn[1]-1], number: cardValuesDrawn[0])

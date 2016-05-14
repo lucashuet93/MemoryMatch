@@ -804,22 +804,12 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I2f-Qf-Hqb">
                                 <rect key="frame" x="223" y="231" width="52" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Player 2 Wins!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8m-9r-NJj">
-                                        <rect key="frame" x="-70" y="-35" width="335" height="77"/>
-                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="34"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="94i-gf-wq9"/>
                                     <constraint firstAttribute="height" constant="50" id="9GH-Ef-bY4"/>
-                                    <constraint firstItem="c8m-9r-NJj" firstAttribute="centerY" secondItem="I2f-Qf-Hqb" secondAttribute="centerY" id="Mjn-Ci-7kO"/>
                                     <constraint firstAttribute="width" constant="50" id="PcA-wi-fyd"/>
                                     <constraint firstAttribute="height" constant="50" id="SS0-Oc-MlI"/>
-                                    <constraint firstItem="c8m-9r-NJj" firstAttribute="centerX" secondItem="I2f-Qf-Hqb" secondAttribute="centerX" id="g7e-ds-DI1"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1626,7 +1616,6 @@
                         <outlet property="image8" destination="UYQ-Rb-pJ5" id="O09-Ni-m7i"/>
                         <outlet property="image9" destination="rvG-lK-3Ev" id="GpN-hW-8xO"/>
                         <outlet property="scoreLabel" destination="w9b-2Y-EyV" id="on6-jQ-Oy6"/>
-                        <outlet property="winnerLabel" destination="c8m-9r-NJj" id="fQQ-kP-Lus"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O3p-Wz-YS7" userLabel="First Responder" sceneMemberID="firstResponder"/>
