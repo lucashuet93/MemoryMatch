@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>L360Confetti.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MemoryMatch.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0A53637BDA00FFC102055CEAA41AB9EF</key>
+		<key>3878108B6CE3E673A0A8D2F8F194446E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>4B2F30D90D85A544E9EFE2A49D392C25</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>72E91A1FA19CF54638654DB3309C3522</key>
 		<dict>
 			<key>primary</key>
 			<true/>

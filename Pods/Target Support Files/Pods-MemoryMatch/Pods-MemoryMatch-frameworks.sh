@@ -85,7 +85,9 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-MemoryMatch/Alamofire.framework"
+  install_framework "Pods-MemoryMatch/L360Confetti.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-MemoryMatch/Alamofire.framework"
+  install_framework "Pods-MemoryMatch/L360Confetti.framework"
 fi

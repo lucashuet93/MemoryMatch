@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '58517E5B6C66EF5C7F2B4DF1'
+               BlueprintIdentifier = '74E3B538789C3B2F0DB0DB46'
                BlueprintName = 'Pods-MemoryMatch'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_MemoryMatch.framework'>

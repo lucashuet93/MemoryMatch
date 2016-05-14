@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F8B895DE58A631B13C74DEEC'
-               BlueprintName = 'Alamofire'
+               BlueprintIdentifier = '5AAC2549D3DCDBF20145C554'
+               BlueprintName = 'L360Confetti'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Alamofire.framework'>
+               BuildableName = 'L360Confetti.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

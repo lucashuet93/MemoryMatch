@@ -9,8 +9,10 @@
 import UIKit
 
 class AnimalViewController: UIViewController {
-    var player = String()
+    var count = Int()
+    var player = Int()
     var turn = Int()
+    var cardValuesDrawn = [Int]()
     var playerOneScore = Int()
     var playerTwoScore = Int()
     var score = String()
@@ -67,17 +69,16 @@ class AnimalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.navigationController!.navigationBar.translucent = false
-//        self.navigationController!.navigationBar.barTintColor = UIColor.blackColor()
         assignbackground()
         resetDeck()
         initializeImagesArray()
         setRecognizers()
-        player = "P1"
+        player = 1
         turn = 1
         playerOneScore = 0
         playerTwoScore = 0
-        score = ("/(playerOneScore) - /(playerTwoScore)")
+        count = 0
+        score = ("\(playerOneScore) - \(playerTwoScore)")
         scoreLabel.text = score
     }
     
@@ -147,103 +148,171 @@ class AnimalViewController: UIViewController {
             recognizersArray[i].addTarget(self, action: Selector(actionsArray[i]))
         }
     }
-    func fade(image: UIImageView, number: Int){
+    func fadeFirst(image: UIImageView, number: Int){
         image.fadeOut(completion: {
             (finished: Bool) -> Void in
             image.image = self.animalsDeck[number-1].flippedCard
+            image.fadeIn(completion: {
+                (finished: Bool) -> Void in
+                self.update(number)
+            })
+            
+        })
+    }
+    func fadeSecond(image: UIImageView, number: Int){
+        image.fadeOut(completion: {
+            (finished: Bool) -> Void in
+            image.image = self.animalsDeck[number-1].unflippedCard
             image.fadeIn()
         })
     }
-
+    func update(number: Int){
+        print(player)
+        if turn == 1 {
+            cardValuesDrawn.append(animalsDeck[number-1].value)
+            cardValuesDrawn.append(number)
+            turn = 2
+        } else {
+            cardValuesDrawn.append(animalsDeck[number-1].value)
+            cardValuesDrawn.append(number)
+            print(cardValuesDrawn)
+            if cardValuesDrawn[0] == cardValuesDrawn[2] {
+                count += 1
+                if player == 1 {
+                    playerOneScore += 1
+                    turn = 1
+                    imagesArray[(cardValuesDrawn[1])-1].hidden = true
+                    imagesArray[(cardValuesDrawn[3])-1].hidden = true
+                    cardValuesDrawn = [Int]()
+                    score = ("\(playerOneScore) - \(playerTwoScore)")
+                    scoreLabel.text = score
+                    if count == 15 {
+                        if playerOneScore > playerTwoScore {
+                            print("player1 wins!")
+                        } else {
+                            print("player2 wins!")
+                        }
+                    }
+                } else {
+                    playerTwoScore += 1
+                    turn = 1
+                    imagesArray[(cardValuesDrawn[1])-1].hidden = true
+                    imagesArray[(cardValuesDrawn[3])-1].hidden = true
+                    cardValuesDrawn = [Int]()
+                    score = ("\(playerOneScore) - \(playerTwoScore)")
+                    scoreLabel.text = score
+                    if count == 15 {
+                        if playerTwoScore > playerOneScore {
+                            print("player1 wins!")
+                        } else {
+                            print("player2 wins!")
+                        }
+                    }
+                }
+            } else {
+                fadeSecond(imagesArray[cardValuesDrawn[1]-1], number: cardValuesDrawn[0])
+                fadeSecond(imagesArray[cardValuesDrawn[3]-1], number: cardValuesDrawn[0])
+                if player == 1 {
+                    cardValuesDrawn = [Int]()
+                    player = 2
+                    turn = 1
+                } else {
+                    cardValuesDrawn = [Int]()
+                    player = 1
+                    turn = 1
+                }
+            }
+        }
+    }
     func image1HasBeenTapped(){
-        fade(image1, number: 1)
+        fadeFirst(image1, number: 1)
     }
     func image2HasBeenTapped(){
-        fade(image2, number: 2)
+        fadeFirst(image2, number: 2)
     }
     func image3HasBeenTapped(){
-        fade(image3, number: 3)
+        fadeFirst(image3, number: 3)
     }
     func image4HasBeenTapped(){
-        fade(image4, number: 4)
+        fadeFirst(image4, number: 4)
     }
     func image5HasBeenTapped(){
-        fade(image5, number: 5)
+        fadeFirst(image5, number: 5)
     }
     func image6HasBeenTapped(){
-        fade(image6, number: 6)
+        fadeFirst(image6, number: 6)
     }
     func image7HasBeenTapped(){
-        fade(image7, number: 7)
+        fadeFirst(image7, number: 7)
     }
     func image8HasBeenTapped(){
-        fade(image8, number: 8)
+        fadeFirst(image8, number: 8)
     }
     func image9HasBeenTapped(){
-        fade(image9, number: 9)
+        fadeFirst(image9, number: 9)
     }
     func image10HasBeenTapped(){
-        fade(image10, number: 10)
+        fadeFirst(image10, number: 10)
     }
     func image11HasBeenTapped(){
-        fade(image11, number: 11)
+        fadeFirst(image11, number: 11)
     }
     func image12HasBeenTapped(){
-        fade(image12, number: 12)
+        fadeFirst(image12, number: 12)
     }
     func image13HasBeenTapped(){
-        fade(image13, number: 13)
+        fadeFirst(image13, number: 13)
     }
     func image14HasBeenTapped(){
-        fade(image14, number: 14)
+        fadeFirst(image14, number: 14)
     }
     func image15HasBeenTapped(){
-        fade(image15, number: 15)
+        fadeFirst(image15, number: 15)
     }
     func image16HasBeenTapped(){
-        fade(image16, number: 16)
+        fadeFirst(image16, number: 16)
     }
     func image17HasBeenTapped(){
-        fade(image17, number: 17)
+        fadeFirst(image17, number: 17)
     }
     func image18HasBeenTapped(){
-        fade(image18, number: 18)
+        fadeFirst(image18, number: 18)
     }
     func image19HasBeenTapped(){
-        fade(image19, number: 19)
+        fadeFirst(image19, number: 19)
     }
     func image20HasBeenTapped(){
-        fade(image20, number: 20)
+        fadeFirst(image20, number: 20)
     }
     func image21HasBeenTapped(){
-        fade(image21, number: 21)
+        fadeFirst(image21, number: 21)
     }
     func image22HasBeenTapped(){
-        fade(image22, number: 22)
+        fadeFirst(image22, number: 22)
     }
     func image23HasBeenTapped(){
-        fade(image23, number: 23)
+        fadeFirst(image23, number: 23)
     }
     func image24HasBeenTapped(){
-        fade(image24, number: 24)
+        fadeFirst(image24, number: 24)
     }
     func image25HasBeenTapped(){
-        fade(image25, number: 25)
+        fadeFirst(image25, number: 25)
     }
     func image26HasBeenTapped(){
-        fade(image26, number: 26)
+        fadeFirst(image26, number: 26)
     }
     func image27HasBeenTapped(){
-        fade(image27, number: 27)
+        fadeFirst(image27, number: 27)
     }
     func image28HasBeenTapped(){
-        fade(image28, number: 28)
+        fadeFirst(image28, number: 28)
     }
     func image29HasBeenTapped(){
-        fade(image29, number: 29)
+        fadeFirst(image29, number: 29)
     }
     func image30HasBeenTapped(){
-        fade(image30, number: 30)
+        fadeFirst(image30, number: 30)
     }
     
     
