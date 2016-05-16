@@ -20,21 +20,21 @@ class AnimalViewController: UIViewController {
     var imagesArray = [UIImageView]()
     var recognizersArray = [UIGestureRecognizer]()
     var actionsArray = [String]()
-    let alligator = Card(flippedCard: UIImage(named: "Alligator-48")!, value: 1)
-    let bear = Card(flippedCard: UIImage(named: "Bear-48")!, value: 2)
-    let butterfly = Card(flippedCard: UIImage(named: "Butterfly-48")!, value: 3)
-    let elephant = Card(flippedCard: UIImage(named: "Elephant-48")!, value: 4)
-    let giraffe = Card(flippedCard: UIImage(named: "Giraffe-48")!, value: 5)
-    let gorilla = Card(flippedCard: UIImage(named: "Gorilla-48")!, value: 6)
-    let hummingbird = Card(flippedCard: UIImage(named: "Hummingbird-48")!, value: 7)
-    let kangaroo = Card(flippedCard: UIImage(named: "Kangaroo-48")!, value: 8)
-    let ladybug = Card(flippedCard: UIImage(named: "Ladybird-48")!, value: 9)
-    let leopard = Card(flippedCard: UIImage(named: "Leopard-48")!, value: 10)
-    let panda = Card(flippedCard: UIImage(named: "Panda-48")!, value: 11)
-    let snake = Card(flippedCard: UIImage(named: "snake")!, value: 12)
-    let turtle = Card(flippedCard: UIImage(named: "Turtle-48")!, value: 13)
-    let unicorn = Card(flippedCard: UIImage(named: "Unicorn-48")!, value: 14)
-    let wolf = Card(flippedCard: UIImage(named: "Wolf-48")!, value: 15)
+    let alligator = Card(flippedCard: UIImage(named: "Alligator-48")!, value: 1, name: "Alligator")
+    let bear = Card(flippedCard: UIImage(named: "Bear-48")!, value: 2, name: "Bear")
+    let butterfly = Card(flippedCard: UIImage(named: "Butterfly-48")!, value: 3, name: "Butterfly")
+    let elephant = Card(flippedCard: UIImage(named: "Elephant-48")!, value: 4, name: "Elephant")
+    let giraffe = Card(flippedCard: UIImage(named: "Giraffe-48")!, value: 5, name: "Giraffe")
+    let gorilla = Card(flippedCard: UIImage(named: "Gorilla-48")!, value: 6, name: "Gorilla")
+    let hummingbird = Card(flippedCard: UIImage(named: "Hummingbird-48")!, value: 7, name: "Hummingbird")
+    let kangaroo = Card(flippedCard: UIImage(named: "Kangaroo-48")!, value: 8, name: "Kangaroo")
+    let ladybug = Card(flippedCard: UIImage(named: "Ladybird-48")!, value: 9, name: "Ladybug")
+    let leopard = Card(flippedCard: UIImage(named: "Leopard-48")!, value: 10, name: "Leopard")
+    let panda = Card(flippedCard: UIImage(named: "Panda-48")!, value: 11, name: "Panda")
+    let snake = Card(flippedCard: UIImage(named: "snake")!, value: 12, name: "Snake")
+    let turtle = Card(flippedCard: UIImage(named: "Turtle-48")!, value: 13, name: "Turtle")
+    let unicorn = Card(flippedCard: UIImage(named: "Unicorn-48")!, value: 14, name: "Alligator")
+    let wolf = Card(flippedCard: UIImage(named: "Wolf-48")!, value: 15, name: "Wolf")
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var image2: UIImageView!
@@ -66,6 +66,11 @@ class AnimalViewController: UIViewController {
     @IBOutlet weak var image28: UIImageView!
     @IBOutlet weak var image29: UIImageView!
     @IBOutlet weak var image30: UIImageView!
+    @IBAction func resetButtonPressed(sender: UIButton) {
+    }
+    @IBAction func menuButtonPressed(sender: UIButton) {
+    }
+    @IBOutlet weak var animalLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         assignbackground()
@@ -80,6 +85,7 @@ class AnimalViewController: UIViewController {
         score = ("\(playerOneScore) - \(playerTwoScore)")
         scoreLabel.text = score
 //        winnerLabel.hidden = true
+        animalLabel.text = ""
     }
     
     func assignbackground(){
@@ -155,6 +161,7 @@ class AnimalViewController: UIViewController {
             image.image = self.animalsDeck[number-1].flippedCard
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
+                self.animalLabel.text = self.animalsDeck[number-1].name
                 self.update(number)
             })
             
@@ -164,11 +171,13 @@ class AnimalViewController: UIViewController {
         image.fadeOut(completion: {
             (finished: Bool) -> Void in
             image.image = self.animalsDeck[number-1].unflippedCard
-            image.fadeIn()
+            image.fadeIn(completion: {
+                (finished: Bool) -> Void in
+                self.animalLabel.text = ""
+            })
         })
     }
     func update(number: Int){
-        print(player)
         if turn == 1 {
             cardValuesDrawn.append(animalsDeck[number-1].value)
             cardValuesDrawn.append(number)
@@ -229,6 +238,7 @@ class AnimalViewController: UIViewController {
             }
         }
     }
+
     func image1HasBeenTapped(){
         fadeFirst(image1, number: 1)
     }

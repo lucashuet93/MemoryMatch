@@ -1,22 +1,3 @@
-PODS:
-  - Alamofire (2.0.2)
-  - L360Confetti (1.1.3)
+PODFILE CHECKSUM: 9f658b3ae2a673673f382deca660b65f1347f6b4
 
-DEPENDENCIES:
-  - Alamofire (= 2.0.2)
-  - L360Confetti (from `https://github.com/life360/confetti.git`)
-
-EXTERNAL SOURCES:
-  L360Confetti:
-    :git: https://github.com/life360/confetti.git
-
-CHECKOUT OPTIONS:
-  L360Confetti:
-    :commit: 0cd9eef8fe72993bf2a53d7dcbe86c803af1eaca
-    :git: https://github.com/life360/confetti.git
-
-SPEC CHECKSUMS:
-  Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
-  L360Confetti: 33bdb885220b6a8b9647ffa76a53be0c088d089a
-
-COCOAPODS: 0.39.0
+COCOAPODS: 1.0.0

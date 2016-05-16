@@ -13,8 +13,10 @@ class Card: NSObject {
     var value = Int()
     let unflippedCard = UIImage(named: "card")
     var flippedCard: UIImage
-    init(flippedCard: UIImage, value: Int) {
+    var name = String()
+    init(flippedCard: UIImage, value: Int, name: String) {
         self.flippedCard = flippedCard
+        self.name = name
         self.value = value
     }
     
