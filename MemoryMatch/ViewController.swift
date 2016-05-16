@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     
     func assignbackground(){
         let background = UIImage(named: "chalkboard")
-        
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIViewContentMode.ScaleAspectFill
@@ -27,6 +26,15 @@ class ViewController: UIViewController {
         imageView.center = view.center
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Animals" {
+            let controller = segue.destinationViewController as! AnimalViewController
+            controller.delegate = self
+        }
+    }
+    func dismissView(controller: UIViewController){
+        controller.dismissViewControllerAnimated(true, completion: nil)
     }
 
 

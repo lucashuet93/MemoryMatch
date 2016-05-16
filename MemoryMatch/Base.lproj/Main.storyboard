@@ -31,7 +31,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="tj5-kv-fPL" kind="show" id="1bF-iO-s6N"/>
+                                    <segue destination="tj5-kv-fPL" kind="show" identifier="Animals" id="1bF-iO-s6N"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -80,7 +80,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gBQ-1d-g7Z">
-                                <rect key="frame" x="275.5" y="57" width="50" height="50"/>
+                                <rect key="frame" x="275" y="57" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="3gh-Jo-6Bp"/>
                                     <constraint firstAttribute="width" constant="50" id="A3f-vl-bF9"/>
@@ -99,7 +99,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fqm-Cf-UC4">
-                                <rect key="frame" x="376.5" y="57" width="50" height="50"/>
+                                <rect key="frame" x="376" y="57" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="542-yx-ZWl"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="8IA-S2-36Y"/>
@@ -118,7 +118,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SM0-OW-rhH">
-                                <rect key="frame" x="173" y="57" width="50" height="50"/>
+                                <rect key="frame" x="173.5" y="57" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0fT-Eg-hEu"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="COQ-gc-j35"/>
@@ -137,7 +137,7 @@
                                 </variation>
                             </imageView>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bkx-dH-sc5">
-                                <rect key="frame" x="20" y="-58" width="51.5" height="50"/>
+                                <rect key="frame" x="20" y="-232" width="51.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="JRi-tT-Uin"/>
@@ -150,7 +150,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2x-ec-FBG">
-                                <rect key="frame" x="325.5" y="57" width="51" height="50"/>
+                                <rect key="frame" x="325" y="57" width="51" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8VR-my-Ivr"/>
@@ -166,8 +166,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70X-Mz-C08">
-                                <rect key="frame" x="426.5" y="57" width="52" height="50"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="70X-Mz-C08">
+                                <rect key="frame" x="426" y="57" width="52.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="8fa-dn-7v8"/>
@@ -179,8 +179,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zDv-Tk-TnN">
-                                <rect key="frame" x="528.5" y="-174" width="51.5" height="50"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zDv-Tk-TnN">
+                                <rect key="frame" x="528.5" y="-116" width="51.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="C5K-qO-wHK"/>
@@ -196,8 +196,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAQ-SB-yL3">
-                                <rect key="frame" x="223" y="57" width="52.5" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAQ-SB-yL3">
+                                <rect key="frame" x="223.5" y="57" width="51.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="7fB-LO-Go8"/>
@@ -213,8 +213,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ov-Ba-GfC">
-                                <rect key="frame" x="121" y="57" width="52" height="50"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ov-Ba-GfC">
+                                <rect key="frame" x="121" y="57" width="52.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="5Qg-Pi-4ph"/>
@@ -277,7 +277,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UYQ-Rb-pJ5">
-                                <rect key="frame" x="275.5" y="115" width="50" height="50"/>
+                                <rect key="frame" x="275" y="115" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="51C-fS-z6A"/>
                                     <constraint firstAttribute="width" constant="50" id="RcW-kg-0Md"/>
@@ -296,7 +296,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rvG-lK-3Ev">
-                                <rect key="frame" x="376.5" y="115" width="50" height="50"/>
+                                <rect key="frame" x="376" y="115" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3X0-J7-PcL"/>
                                     <constraint firstAttribute="height" constant="50" id="KS3-WP-wRV"/>
@@ -315,7 +315,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o5w-DC-lyX">
-                                <rect key="frame" x="173" y="115" width="50" height="50"/>
+                                <rect key="frame" x="173.5" y="115" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="2TH-gw-Fn1"/>
                                     <constraint firstAttribute="width" constant="50" id="N0b-OV-PRd"/>
@@ -334,7 +334,7 @@
                                 </variation>
                             </imageView>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Rr-iF-yp6">
-                                <rect key="frame" x="20" y="0.0" width="51.5" height="50"/>
+                                <rect key="frame" x="20" y="-174" width="51.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8eE-Rt-MDB"/>
@@ -347,7 +347,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xwf-Wp-M6V">
-                                <rect key="frame" x="325.5" y="115" width="51" height="50"/>
+                                <rect key="frame" x="325" y="115" width="51" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6GB-MS-IVM"/>
@@ -363,8 +363,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIQ-OS-Jqt">
-                                <rect key="frame" x="426.5" y="115" width="52" height="50"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aIQ-OS-Jqt">
+                                <rect key="frame" x="426" y="115" width="52.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9Wh-5N-whv"/>
@@ -376,8 +376,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dnx-uh-CZS">
-                                <rect key="frame" x="528.5" y="-116" width="51.5" height="50"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dnx-uh-CZS">
+                                <rect key="frame" x="528.5" y="-58" width="51.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="D5x-6o-U0H"/>
@@ -393,8 +393,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mWH-vy-Zkf">
-                                <rect key="frame" x="223" y="115" width="52.5" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mWH-vy-Zkf">
+                                <rect key="frame" x="223.5" y="115" width="51.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="1V7-aC-742"/>
@@ -410,8 +410,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sED-Ks-Shy">
-                                <rect key="frame" x="121" y="115" width="52" height="50"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sED-Ks-Shy">
+                                <rect key="frame" x="121" y="115" width="52.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3OS-ka-KtQ"/>
@@ -474,7 +474,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ddw-pd-MHS">
-                                <rect key="frame" x="275.5" y="173" width="50" height="50"/>
+                                <rect key="frame" x="275" y="173" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Al4-dW-JXc"/>
                                     <constraint firstAttribute="width" constant="50" id="JsU-1f-Kbx"/>
@@ -493,7 +493,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B1c-g8-tVK">
-                                <rect key="frame" x="376.5" y="173" width="50" height="50"/>
+                                <rect key="frame" x="376" y="173" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="28h-QR-Zt8"/>
                                     <constraint firstAttribute="height" constant="50" id="6BH-cy-e0L"/>
@@ -512,7 +512,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="McE-HC-awc">
-                                <rect key="frame" x="173" y="173" width="50" height="50"/>
+                                <rect key="frame" x="173.5" y="173" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7v6-f6-3yh"/>
                                     <constraint firstAttribute="width" constant="50" id="VlQ-Ug-PpO"/>
@@ -531,7 +531,7 @@
                                 </variation>
                             </imageView>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fDm-C1-2wY">
-                                <rect key="frame" x="20" y="58" width="51.5" height="50"/>
+                                <rect key="frame" x="20" y="-116" width="51.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="7wp-yh-kzA"/>
@@ -544,7 +544,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GY4-JE-7ud">
-                                <rect key="frame" x="325.5" y="173" width="51" height="50"/>
+                                <rect key="frame" x="325" y="173" width="51" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3eb-ED-Ukv"/>
@@ -560,8 +560,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4FB-zA-QQ0">
-                                <rect key="frame" x="426.5" y="173" width="52" height="50"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4FB-zA-QQ0">
+                                <rect key="frame" x="426" y="173" width="52.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="QUI-gO-IET"/>
@@ -573,8 +573,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nzl-J7-n58">
-                                <rect key="frame" x="528.5" y="-58" width="51.5" height="50"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nzl-J7-n58">
+                                <rect key="frame" x="528.5" y="0.0" width="51.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="4D2-K0-LkI"/>
@@ -590,8 +590,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bPP-2b-SG9">
-                                <rect key="frame" x="223" y="173" width="52.5" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPP-2b-SG9">
+                                <rect key="frame" x="223.5" y="173" width="51.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Oru-WS-4LG"/>
@@ -607,8 +607,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nup-J2-Sbd">
-                                <rect key="frame" x="121" y="173" width="52" height="50"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nup-J2-Sbd">
+                                <rect key="frame" x="121" y="173" width="52.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Oiu-D7-r9f"/>
@@ -671,7 +671,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C4o-Vb-UYQ">
-                                <rect key="frame" x="275.5" y="231" width="50" height="50"/>
+                                <rect key="frame" x="275" y="231" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="2HM-SY-brk"/>
                                     <constraint firstAttribute="height" constant="50" id="7aJ-af-mtp"/>
@@ -690,7 +690,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0jn-ga-nSh">
-                                <rect key="frame" x="376.5" y="231" width="50" height="50"/>
+                                <rect key="frame" x="376" y="231" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="4CP-oR-HRN"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Chh-O6-BDD"/>
@@ -709,7 +709,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rI8-ki-H5k">
-                                <rect key="frame" x="173" y="231" width="50" height="50"/>
+                                <rect key="frame" x="173.5" y="231" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="3SB-ZB-Qss"/>
                                     <constraint firstAttribute="height" constant="50" id="FUS-d3-0vt"/>
@@ -728,7 +728,7 @@
                                 </variation>
                             </imageView>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vxV-dN-gQO">
-                                <rect key="frame" x="20" y="116" width="51.5" height="50"/>
+                                <rect key="frame" x="20" y="-58" width="51.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="9ap-9h-jRz"/>
@@ -741,7 +741,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4M-DR-Jhu">
-                                <rect key="frame" x="325.5" y="231" width="51" height="50"/>
+                                <rect key="frame" x="325" y="231" width="51" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BGK-at-sNa"/>
@@ -757,11 +757,11 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfR-gq-mud">
-                                <rect key="frame" x="426.5" y="231" width="52" height="50"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UfR-gq-mud">
+                                <rect key="frame" x="426" y="231" width="52.5" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CLo-Xc-cf1">
-                                        <rect key="frame" x="87" y="-60" width="23" height="50"/>
+                                        <rect key="frame" x="-94" y="-2" width="4" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="bBE-dm-Kmk"/>
@@ -785,8 +785,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jrs-tH-BQ1">
-                                <rect key="frame" x="528.5" y="0.0" width="51.5" height="50"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jrs-tH-BQ1">
+                                <rect key="frame" x="528.5" y="58" width="51.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="NwO-10-YUw"/>
@@ -802,8 +802,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I2f-Qf-Hqb">
-                                <rect key="frame" x="223" y="231" width="52.5" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I2f-Qf-Hqb">
+                                <rect key="frame" x="223.5" y="231" width="51.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="94i-gf-wq9"/>
@@ -819,8 +819,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXX-fS-git">
-                                <rect key="frame" x="121" y="231" width="52" height="50"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tXX-fS-git">
+                                <rect key="frame" x="121" y="231" width="52.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Agn-dG-YSP"/>
@@ -940,7 +940,7 @@
                                 </variation>
                             </imageView>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sCe-3k-kW1">
-                                <rect key="frame" x="20" y="174" width="52" height="50"/>
+                                <rect key="frame" x="20" y="0.0" width="52" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="I1P-01-TKs"/>
@@ -969,8 +969,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="baz-KX-6di">
-                                <rect key="frame" x="528" y="58" width="52" height="50"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="baz-KX-6di">
+                                <rect key="frame" x="528" y="116" width="52" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9ct-0i-lI9"/>
@@ -1067,7 +1067,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H24-2N-JGK">
-                                <rect key="frame" x="275.5" y="347" width="50" height="50"/>
+                                <rect key="frame" x="275" y="347" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Dvc-NK-sQn"/>
                                     <constraint firstAttribute="width" constant="50" id="WxV-KP-qUq"/>
@@ -1086,7 +1086,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yod-Lv-XLg">
-                                <rect key="frame" x="375.5" y="347" width="50" height="50"/>
+                                <rect key="frame" x="375" y="347" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="4JT-v1-N1C"/>
                                     <constraint firstAttribute="height" constant="50" id="HgF-64-4U9"/>
@@ -1105,7 +1105,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4lL-BB-CAw">
-                                <rect key="frame" x="173" y="347" width="50" height="50"/>
+                                <rect key="frame" x="173.5" y="347" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="g4R-Ys-bcq"/>
                                     <constraint firstAttribute="width" constant="50" id="h7m-L7-85x"/>
@@ -1124,7 +1124,7 @@
                                 </variation>
                             </imageView>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rgh-Fc-5sX">
-                                <rect key="frame" x="20" y="232" width="51.5" height="50"/>
+                                <rect key="frame" x="20" y="58" width="51.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gk2-Bq-dl8"/>
@@ -1137,7 +1137,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ek8-k3-PUq">
-                                <rect key="frame" x="325.5" y="347" width="51" height="50"/>
+                                <rect key="frame" x="325" y="347" width="51" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="5tu-hl-dDU"/>
@@ -1153,8 +1153,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2UY-GP-Yde">
-                                <rect key="frame" x="426.5" y="347" width="52" height="50"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2UY-GP-Yde">
+                                <rect key="frame" x="426" y="347" width="52.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="C7i-aw-Xt4"/>
@@ -1166,8 +1166,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="88T-ll-0W3">
-                                <rect key="frame" x="528.5" y="116" width="51.5" height="50"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="88T-ll-0W3">
+                                <rect key="frame" x="528.5" y="174" width="51.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="08f-LL-O1l"/>
@@ -1183,8 +1183,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xJ2-WR-4Yg">
-                                <rect key="frame" x="223" y="347" width="52.5" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJ2-WR-4Yg">
+                                <rect key="frame" x="223.5" y="347" width="51.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8vd-uE-8f6"/>
@@ -1200,8 +1200,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8GJ-Nb-tLi">
-                                <rect key="frame" x="121" y="347" width="52" height="50"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8GJ-Nb-tLi">
+                                <rect key="frame" x="121" y="347" width="52.5" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="8EL-p0-01E"/>
@@ -1312,6 +1312,12 @@
                                     <constraint firstAttribute="width" constant="560" id="coC-7D-Eht"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2 Wins!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsK-Ud-5qc">
+                                <rect key="frame" x="130.5" y="273" width="339.5" height="54.5"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="43"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1511,6 +1517,7 @@
                             <constraint firstItem="KYd-Iu-qV6" firstAttribute="leading" secondItem="aIQ-OS-Jqt" secondAttribute="trailing" id="ehI-s4-QAq"/>
                             <constraint firstItem="w9b-2Y-EyV" firstAttribute="top" secondItem="rIO-T5-lb6" secondAttribute="bottom" id="eyK-bg-tZE"/>
                             <constraint firstItem="OVf-qZ-dwE" firstAttribute="leading" secondItem="4FB-zA-QQ0" secondAttribute="trailing" id="fZI-jp-ZfD"/>
+                            <constraint firstItem="RsK-Ud-5qc" firstAttribute="centerX" secondItem="Onf-b2-bdw" secondAttribute="centerX" id="foo-Mm-bvF"/>
                             <constraint firstItem="bPP-2b-SG9" firstAttribute="width" secondItem="fDm-C1-2wY" secondAttribute="width" id="fpY-qk-9xL"/>
                             <constraint firstItem="UfR-gq-mud" firstAttribute="top" secondItem="4FB-zA-QQ0" secondAttribute="bottom" constant="8" id="fy1-s8-dic"/>
                             <constraint firstItem="0jn-ga-nSh" firstAttribute="leading" secondItem="I4M-DR-Jhu" secondAttribute="trailing" id="g3T-sP-SHk"/>
@@ -1538,6 +1545,7 @@
                             <constraint firstItem="nzl-J7-n58" firstAttribute="top" secondItem="Dnx-uh-CZS" secondAttribute="bottom" constant="8" id="iVD-c0-3Y2"/>
                             <constraint firstItem="aIQ-OS-Jqt" firstAttribute="leading" secondItem="rvG-lK-3Ev" secondAttribute="trailing" id="ieC-zh-4qz"/>
                             <constraint firstItem="Yod-Lv-XLg" firstAttribute="leading" secondItem="ek8-k3-PUq" secondAttribute="trailing" constant="-1" id="iqo-uy-I28"/>
+                            <constraint firstItem="RsK-Ud-5qc" firstAttribute="centerY" secondItem="Onf-b2-bdw" secondAttribute="centerY" id="ixt-4H-0YN"/>
                             <constraint firstItem="SM0-OW-rhH" firstAttribute="leading" secondItem="2ov-Ba-GfC" secondAttribute="trailing" id="j0E-kj-X5B"/>
                             <constraint firstItem="I4M-DR-Jhu" firstAttribute="leading" secondItem="C4o-Vb-UYQ" secondAttribute="trailing" id="jZ7-yp-mkz"/>
                             <constraint firstItem="ZYA-aA-qov" firstAttribute="leading" secondItem="dtZ-0X-n7J" secondAttribute="trailing" id="jfG-Mm-FJP"/>
@@ -1680,6 +1688,7 @@
                         <outlet property="image8" destination="UYQ-Rb-pJ5" id="O09-Ni-m7i"/>
                         <outlet property="image9" destination="rvG-lK-3Ev" id="GpN-hW-8xO"/>
                         <outlet property="scoreLabel" destination="w9b-2Y-EyV" id="on6-jQ-Oy6"/>
+                        <outlet property="winnerLabel" destination="RsK-Ud-5qc" id="QGT-Jo-hWr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O3p-Wz-YS7" userLabel="First Responder" sceneMemberID="firstResponder"/>

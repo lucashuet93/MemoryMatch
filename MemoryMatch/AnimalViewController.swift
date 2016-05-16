@@ -12,6 +12,7 @@ class AnimalViewController: UIViewController {
     var count = Int()
     var player = Int()
     var turn = Int()
+    var delegate = UIViewController()
     var cardValuesDrawn = [Int]()
     var playerOneScore = Int()
     var playerTwoScore = Int()
@@ -33,7 +34,7 @@ class AnimalViewController: UIViewController {
     let panda = Card(flippedCard: UIImage(named: "Panda-48")!, value: 11, name: "Panda")
     let snake = Card(flippedCard: UIImage(named: "snake")!, value: 12, name: "Snake")
     let turtle = Card(flippedCard: UIImage(named: "Turtle-48")!, value: 13, name: "Turtle")
-    let unicorn = Card(flippedCard: UIImage(named: "Unicorn-48")!, value: 14, name: "Alligator")
+    let unicorn = Card(flippedCard: UIImage(named: "Unicorn-48")!, value: 14, name: "Unicorn")
     let wolf = Card(flippedCard: UIImage(named: "Wolf-48")!, value: 15, name: "Wolf")
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var image1: UIImageView!
@@ -66,13 +67,25 @@ class AnimalViewController: UIViewController {
     @IBOutlet weak var image28: UIImageView!
     @IBOutlet weak var image29: UIImageView!
     @IBOutlet weak var image30: UIImageView!
+    @IBOutlet weak var winnerLabel: UILabel!
     @IBAction func resetButtonPressed(sender: UIButton) {
+        initializeLabelsAndCards()
+        winnerLabel.hidden = true
+        for i in 0...imagesArray.count - 1 {
+            imagesArray[i].hidden = false
+        }
     }
     @IBAction func menuButtonPressed(sender: UIButton) {
+        delegate.dismissViewControllerAnimated(true) { 
+        }
     }
     @IBOutlet weak var animalLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        initializeLabelsAndCards()
+        winnerLabel.hidden = true
+    }
+    func initializeLabelsAndCards() {
         assignbackground()
         resetDeck()
         initializeImagesArray()
@@ -84,10 +97,8 @@ class AnimalViewController: UIViewController {
         count = 0
         score = ("\(playerOneScore) - \(playerTwoScore)")
         scoreLabel.text = score
-//        winnerLabel.hidden = true
         animalLabel.text = ""
     }
-    
     func assignbackground(){
         let background = UIImage(named: "background-1")
         var imageView : UIImageView!
@@ -98,7 +109,6 @@ class AnimalViewController: UIViewController {
         imageView.center = view.center
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
-//        self.view.bringSubviewToFront(winnerLabel)
     }
     func resetDeck(){
         animalsDeck = [Card]()
@@ -177,6 +187,20 @@ class AnimalViewController: UIViewController {
             })
         })
     }
+    func printText(player: Int){
+        self.view.bringSubviewToFront(winnerLabel);
+        animalLabel.hidden = true
+        winnerLabel.hidden = false
+        if player == 1 {
+            winnerLabel.text = "Player 1 Wins"
+        } else {
+            winnerLabel.text = "Player 2 Wins"
+        }
+        for i in 0...imagesArray.count-1{
+            imagesArray[i].hidden = true
+        }
+        
+    }
     func update(number: Int){
         if turn == 1 {
             cardValuesDrawn.append(animalsDeck[number-1].value)
@@ -196,15 +220,15 @@ class AnimalViewController: UIViewController {
                     cardValuesDrawn = [Int]()
                     score = ("\(playerOneScore) - \(playerTwoScore)")
                     scoreLabel.text = score
-//                    if count == 15 {
-//                        if playerTwoScore > playerOneScore {
-//                            winnerLabel.text = "Player 1 Wins!"
-//                            winnerLabel.hidden = false
-//                        } else {
-//                            winnerLabel.text = "Player 2 Wins!"
-//                            winnerLabel.hidden = false
-//                        }
-//                    }
+                    animalLabel.text = "Match!"
+                    if count == 15 {
+                        print("I'm Here")
+                        if playerTwoScore > playerOneScore {
+                            printText(2)
+                        } else {
+                            printText(1)
+                        }
+                    }
                 } else {
                     playerTwoScore += 1
                     turn = 1
@@ -213,15 +237,15 @@ class AnimalViewController: UIViewController {
                     cardValuesDrawn = [Int]()
                     score = ("\(playerOneScore) - \(playerTwoScore)")
                     scoreLabel.text = score
-//                    if count == 15 {
-//                        if playerTwoScore > playerOneScore {
-//                            winnerLabel.text = "Player 1 Wins!"
-//                            winnerLabel.hidden = false
-//                        } else {
-//                            winnerLabel.text = "Player 2 Wins!"
-//                            winnerLabel.hidden = false
-//                        }
-//                    }
+                    animalLabel.text = "Match!"
+                    if count == 15 {
+                        print("I'm Here2")
+                        if playerTwoScore > playerOneScore {
+                            printText(2)
+                        } else {
+                            printText(1)
+                        }
+                    }
                 }
             } else {
                 fadeSecond(imagesArray[cardValuesDrawn[1]-1], number: cardValuesDrawn[0])
