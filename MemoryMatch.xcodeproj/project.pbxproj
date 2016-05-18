@@ -136,13 +136,9 @@
 		985744561CE63FC30006D852 /* MemoryMatch */ = {
 			isa = PBXGroup;
 			children = (
+				D8AD0E1A1CED17CA00E7CADF /* Controllers */,
+				D8AD0E191CED17C200E7CADF /* Models */,
 				985744571CE63FC30006D852 /* AppDelegate.swift */,
-				985744591CE63FC30006D852 /* ViewController.swift */,
-				985744881CE64A780006D852 /* AnimalViewController.swift */,
-				988CBD961CE6DAFF0092ACFF /* Card.swift */,
-				D8AD0E151CEAB3D900E7CADF /* FoodViewController.swift */,
-				D8AD0E171CED072900E7CADF /* Alert.swift */,
-				98E5676F1CE659850058B56B /* UIViewExtensions.swift */,
 				9857445B1CE63FC30006D852 /* Main.storyboard */,
 				985744611CE63FC30006D852 /* Assets.xcassets */,
 				985744631CE63FC30006D852 /* LaunchScreen.storyboard */,
@@ -181,6 +177,26 @@
 				BA766D49318C2BFD450C42EA /* Pods-MemoryMatchUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D8AD0E191CED17C200E7CADF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				98E5676F1CE659850058B56B /* UIViewExtensions.swift */,
+				988CBD961CE6DAFF0092ACFF /* Card.swift */,
+				D8AD0E171CED072900E7CADF /* Alert.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D8AD0E1A1CED17CA00E7CADF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				985744591CE63FC30006D852 /* ViewController.swift */,
+				D8AD0E151CEAB3D900E7CADF /* FoodViewController.swift */,
+				985744881CE64A780006D852 /* AnimalViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

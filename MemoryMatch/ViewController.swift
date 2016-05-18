@@ -14,8 +14,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         assignbackground()
         // Do any additional setup after loading the view.
+        animalButton.setBackgroundImage(UIImage(named: "wood"), forState: .Normal)
+        animalButton.layer.borderColor = UIColor.blueColor().CGColor
+        animalButton.layer.borderWidth = 2.0
     }
     
+    @IBOutlet weak var animalButton: UIButton!
     func assignbackground(){
         let background = UIImage(named: "chalkboard")
         var imageView : UIImageView!

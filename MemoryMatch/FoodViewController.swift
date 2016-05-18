@@ -100,7 +100,7 @@ class FoodViewController: UIViewController {
         foodLabel.text = ""
     }
     func assignbackground(){
-        let background = UIImage(named: "background-1")
+        let background = UIImage(named: "wood")
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIViewContentMode.ScaleAspectFill

@@ -36,6 +36,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mv-ei-8zK">
                                 <rect key="frame" x="255" y="466" width="91" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="O4L-IH-9mv"/>
+                                    <constraint firstAttribute="width" constant="91" id="aFt-9f-d8P"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
                                 <state key="normal" title="Animals">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,6 +66,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="animalButton" destination="2Mv-ei-8zK" id="R4g-Ki-8xj"/>
                         <segue destination="AEv-LW-SXa" kind="presentation" identifier="Food" id="hAh-Oi-jGi"/>
                     </connections>
                 </viewController>
