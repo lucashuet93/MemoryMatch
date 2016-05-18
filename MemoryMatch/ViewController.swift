@@ -14,9 +14,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         assignbackground()
         // Do any additional setup after loading the view.
+        animalButton.layer.cornerRadius = 10
         animalButton.setBackgroundImage(UIImage(named: "wood"), forState: .Normal)
         animalButton.layer.borderColor = UIColor.blueColor().CGColor
         animalButton.layer.borderWidth = 2.0
+        animalButton.layer.masksToBounds = true
+        
     }
     
     @IBOutlet weak var animalButton: UIButton!
