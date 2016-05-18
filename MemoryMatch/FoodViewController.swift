@@ -79,7 +79,7 @@ class FoodViewController: UIViewController {
         delegate.dismissViewControllerAnimated(true) {
         }
     }
-    @IBOutlet weak var animalLabel: UILabel!
+    @IBOutlet weak var foodLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeLabelsAndCards()
@@ -97,10 +97,10 @@ class FoodViewController: UIViewController {
         count = 0
         score = ("\(playerOneScore) - \(playerTwoScore)")
         scoreLabel.text = score
-        animalLabel.text = ""
+        foodLabel.text = ""
     }
     func assignbackground(){
-        let background = UIImage(named: "wood")
+        let background = UIImage(named: "background-1")
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIViewContentMode.ScaleAspectFill
@@ -171,7 +171,7 @@ class FoodViewController: UIViewController {
             image.image = self.animalsDeck[number-1].flippedCard
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
-                self.animalLabel.text = self.animalsDeck[number-1].name
+                self.foodLabel.text = self.animalsDeck[number-1].name
                 self.update(number)
             })
             
@@ -183,13 +183,28 @@ class FoodViewController: UIViewController {
             image.image = self.animalsDeck[number-1].unflippedCard
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
-                self.animalLabel.text = ""
+                self.foodLabel.text = ""
+                if self.player == 1 {
+                    let alert = showAlert("Player 2's Turn!", message: "")
+                    self.presentViewController(alert, animated: true, completion: {
+                        self.cardValuesDrawn = [Int]()
+                        self.player = 2
+                        self.turn = 1
+                    })
+                } else {
+                    let alert = showAlert("Player 1's Turn!", message: "")
+                    self.presentViewController(alert, animated: true, completion: {
+                        self.cardValuesDrawn = [Int]()
+                        self.player = 1
+                        self.turn = 1
+                    })
+                }
             })
         })
     }
     func printText(player: Int){
         self.view.bringSubviewToFront(winnerLabel);
-        animalLabel.hidden = true
+        foodLabel.hidden = true
         winnerLabel.hidden = false
         if player == 1 {
             winnerLabel.text = "Player 1 Wins"
@@ -213,16 +228,18 @@ class FoodViewController: UIViewController {
             if cardValuesDrawn[0] == cardValuesDrawn[2] {
                 count += 1
                 if player == 1 {
-                    playerOneScore += 1
-                    turn = 1
-                    imagesArray[(cardValuesDrawn[1])-1].hidden = true
-                    imagesArray[(cardValuesDrawn[3])-1].hidden = true
-                    cardValuesDrawn = [Int]()
+                    playerTwoScore += 1
                     score = ("\(playerOneScore) - \(playerTwoScore)")
-                    scoreLabel.text = score
-                    animalLabel.text = "Match!"
+                    let alert = showAlert("Match!", message: score)
+                    presentViewController(alert, animated: true, completion: {
+                        self.turn = 1
+                        self.imagesArray[(self.cardValuesDrawn[1])-1].hidden = true
+                        self.imagesArray[(self.cardValuesDrawn[3])-1].hidden = true
+                        self.cardValuesDrawn = [Int]()
+                        self.scoreLabel.text = self.score
+                    })
+                    foodLabel.text = ""
                     if count == 15 {
-                        print("I'm Here")
                         if playerTwoScore > playerOneScore {
                             printText(2)
                         } else {
@@ -231,13 +248,16 @@ class FoodViewController: UIViewController {
                     }
                 } else {
                     playerTwoScore += 1
-                    turn = 1
-                    imagesArray[(cardValuesDrawn[1])-1].hidden = true
-                    imagesArray[(cardValuesDrawn[3])-1].hidden = true
-                    cardValuesDrawn = [Int]()
                     score = ("\(playerOneScore) - \(playerTwoScore)")
-                    scoreLabel.text = score
-                    animalLabel.text = "Match!"
+                    let alert = showAlert("Match!", message: score)
+                    presentViewController(alert, animated: true, completion: {
+                        self.turn = 1
+                        self.imagesArray[(self.cardValuesDrawn[1])-1].hidden = true
+                        self.imagesArray[(self.cardValuesDrawn[3])-1].hidden = true
+                        self.cardValuesDrawn = [Int]()
+                        self.scoreLabel.text = self.score
+                    })
+                    foodLabel.text = ""
                     if count == 15 {
                         print("I'm Here2")
                         if playerTwoScore > playerOneScore {
@@ -250,15 +270,6 @@ class FoodViewController: UIViewController {
             } else {
                 fadeSecond(imagesArray[cardValuesDrawn[1]-1], number: cardValuesDrawn[0])
                 fadeSecond(imagesArray[cardValuesDrawn[3]-1], number: cardValuesDrawn[0])
-                if player == 1 {
-                    cardValuesDrawn = [Int]()
-                    player = 2
-                    turn = 1
-                } else {
-                    cardValuesDrawn = [Int]()
-                    player = 1
-                    turn = 1
-                }
             }
         }
     }
@@ -353,8 +364,4 @@ class FoodViewController: UIViewController {
     func image30HasBeenTapped(){
         fadeFirst(image30, number: 30)
     }
-    
-    
-    
-    
 }

@@ -3324,7 +3324,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Pma-I9-q0S"/>
                     <connections>
-                        <outlet property="animalLabel" destination="4Ek-zi-wDC" id="Hqw-oQ-KZx"/>
+                        <outlet property="foodLabel" destination="4Ek-zi-wDC" id="w2E-IY-6Oh"/>
                         <outlet property="image1" destination="GVf-H1-94q" id="tGv-9M-rfP"/>
                         <outlet property="image10" destination="q74-WP-uix" id="EUm-dl-5hg"/>
                         <outlet property="image11" destination="Beg-vS-oXZ" id="xsW-tK-8GH"/>
