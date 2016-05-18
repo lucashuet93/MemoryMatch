@@ -23,6 +23,8 @@
 		98E567701CE659850058B56B /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E5676F1CE659850058B56B /* UIViewExtensions.swift */; };
 		D8AD0E161CEAB3D900E7CADF /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AD0E151CEAB3D900E7CADF /* FoodViewController.swift */; };
 		D8AD0E181CED072900E7CADF /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AD0E171CED072900E7CADF /* Alert.swift */; };
+		D8AD0E1C1CED2DCF00E7CADF /* SeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AD0E1B1CED2DCF00E7CADF /* SeaViewController.swift */; };
+		D8AD0E1E1CED2E9900E7CADF /* ChristmasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AD0E1D1CED2E9900E7CADF /* ChristmasViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		BA766D49318C2BFD450C42EA /* Pods-MemoryMatchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryMatchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryMatchUITests/Pods-MemoryMatchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D8AD0E151CEAB3D900E7CADF /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		D8AD0E171CED072900E7CADF /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		D8AD0E1B1CED2DCF00E7CADF /* SeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeaViewController.swift; sourceTree = "<group>"; };
+		D8AD0E1D1CED2E9900E7CADF /* ChristmasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChristmasViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +199,8 @@
 				985744591CE63FC30006D852 /* ViewController.swift */,
 				D8AD0E151CEAB3D900E7CADF /* FoodViewController.swift */,
 				985744881CE64A780006D852 /* AnimalViewController.swift */,
+				D8AD0E1B1CED2DCF00E7CADF /* SeaViewController.swift */,
+				D8AD0E1D1CED2E9900E7CADF /* ChristmasViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -465,9 +471,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				985744601CE63FC30006D852 /* MemoryMatch.xcdatamodeld in Sources */,
+				D8AD0E1C1CED2DCF00E7CADF /* SeaViewController.swift in Sources */,
 				D8AD0E161CEAB3D900E7CADF /* FoodViewController.swift in Sources */,
 				988CBD971CE6DAFF0092ACFF /* Card.swift in Sources */,
 				98E567701CE659850058B56B /* UIViewExtensions.swift in Sources */,
+				D8AD0E1E1CED2E9900E7CADF /* ChristmasViewController.swift in Sources */,
 				985744891CE64A780006D852 /* AnimalViewController.swift in Sources */,
 				9857445A1CE63FC30006D852 /* ViewController.swift in Sources */,
 				D8AD0E181CED072900E7CADF /* Alert.swift in Sources */,
