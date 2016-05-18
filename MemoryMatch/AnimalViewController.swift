@@ -184,6 +184,21 @@ class AnimalViewController: UIViewController {
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
                 self.animalLabel.text = ""
+                if self.player == 1 {
+                    let alert = showAlert("Player 2's Turn!", message: "")
+                    self.presentViewController(alert, animated: true, completion: {
+                        self.cardValuesDrawn = [Int]()
+                        self.player = 2
+                        self.turn = 1
+                    })
+                } else {
+                    let alert = showAlert("Player 1's Turn!", message: "")
+                    self.presentViewController(alert, animated: true, completion: {
+                        self.cardValuesDrawn = [Int]()
+                        self.player = 1
+                        self.turn = 1
+                    })
+                }
             })
         })
     }
@@ -213,16 +228,18 @@ class AnimalViewController: UIViewController {
             if cardValuesDrawn[0] == cardValuesDrawn[2] {
                 count += 1
                 if player == 1 {
-                    playerOneScore += 1
-                    turn = 1
-                    imagesArray[(cardValuesDrawn[1])-1].hidden = true
-                    imagesArray[(cardValuesDrawn[3])-1].hidden = true
-                    cardValuesDrawn = [Int]()
+                    playerTwoScore += 1
                     score = ("\(playerOneScore) - \(playerTwoScore)")
-                    scoreLabel.text = score
-                    animalLabel.text = "Match!"
+                    let alert = showAlert("Match!", message: score)
+                    presentViewController(alert, animated: true, completion: {
+                        self.turn = 1
+                        self.imagesArray[(self.cardValuesDrawn[1])-1].hidden = true
+                        self.imagesArray[(self.cardValuesDrawn[3])-1].hidden = true
+                        self.cardValuesDrawn = [Int]()
+                        self.scoreLabel.text = self.score
+                    })
+                    animalLabel.text = ""
                     if count == 15 {
-                        print("I'm Here")
                         if playerTwoScore > playerOneScore {
                             printText(2)
                         } else {
@@ -231,13 +248,16 @@ class AnimalViewController: UIViewController {
                     }
                 } else {
                     playerTwoScore += 1
-                    turn = 1
-                    imagesArray[(cardValuesDrawn[1])-1].hidden = true
-                    imagesArray[(cardValuesDrawn[3])-1].hidden = true
-                    cardValuesDrawn = [Int]()
                     score = ("\(playerOneScore) - \(playerTwoScore)")
-                    scoreLabel.text = score
-                    animalLabel.text = "Match!"
+                    let alert = showAlert("Match!", message: score)
+                    presentViewController(alert, animated: true, completion: {
+                        self.turn = 1
+                        self.imagesArray[(self.cardValuesDrawn[1])-1].hidden = true
+                        self.imagesArray[(self.cardValuesDrawn[3])-1].hidden = true
+                        self.cardValuesDrawn = [Int]()
+                        self.scoreLabel.text = self.score
+                    })
+                    animalLabel.text = ""
                     if count == 15 {
                         print("I'm Here2")
                         if playerTwoScore > playerOneScore {
@@ -250,15 +270,6 @@ class AnimalViewController: UIViewController {
             } else {
                 fadeSecond(imagesArray[cardValuesDrawn[1]-1], number: cardValuesDrawn[0])
                 fadeSecond(imagesArray[cardValuesDrawn[3]-1], number: cardValuesDrawn[0])
-                if player == 1 {
-                    cardValuesDrawn = [Int]()
-                    player = 2
-                    turn = 1
-                } else {
-                    cardValuesDrawn = [Int]()
-                    player = 1
-                    turn = 1
-                }
             }
         }
     }
@@ -353,8 +364,4 @@ class AnimalViewController: UIViewController {
     func image30HasBeenTapped(){
         fadeFirst(image30, number: 30)
     }
-    
-    
-    
-    
 }

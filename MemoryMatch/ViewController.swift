@@ -32,6 +32,10 @@ class ViewController: UIViewController {
             let controller = segue.destinationViewController as! AnimalViewController
             controller.delegate = self
         }
+        else if segue.identifier == "Food" {
+            let controller = segue.destinationViewController as! FoodViewController
+            controller.delegate = self
+        }
     }
     func dismissView(controller: UIViewController){
         controller.dismissViewControllerAnimated(true, completion: nil)

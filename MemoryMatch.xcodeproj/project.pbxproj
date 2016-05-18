@@ -22,6 +22,7 @@
 		988CBD971CE6DAFF0092ACFF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988CBD961CE6DAFF0092ACFF /* Card.swift */; };
 		98E567701CE659850058B56B /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E5676F1CE659850058B56B /* UIViewExtensions.swift */; };
 		D8AD0E161CEAB3D900E7CADF /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AD0E151CEAB3D900E7CADF /* FoodViewController.swift */; };
+		D8AD0E181CED072900E7CADF /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AD0E171CED072900E7CADF /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		A8E594AFA0A0E0784DDC0DA5 /* Pods-MemoryMatchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryMatchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryMatchTests/Pods-MemoryMatchTests.release.xcconfig"; sourceTree = "<group>"; };
 		BA766D49318C2BFD450C42EA /* Pods-MemoryMatchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryMatchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemoryMatchUITests/Pods-MemoryMatchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D8AD0E151CEAB3D900E7CADF /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		D8AD0E171CED072900E7CADF /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				985744881CE64A780006D852 /* AnimalViewController.swift */,
 				988CBD961CE6DAFF0092ACFF /* Card.swift */,
 				D8AD0E151CEAB3D900E7CADF /* FoodViewController.swift */,
+				D8AD0E171CED072900E7CADF /* Alert.swift */,
 				98E5676F1CE659850058B56B /* UIViewExtensions.swift */,
 				9857445B1CE63FC30006D852 /* Main.storyboard */,
 				985744611CE63FC30006D852 /* Assets.xcassets */,
@@ -451,6 +454,7 @@
 				98E567701CE659850058B56B /* UIViewExtensions.swift in Sources */,
 				985744891CE64A780006D852 /* AnimalViewController.swift in Sources */,
 				9857445A1CE63FC30006D852 /* ViewController.swift in Sources */,
+				D8AD0E181CED072900E7CADF /* Alert.swift in Sources */,
 				985744581CE63FC30006D852 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
