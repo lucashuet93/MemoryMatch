@@ -48,9 +48,6 @@ class ViewController: UIViewController {
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
 
-    @IBAction func foodButtonClicked(sender: UIButton) {
-        self.performSegueWithIdentifier("Food", sender: self)
-    }
 
 }
 

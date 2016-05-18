@@ -31,7 +31,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="foodButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Md0-h3-ABF"/>
+                                    <segue destination="AEv-LW-SXa" kind="presentation" identifier="Food" id="yc8-8K-5hD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mv-ei-8zK">
@@ -45,7 +45,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="tj5-kv-fPL" kind="show" identifier="Animals" id="1bF-iO-s6N"/>
+                                    <segue destination="tj5-kv-fPL" kind="popoverPresentation" identifier="Animals" popoverAnchorView="2Mv-ei-8zK" id="1bF-iO-s6N">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,7 +69,6 @@
                     </view>
                     <connections>
                         <outlet property="animalButton" destination="2Mv-ei-8zK" id="R4g-Ki-8xj"/>
-                        <segue destination="AEv-LW-SXa" kind="presentation" identifier="Food" id="hAh-Oi-jGi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
