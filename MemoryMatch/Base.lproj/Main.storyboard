@@ -46,7 +46,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="tj5-kv-fPL" kind="presentation" identifier="Animals" modalTransitionStyle="partialCurl" id="1bF-iO-s6N"/>
+                                    <segue destination="tj5-kv-fPL" kind="presentation" identifier="Animals" id="1bF-iO-s6N"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgk-5L-0KN">
@@ -60,7 +60,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="AEv-LW-SXa" kind="presentation" identifier="Food" modalTransitionStyle="partialCurl" id="yc8-8K-5hD"/>
+                                    <segue destination="AEv-LW-SXa" kind="presentation" identifier="Food" id="yc8-8K-5hD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dko-ao-WTh">
@@ -74,7 +74,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="z6b-dS-1vi" kind="presentation" identifier="Sea" modalTransitionStyle="partialCurl" id="Lk0-VD-JAO"/>
+                                    <segue destination="z6b-dS-1vi" kind="presentation" identifier="Sea" id="Lk0-VD-JAO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rn0-ao-agP">
@@ -88,7 +88,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ccM-qi-S5B" kind="presentation" identifier="Christmas" modalTransitionStyle="partialCurl" id="ZYp-sa-oKT"/>
+                                    <segue destination="ccM-qi-S5B" kind="presentation" identifier="Christmas" id="ZYp-sa-oKT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memory Match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQx-Mj-fdb">
