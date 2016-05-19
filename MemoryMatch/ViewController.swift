@@ -18,14 +18,14 @@ class ViewController: UIViewController {
         buttons = [animalButton, foodButton, seaButton, christmasButton]
         for button in buttons {
             button.layer.cornerRadius = 10
-            button.layer.borderColor = UIColor.whiteColor().CGColor
+            button.layer.borderColor = UIColor.redColor().CGColor
             button.layer.borderWidth = 2.0
             button.layer.masksToBounds = true
         }
-        animalButton.backgroundColor = UIColor.purpleColor()
-        foodButton.backgroundColor = UIColor.greenColor()
-        seaButton.backgroundColor = UIColor.blueColor()
-        christmasButton.backgroundColor = UIColor.redColor()
+        animalButton.backgroundColor = UIColor.whiteColor()
+        foodButton.backgroundColor = UIColor.whiteColor()
+        seaButton.backgroundColor = UIColor.whiteColor()
+        christmasButton.backgroundColor = UIColor.whiteColor()
     }
     
     @IBOutlet weak var christmasButton: UIButton!
