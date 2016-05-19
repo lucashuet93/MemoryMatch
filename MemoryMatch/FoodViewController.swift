@@ -159,10 +159,19 @@ class FoodViewController: UIViewController {
         let recognizer30 = UITapGestureRecognizer()
         recognizersArray = [recognizer1, recognizer2, recognizer3, recognizer4, recognizer5, recognizer6, recognizer7, recognizer8, recognizer9, recognizer10, recognizer11, recognizer12, recognizer13, recognizer14, recognizer15, recognizer16, recognizer17, recognizer18, recognizer19, recognizer20, recognizer21, recognizer22, recognizer23, recognizer24, recognizer25, recognizer26, recognizer27, recognizer28, recognizer29, recognizer30]
         actionsArray = ["image1HasBeenTapped", "image2HasBeenTapped", "image3HasBeenTapped", "image4HasBeenTapped", "image5HasBeenTapped", "image6HasBeenTapped", "image7HasBeenTapped", "image8HasBeenTapped", "image9HasBeenTapped", "image10HasBeenTapped", "image11HasBeenTapped", "image12HasBeenTapped", "image13HasBeenTapped", "image14HasBeenTapped", "image15HasBeenTapped", "image16HasBeenTapped", "image17HasBeenTapped", "image18HasBeenTapped", "image19HasBeenTapped", "image20HasBeenTapped", "image21HasBeenTapped", "image22HasBeenTapped", "image23HasBeenTapped", "image24HasBeenTapped", "image25HasBeenTapped", "image26HasBeenTapped", "image27HasBeenTapped", "image28HasBeenTapped", "image29HasBeenTapped", "image30HasBeenTapped"]
+        loadRecognizers()
+    }
+    func loadRecognizers() {
         for i in 0...imagesArray.count-1 {
             imagesArray[i].userInteractionEnabled = true
             imagesArray[i].addGestureRecognizer(recognizersArray[i])
             recognizersArray[i].addTarget(self, action: Selector(actionsArray[i]))
+        }
+    }
+    func removeRecognizers() {
+        for i in 0...imagesArray.count-1 {
+            imagesArray[i].userInteractionEnabled = true
+            recognizersArray[i].removeTarget(self, action: Selector(actionsArray[i]))
         }
     }
     func fadeFirst(image: UIImageView, number: Int){
@@ -178,7 +187,7 @@ class FoodViewController: UIViewController {
         })
     }
     func fadeSecond(image: UIImageView, number: Int){
-        image.fadeOut(completion: {
+        image.fadeOutWithDelay(completion: {
             (finished: Bool) -> Void in
             image.image = self.foodDeck[number-1].unflippedCard
             image.fadeIn(completion: {
@@ -199,6 +208,7 @@ class FoodViewController: UIViewController {
                         self.turn = 1
                     })
                 }
+                self.loadRecognizers()
             })
         })
     }
@@ -222,9 +232,9 @@ class FoodViewController: UIViewController {
             cardValuesDrawn.append(number)
             turn = 2
         } else {
+            removeRecognizers()
             cardValuesDrawn.append(foodDeck[number-1].value)
             cardValuesDrawn.append(number)
-            print(cardValuesDrawn)
             if cardValuesDrawn[0] == cardValuesDrawn[2] {
                 count += 1
                 if player == 1 {
@@ -259,7 +269,6 @@ class FoodViewController: UIViewController {
                     })
                     foodLabel.text = ""
                     if count == 15 {
-                        print("I'm Here2")
                         if playerTwoScore > playerOneScore {
                             printText(2)
                         } else {

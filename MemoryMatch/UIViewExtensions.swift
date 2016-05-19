@@ -20,6 +20,11 @@ extension UIImageView {
             self.alpha = 0.0
             }, completion: completion)
     }
+    func fadeOutWithDelay(duration: NSTimeInterval = 0.5, delay: NSTimeInterval = 0.5, completion: (Bool) -> Void = {(finished: Bool) -> Void in}) {
+        UIView.animateWithDuration(duration, delay: delay, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            self.alpha = 0.0
+            }, completion: completion)
+    }
     func slideInFromLeft(duration: NSTimeInterval = 1.0, completionDelegate: AnyObject? = nil) {
         // Create a CATransition animation
         let slideInFromLeftTransition = CATransition()
