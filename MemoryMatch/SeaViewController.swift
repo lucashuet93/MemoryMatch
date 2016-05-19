@@ -101,7 +101,7 @@ class SeaViewController: UIViewController {
         animalLabel.text = ""
     }
     func assignbackground(){
-        let background = UIImage(named: "ocean")
+        let background = UIImage(named: "under-ocean-background")
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIViewContentMode.ScaleAspectFill

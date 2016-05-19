@@ -15,16 +15,16 @@ class ViewController: UIViewController {
         assignbackground()
         // Do any additional setup after loading the view.
         animalButton.layer.cornerRadius = 10
-        animalButton.setBackgroundImage(UIImage(named: "wood"), forState: .Normal)
-        animalButton.layer.borderColor = UIColor.blueColor().CGColor
+        animalButton.setBackgroundImage(UIImage(named: "background-1"), forState: .Normal)
+        animalButton.layer.borderColor = UIColor.whiteColor().CGColor
         animalButton.layer.borderWidth = 2.0
         animalButton.layer.masksToBounds = true
-        
     }
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var animalButton: UIButton!
     func assignbackground(){
-        let background = UIImage(named: "chalkboard")
+        let background = UIImage(named: "HiRes")
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIViewContentMode.ScaleAspectFill
@@ -41,6 +41,14 @@ class ViewController: UIViewController {
         }
         else if segue.identifier == "Food" {
             let controller = segue.destinationViewController as! FoodViewController
+            controller.delegate = self
+        }
+        else if segue.identifier == "Sea" {
+            let controller = segue.destinationViewController as! SeaViewController
+            controller.delegate = self
+        }
+        else if segue.identifier == "Christmas" {
+            let controller = segue.destinationViewController as! ChristmasViewController
             controller.delegate = self
         }
     }

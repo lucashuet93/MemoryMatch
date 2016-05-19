@@ -101,7 +101,7 @@ class ChristmasViewController: UIViewController {
         animalLabel.text = ""
     }
     func assignbackground(){
-        let background = UIImage(named: "christmas")
+        let background = UIImage(named: "winterbgblue")
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIViewContentMode.ScaleAspectFill

@@ -75,6 +75,7 @@
 		D8AD0E171CED072900E7CADF /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		D8AD0E1B1CED2DCF00E7CADF /* SeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeaViewController.swift; sourceTree = "<group>"; };
 		D8AD0E1D1CED2E9900E7CADF /* ChristmasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChristmasViewController.swift; sourceTree = "<group>"; };
+		D8AD0E201CED6EC400E7CADF /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Pacifico.ttf; path = ../../Downloads/pacifico/Pacifico.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +119,7 @@
 		9857444B1CE63FC20006D852 = {
 			isa = PBXGroup;
 			children = (
+				D8AD0E201CED6EC400E7CADF /* Pacifico.ttf */,
 				985744561CE63FC30006D852 /* MemoryMatch */,
 				9857446E1CE63FC30006D852 /* MemoryMatchTests */,
 				985744791CE63FC30006D852 /* MemoryMatchUITests */,

@@ -17,25 +17,25 @@ class FoodViewController: UIViewController {
     var playerOneScore = Int()
     var playerTwoScore = Int()
     var score = String()
-    var animalsDeck = [Card]()
+    var foodDeck = [Card]()
     var imagesArray = [UIImageView]()
     var recognizersArray = [UIGestureRecognizer]()
     var actionsArray = [String]()
-    let alligator = Card(flippedCard: UIImage(named: "Alligator-48")!, value: 1, name: "Alligator")
-    let bear = Card(flippedCard: UIImage(named: "Bear-48")!, value: 2, name: "Bear")
-    let butterfly = Card(flippedCard: UIImage(named: "Butterfly-48")!, value: 3, name: "Butterfly")
-    let elephant = Card(flippedCard: UIImage(named: "Elephant-48")!, value: 4, name: "Elephant")
-    let giraffe = Card(flippedCard: UIImage(named: "Giraffe-48")!, value: 5, name: "Giraffe")
-    let gorilla = Card(flippedCard: UIImage(named: "Gorilla-48")!, value: 6, name: "Gorilla")
-    let hummingbird = Card(flippedCard: UIImage(named: "Hummingbird-48")!, value: 7, name: "Hummingbird")
-    let kangaroo = Card(flippedCard: UIImage(named: "Kangaroo-48")!, value: 8, name: "Kangaroo")
-    let ladybug = Card(flippedCard: UIImage(named: "Ladybird-48")!, value: 9, name: "Ladybug")
-    let leopard = Card(flippedCard: UIImage(named: "Leopard-48")!, value: 10, name: "Leopard")
-    let panda = Card(flippedCard: UIImage(named: "Panda-48")!, value: 11, name: "Panda")
-    let snake = Card(flippedCard: UIImage(named: "snake")!, value: 12, name: "Snake")
-    let turtle = Card(flippedCard: UIImage(named: "Turtle-48")!, value: 13, name: "Turtle")
-    let unicorn = Card(flippedCard: UIImage(named: "Unicorn-48")!, value: 14, name: "Unicorn")
-    let wolf = Card(flippedCard: UIImage(named: "Wolf-48")!, value: 15, name: "Wolf")
+    let apple = Card(flippedCard: UIImage(named: "Apple-48")!, value: 1, name: "Apple")
+    let avocado = Card(flippedCard: UIImage(named: "Avocado-48")!, value: 2, name: "Avocado")
+    let banana = Card(flippedCard: UIImage(named: "Banana-48")!, value: 3, name: "Banana")
+    let corn = Card(flippedCard: UIImage(named: "Corn-48")!, value: 4, name: "Corn")
+    let dragonfruit = Card(flippedCard: UIImage(named: "Dragon Fruit-48")!, value: 5, name: "Dragon Fruit")
+    let eggplant = Card(flippedCard: UIImage(named: "Eggplant-48")!, value: 6, name: "Eggplant")
+    let kiwi = Card(flippedCard: UIImage(named: "Kiwi-48")!, value: 7, name: "Kiwi")
+    let pineapple = Card(flippedCard: UIImage(named: "Pineapple-48")!, value: 8, name: "Pineapple")
+    let strawberry = Card(flippedCard: UIImage(named: "Strawberry-48")!, value: 9, name: "Strawberry")
+    let pomegranate = Card(flippedCard: UIImage(named: "Pomegranate-48")!, value: 10, name: "Pomegranate")
+    let watermelon = Card(flippedCard: UIImage(named: "Watermelon-48")!, value: 11, name: "Watermelon")
+    let grapes = Card(flippedCard: UIImage(named: "Grapes-48")!, value: 12, name: "Grapes")
+    let potato = Card(flippedCard: UIImage(named: "Potato-48")!, value: 13, name: "Potato")
+    let carrot = Card(flippedCard: UIImage(named: "Carrot-48")!, value: 14, name: "Carrot")
+    let pear = Card(flippedCard: UIImage(named: "Pear-48")!, value: 15, name: "Pear")
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var image2: UIImageView!
@@ -100,7 +100,7 @@ class FoodViewController: UIViewController {
         foodLabel.text = ""
     }
     func assignbackground(){
-        let background = UIImage(named: "wood-1")
+        let background = UIImage(named: "HiRes-1")
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIViewContentMode.ScaleAspectFill
@@ -111,19 +111,19 @@ class FoodViewController: UIViewController {
         self.view.sendSubviewToBack(imageView)
     }
     func resetDeck(){
-        animalsDeck = [Card]()
-        animalsDeck = [alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, turtle, unicorn, wolf, alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, turtle, unicorn, wolf]
-        for i in 0...animalsDeck.count - 1 {
-            let j = Int(arc4random_uniform(UInt32(animalsDeck.count - i))) + i
+        foodDeck = [Card]()
+        foodDeck = [apple, banana, avocado, corn, dragonfruit, eggplant, kiwi, pineapple, strawberry, pomegranate, watermelon, grapes, carrot, potato, pear, apple, banana, avocado, corn, dragonfruit, eggplant, kiwi, pineapple, strawberry, pomegranate, watermelon, grapes, carrot, potato, pear]
+        for i in 0...foodDeck.count - 1 {
+            let j = Int(arc4random_uniform(UInt32(foodDeck.count - i))) + i
             if j != i {
-                swap(&animalsDeck[i], &animalsDeck[j])
+                swap(&foodDeck[i], &foodDeck[j])
             }
         }
     }
     func initializeImagesArray(){
         imagesArray = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image17, image18, image19, image20, image21, image22, image23, image24, image25, image26, image27, image28, image29, image30]
         for i in 0...imagesArray.count - 1 {
-            imagesArray[i].image = animalsDeck[i].unflippedCard
+            imagesArray[i].image = foodDeck[i].unflippedCard
         }
     }
     func setRecognizers(){
@@ -168,10 +168,10 @@ class FoodViewController: UIViewController {
     func fadeFirst(image: UIImageView, number: Int){
         image.fadeOut(completion: {
             (finished: Bool) -> Void in
-            image.image = self.animalsDeck[number-1].flippedCard
+            image.image = self.foodDeck[number-1].flippedCard
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
-                self.foodLabel.text = self.animalsDeck[number-1].name
+                self.foodLabel.text = self.foodDeck[number-1].name
                 self.update(number)
             })
             
@@ -180,7 +180,7 @@ class FoodViewController: UIViewController {
     func fadeSecond(image: UIImageView, number: Int){
         image.fadeOut(completion: {
             (finished: Bool) -> Void in
-            image.image = self.animalsDeck[number-1].unflippedCard
+            image.image = self.foodDeck[number-1].unflippedCard
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
                 self.foodLabel.text = ""
@@ -218,11 +218,11 @@ class FoodViewController: UIViewController {
     }
     func update(number: Int){
         if turn == 1 {
-            cardValuesDrawn.append(animalsDeck[number-1].value)
+            cardValuesDrawn.append(foodDeck[number-1].value)
             cardValuesDrawn.append(number)
             turn = 2
         } else {
-            cardValuesDrawn.append(animalsDeck[number-1].value)
+            cardValuesDrawn.append(foodDeck[number-1].value)
             cardValuesDrawn.append(number)
             print(cardValuesDrawn)
             if cardValuesDrawn[0] == cardValuesDrawn[2] {
