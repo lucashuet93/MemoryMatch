@@ -27,7 +27,7 @@
 		D8AD0E1E1CED2E9900E7CADF /* ChristmasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AD0E1D1CED2E9900E7CADF /* ChristmasViewController.swift */; };
 		D8FAC4CA1CEE338200007171 /* Comic_White_Rabbit_.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8FAC4C91CEE338200007171 /* Comic_White_Rabbit_.otf */; };
 		D8FAC4CC1CEE418400007171 /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8FAC4CB1CEE418400007171 /* Pacifico.ttf */; };
-		D8FAC4CE1CEE6FFA00007171 /* Grinched.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8FAC4CD1CEE6FFA00007171 /* Grinched.ttf */; };
+		D8FAC4D01CEE718100007171 /* Grinched.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8FAC4CF1CEE718100007171 /* Grinched.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +80,7 @@
 		D8AD0E1D1CED2E9900E7CADF /* ChristmasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChristmasViewController.swift; sourceTree = "<group>"; };
 		D8FAC4C91CEE338200007171 /* Comic_White_Rabbit_.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comic_White_Rabbit_.otf; sourceTree = "<group>"; };
 		D8FAC4CB1CEE418400007171 /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
-		D8FAC4CD1CEE6FFA00007171 /* Grinched.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Grinched.ttf; sourceTree = "<group>"; };
+		D8FAC4CF1CEE718100007171 /* Grinched.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Grinched.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				D8FAC4C91CEE338200007171 /* Comic_White_Rabbit_.otf */,
-				D8FAC4CD1CEE6FFA00007171 /* Grinched.ttf */,
+				D8FAC4CF1CEE718100007171 /* Grinched.ttf */,
 				D8FAC4CB1CEE418400007171 /* Pacifico.ttf */,
 				985744561CE63FC30006D852 /* MemoryMatch */,
 				9857446E1CE63FC30006D852 /* MemoryMatchTests */,
@@ -331,7 +331,7 @@
 			files = (
 				985744651CE63FC30006D852 /* LaunchScreen.storyboard in Resources */,
 				D8FAC4CC1CEE418400007171 /* Pacifico.ttf in Resources */,
-				D8FAC4CE1CEE6FFA00007171 /* Grinched.ttf in Resources */,
+				D8FAC4D01CEE718100007171 /* Grinched.ttf in Resources */,
 				985744621CE63FC30006D852 /* Assets.xcassets in Resources */,
 				9857445D1CE63FC30006D852 /* Main.storyboard in Resources */,
 				D8FAC4CA1CEE338200007171 /* Comic_White_Rabbit_.otf in Resources */,
