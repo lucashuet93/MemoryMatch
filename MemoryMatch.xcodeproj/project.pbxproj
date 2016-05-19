@@ -25,6 +25,8 @@
 		D8AD0E181CED072900E7CADF /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AD0E171CED072900E7CADF /* Alert.swift */; };
 		D8AD0E1C1CED2DCF00E7CADF /* SeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AD0E1B1CED2DCF00E7CADF /* SeaViewController.swift */; };
 		D8AD0E1E1CED2E9900E7CADF /* ChristmasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AD0E1D1CED2E9900E7CADF /* ChristmasViewController.swift */; };
+		D8FAC4C81CEE331900007171 /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8AD0E201CED6EC400E7CADF /* Pacifico.ttf */; };
+		D8FAC4CA1CEE338200007171 /* Comic_White_Rabbit_.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8FAC4C91CEE338200007171 /* Comic_White_Rabbit_.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,7 @@
 		D8AD0E1B1CED2DCF00E7CADF /* SeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeaViewController.swift; sourceTree = "<group>"; };
 		D8AD0E1D1CED2E9900E7CADF /* ChristmasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChristmasViewController.swift; sourceTree = "<group>"; };
 		D8AD0E201CED6EC400E7CADF /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Pacifico.ttf; path = ../../Downloads/pacifico/Pacifico.ttf; sourceTree = "<group>"; };
+		D8FAC4C91CEE338200007171 /* Comic_White_Rabbit_.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comic_White_Rabbit_.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				D8AD0E201CED6EC400E7CADF /* Pacifico.ttf */,
+				D8FAC4C91CEE338200007171 /* Comic_White_Rabbit_.otf */,
 				985744561CE63FC30006D852 /* MemoryMatch */,
 				9857446E1CE63FC30006D852 /* MemoryMatchTests */,
 				985744791CE63FC30006D852 /* MemoryMatchUITests */,
@@ -324,7 +328,9 @@
 			files = (
 				985744651CE63FC30006D852 /* LaunchScreen.storyboard in Resources */,
 				985744621CE63FC30006D852 /* Assets.xcassets in Resources */,
+				D8FAC4C81CEE331900007171 /* Pacifico.ttf in Resources */,
 				9857445D1CE63FC30006D852 /* Main.storyboard in Resources */,
+				D8FAC4CA1CEE338200007171 /* Comic_White_Rabbit_.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

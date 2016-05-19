@@ -6,8 +6,12 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Pacifico.ttf">
-            <string>Pacifico</string>
+        <mutableArray key="Comic_White_Rabbit_.otf">
+            <string>ComicWhiteRabbit</string>
+            <string>ComicWhiteRabbit</string>
+            <string>ComicWhiteRabbit</string>
+            <string>ComicWhiteRabbit</string>
+            <string>ComicWhiteRabbit</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -31,7 +35,7 @@
                                     <constraint firstAttribute="height" constant="38" id="Qqv-Kc-0H2"/>
                                     <constraint firstAttribute="width" constant="91" id="aFt-9f-d8P"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="ComicWhiteRabbit" family="Comic White Rabbit" pointSize="20"/>
                                 <state key="normal" title="Animals">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -42,9 +46,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="tj5-kv-fPL" kind="popoverPresentation" identifier="Animals" popoverAnchorView="2Mv-ei-8zK" id="1bF-iO-s6N">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="tj5-kv-fPL" kind="presentation" identifier="Animals" modalTransitionStyle="partialCurl" id="1bF-iO-s6N"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgk-5L-0KN">
@@ -53,12 +55,12 @@
                                     <constraint firstAttribute="height" constant="38" id="0d3-8H-XYo"/>
                                     <constraint firstAttribute="width" constant="246" id="3Bk-OZ-8tf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="ComicWhiteRabbit" family="Comic White Rabbit" pointSize="20"/>
                                 <state key="normal" title="Fruits And Vegetables">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="AEv-LW-SXa" kind="presentation" identifier="Food" id="yc8-8K-5hD"/>
+                                    <segue destination="AEv-LW-SXa" kind="presentation" identifier="Food" modalTransitionStyle="partialCurl" id="yc8-8K-5hD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dko-ao-WTh">
@@ -67,14 +69,12 @@
                                     <constraint firstAttribute="width" constant="162" id="pWn-UX-avA"/>
                                     <constraint firstAttribute="height" constant="38" id="zHR-Q0-yha"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="ComicWhiteRabbit" family="Comic White Rabbit" pointSize="20"/>
                                 <state key="normal" title="Under The Sea">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="z6b-dS-1vi" kind="popoverPresentation" identifier="Sea" popoverAnchorView="Dko-ao-WTh" id="Lk0-VD-JAO">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="z6b-dS-1vi" kind="presentation" identifier="Sea" modalTransitionStyle="partialCurl" id="Lk0-VD-JAO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rn0-ao-agP">
@@ -83,22 +83,22 @@
                                     <constraint firstAttribute="height" constant="38" id="T2s-9e-jkv"/>
                                     <constraint firstAttribute="width" constant="162" id="bIR-AF-Vn2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="ComicWhiteRabbit" family="Comic White Rabbit" pointSize="20"/>
                                 <state key="normal" title="Christmas">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ccM-qi-S5B" kind="presentation" identifier="Christmas" id="ZYp-sa-oKT"/>
+                                    <segue destination="ccM-qi-S5B" kind="presentation" identifier="Christmas" modalTransitionStyle="partialCurl" id="ZYp-sa-oKT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memory Match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQx-Mj-fdb">
-                                <rect key="frame" x="107.5" y="175" width="385.5" height="112"/>
+                                <rect key="frame" x="154" y="175" width="292.5" height="79.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="79" id="eUT-ly-eNd"/>
                                     <constraint firstAttribute="width" constant="378.5" id="jfb-fK-GIa"/>
                                     <constraint firstAttribute="width" constant="246.5" id="oxc-OH-pln"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Pacifico" family="Pacifico" pointSize="60"/>
+                                <fontDescription key="fontDescription" name="ComicWhiteRabbit" family="Comic White Rabbit" pointSize="60"/>
                                 <color key="textColor" red="1" green="0.12656368209449376" blue="0.098522103994696408" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
@@ -154,6 +154,9 @@
                     </view>
                     <connections>
                         <outlet property="animalButton" destination="2Mv-ei-8zK" id="R4g-Ki-8xj"/>
+                        <outlet property="christmasButton" destination="rn0-ao-agP" id="4sh-6V-dwc"/>
+                        <outlet property="foodButton" destination="dgk-5L-0KN" id="IVC-2R-13O"/>
+                        <outlet property="seaButton" destination="Dko-ao-WTh" id="Cut-gU-cWq"/>
                         <outlet property="titleLabel" destination="iQx-Mj-fdb" id="JhK-jN-09r"/>
                     </connections>
                 </viewController>

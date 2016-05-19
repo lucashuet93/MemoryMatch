@@ -14,13 +14,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         assignbackground()
         // Do any additional setup after loading the view.
-        animalButton.layer.cornerRadius = 10
-        animalButton.setBackgroundImage(UIImage(named: "background-1"), forState: .Normal)
-        animalButton.layer.borderColor = UIColor.whiteColor().CGColor
-        animalButton.layer.borderWidth = 2.0
-        animalButton.layer.masksToBounds = true
+        var buttons  = [UIButton] ()
+        buttons = [animalButton, foodButton, seaButton, christmasButton]
+        for button in buttons {
+            button.layer.cornerRadius = 10
+            button.layer.borderColor = UIColor.whiteColor().CGColor
+            button.layer.borderWidth = 2.0
+            button.layer.masksToBounds = true
+        }
+        animalButton.backgroundColor = UIColor.purpleColor()
+        foodButton.backgroundColor = UIColor.greenColor()
+        seaButton.backgroundColor = UIColor.blueColor()
+        christmasButton.backgroundColor = UIColor.redColor()
     }
     
+    @IBOutlet weak var christmasButton: UIButton!
+    @IBOutlet weak var seaButton: UIButton!
+    @IBOutlet weak var foodButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var animalButton: UIButton!
     func assignbackground(){
