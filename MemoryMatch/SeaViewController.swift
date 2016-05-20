@@ -18,25 +18,25 @@ class SeaViewController: UIViewController {
     var playerOneScore = Int()
     var playerTwoScore = Int()
     var score = String()
-    var animalsDeck = [Card]()
+    var foodDeck = [Card]()
     var imagesArray = [UIImageView]()
     var recognizersArray = [UIGestureRecognizer]()
     var actionsArray = [String]()
-    let alligator = Card(flippedCard: UIImage(named: "Alligator-48")!, value: 1, name: "Alligator")
-    let bear = Card(flippedCard: UIImage(named: "Bear-48")!, value: 2, name: "Bear")
-    let butterfly = Card(flippedCard: UIImage(named: "Butterfly-48")!, value: 3, name: "Butterfly")
-    let elephant = Card(flippedCard: UIImage(named: "Elephant-48")!, value: 4, name: "Elephant")
-    let giraffe = Card(flippedCard: UIImage(named: "Giraffe-48")!, value: 5, name: "Giraffe")
-    let gorilla = Card(flippedCard: UIImage(named: "Gorilla-48")!, value: 6, name: "Gorilla")
-    let hummingbird = Card(flippedCard: UIImage(named: "Hummingbird-48")!, value: 7, name: "Hummingbird")
-    let kangaroo = Card(flippedCard: UIImage(named: "Kangaroo-48")!, value: 8, name: "Kangaroo")
-    let ladybug = Card(flippedCard: UIImage(named: "Ladybird-48")!, value: 9, name: "Ladybug")
-    let leopard = Card(flippedCard: UIImage(named: "Leopard-48")!, value: 10, name: "Leopard")
-    let panda = Card(flippedCard: UIImage(named: "Panda-48")!, value: 11, name: "Panda")
-    let snake = Card(flippedCard: UIImage(named: "snake")!, value: 12, name: "Snake")
-    let turtle = Card(flippedCard: UIImage(named: "Turtle-48")!, value: 13, name: "Turtle")
-    let unicorn = Card(flippedCard: UIImage(named: "Unicorn-48")!, value: 14, name: "Unicorn")
-    let wolf = Card(flippedCard: UIImage(named: "Wolf-48")!, value: 15, name: "Wolf")
+    let alligator = Card(flippedCard: UIImage(named: "Alligator-48")!, unflippedCard: UIImage(named: "BlueQ")!, value: 1, name: "Alligator")
+    let bear = Card(flippedCard: UIImage(named: "Bear-48")!, unflippedCard: UIImage(named: "BlueQ")!, value: 2, name: "Bear")
+    let butterfly = Card(flippedCard: UIImage(named: "Butterfly-48")!, unflippedCard: UIImage(named: "BlueQ")!, value: 3, name: "Butterfly")
+    let elephant = Card(flippedCard: UIImage(named: "Elephant-48")!, unflippedCard: UIImage(named: "BlueQ")!, value: 4, name: "Elephant")
+    let giraffe = Card(flippedCard: UIImage(named: "Giraffe-48")!, unflippedCard: UIImage(named: "BlueQ")!, value: 5, name: "Giraffe")
+    let gorilla = Card(flippedCard: UIImage(named: "Gorilla-48")!, unflippedCard: UIImage(named: "BlueQ")!, value: 6, name: "Gorilla")
+    let hummingbird = Card(flippedCard: UIImage(named: "Hummingbird-48")!, unflippedCard: UIImage(named: "BlueQ")!, value: 7, name: "Hummingbird")
+    let kangaroo = Card(flippedCard: UIImage(named: "Kangaroo-48")!, unflippedCard: UIImage(named: "BlueQ")!, value: 8, name: "Kangaroo")
+    let ladybug = Card(flippedCard: UIImage(named: "Ladybird-48")!, unflippedCard: UIImage(named: "BlueQ")!, value: 9, name: "Ladybug")
+    let leopard = Card(flippedCard: UIImage(named: "Leopard-48")!, unflippedCard: UIImage(named: "BlueQ")!, value: 10, name: "Leopard")
+    let panda = Card(flippedCard: UIImage(named: "Panda-48")!, unflippedCard: UIImage(named: "BlueQ")!, value: 11, name: "Panda")
+    let snake = Card(flippedCard: UIImage(named: "Snake-48")!, unflippedCard: UIImage(named: "BlueQ")!, value: 12, name: "Snake")
+    let horse = Card(flippedCard: UIImage(named: "Horse-48")!, unflippedCard: UIImage(named: "BlueQ")!, value: 13, name: "Horse")
+    let unicorn = Card(flippedCard: UIImage(named: "Unicorn-48")!, unflippedCard: UIImage(named: "BlueQ")!, value: 14, name: "Unicorn")
+    let wolf = Card(flippedCard: UIImage(named: "Wolf-48")!, unflippedCard: UIImage(named: "BlueQ")!, value: 15, name: "Wolf")
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var image2: UIImageView!
@@ -76,11 +76,11 @@ class SeaViewController: UIViewController {
             imagesArray[i].hidden = false
         }
     }
-    @IBOutlet weak var seaLabel: UILabel!
     @IBAction func menuButtonPressed(sender: UIButton) {
         delegate.dismissViewControllerAnimated(true) {
         }
     }
+    @IBOutlet weak var seaLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeLabelsAndCards()
@@ -112,19 +112,19 @@ class SeaViewController: UIViewController {
         self.view.sendSubviewToBack(imageView)
     }
     func resetDeck(){
-        animalsDeck = [Card]()
-        animalsDeck = [alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, turtle, unicorn, wolf, alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, turtle, unicorn, wolf]
-        for i in 0...animalsDeck.count - 1 {
-            let j = Int(arc4random_uniform(UInt32(animalsDeck.count - i))) + i
+        foodDeck = [Card]()
+        foodDeck = [alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, horse, unicorn, wolf, alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, horse, unicorn, wolf]
+        for i in 0...foodDeck.count - 1 {
+            let j = Int(arc4random_uniform(UInt32(foodDeck.count - i))) + i
             if j != i {
-                swap(&animalsDeck[i], &animalsDeck[j])
+                swap(&foodDeck[i], &foodDeck[j])
             }
         }
     }
     func initializeImagesArray(){
         imagesArray = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image17, image18, image19, image20, image21, image22, image23, image24, image25, image26, image27, image28, image29, image30]
         for i in 0...imagesArray.count - 1 {
-            imagesArray[i].image = animalsDeck[i].unflippedCard
+            imagesArray[i].image = foodDeck[i].unflippedCard
         }
     }
     func setRecognizers(){
@@ -160,28 +160,37 @@ class SeaViewController: UIViewController {
         let recognizer30 = UITapGestureRecognizer()
         recognizersArray = [recognizer1, recognizer2, recognizer3, recognizer4, recognizer5, recognizer6, recognizer7, recognizer8, recognizer9, recognizer10, recognizer11, recognizer12, recognizer13, recognizer14, recognizer15, recognizer16, recognizer17, recognizer18, recognizer19, recognizer20, recognizer21, recognizer22, recognizer23, recognizer24, recognizer25, recognizer26, recognizer27, recognizer28, recognizer29, recognizer30]
         actionsArray = ["image1HasBeenTapped", "image2HasBeenTapped", "image3HasBeenTapped", "image4HasBeenTapped", "image5HasBeenTapped", "image6HasBeenTapped", "image7HasBeenTapped", "image8HasBeenTapped", "image9HasBeenTapped", "image10HasBeenTapped", "image11HasBeenTapped", "image12HasBeenTapped", "image13HasBeenTapped", "image14HasBeenTapped", "image15HasBeenTapped", "image16HasBeenTapped", "image17HasBeenTapped", "image18HasBeenTapped", "image19HasBeenTapped", "image20HasBeenTapped", "image21HasBeenTapped", "image22HasBeenTapped", "image23HasBeenTapped", "image24HasBeenTapped", "image25HasBeenTapped", "image26HasBeenTapped", "image27HasBeenTapped", "image28HasBeenTapped", "image29HasBeenTapped", "image30HasBeenTapped"]
+        loadRecognizers()
+    }
+    func loadRecognizers() {
         for i in 0...imagesArray.count-1 {
             imagesArray[i].userInteractionEnabled = true
             imagesArray[i].addGestureRecognizer(recognizersArray[i])
             recognizersArray[i].addTarget(self, action: Selector(actionsArray[i]))
         }
     }
+    func removeRecognizers() {
+        for i in 0...imagesArray.count-1 {
+            imagesArray[i].userInteractionEnabled = true
+            recognizersArray[i].removeTarget(self, action: Selector(actionsArray[i]))
+        }
+    }
     func fadeFirst(image: UIImageView, number: Int){
         image.fadeOut(completion: {
             (finished: Bool) -> Void in
-            image.image = self.animalsDeck[number-1].flippedCard
+            image.image = self.foodDeck[number-1].flippedCard
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
-                self.seaLabel.text = self.animalsDeck[number-1].name
+                self.seaLabel.text = self.foodDeck[number-1].name
                 self.update(number)
             })
             
         })
     }
     func fadeSecond(image: UIImageView, number: Int){
-        image.fadeOut(completion: {
+        image.fadeOutWithDelay(completion: {
             (finished: Bool) -> Void in
-            image.image = self.animalsDeck[number-1].unflippedCard
+            image.image = self.foodDeck[number-1].unflippedCard
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
                 self.seaLabel.text = ""
@@ -200,6 +209,7 @@ class SeaViewController: UIViewController {
                         self.turn = 1
                     })
                 }
+                self.loadRecognizers()
             })
         })
     }
@@ -219,13 +229,13 @@ class SeaViewController: UIViewController {
     }
     func update(number: Int){
         if turn == 1 {
-            cardValuesDrawn.append(animalsDeck[number-1].value)
+            cardValuesDrawn.append(foodDeck[number-1].value)
             cardValuesDrawn.append(number)
             turn = 2
         } else {
-            cardValuesDrawn.append(animalsDeck[number-1].value)
+            removeRecognizers()
+            cardValuesDrawn.append(foodDeck[number-1].value)
             cardValuesDrawn.append(number)
-            print(cardValuesDrawn)
             if cardValuesDrawn[0] == cardValuesDrawn[2] {
                 count += 1
                 if player == 1 {
@@ -260,7 +270,6 @@ class SeaViewController: UIViewController {
                     })
                     seaLabel.text = ""
                     if count == 15 {
-                        print("I'm Here2")
                         if playerTwoScore > playerOneScore {
                             printText(2)
                         } else {

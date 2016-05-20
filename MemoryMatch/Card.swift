@@ -11,11 +11,12 @@ import UIKit
 
 class Card: NSObject {
     var value = Int()
-    let unflippedCard = UIImage(named: "card")
+    var unflippedCard: UIImage
     var flippedCard: UIImage
     var name = String()
-    init(flippedCard: UIImage, value: Int, name: String) {
+    init(flippedCard: UIImage, unflippedCard: UIImage, value: Int, name: String) {
         self.flippedCard = flippedCard
+        self.unflippedCard = unflippedCard
         self.name = name
         self.value = value
     }

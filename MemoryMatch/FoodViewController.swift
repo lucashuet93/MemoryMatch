@@ -21,21 +21,21 @@ class FoodViewController: UIViewController {
     var imagesArray = [UIImageView]()
     var recognizersArray = [UIGestureRecognizer]()
     var actionsArray = [String]()
-    let apple = Card(flippedCard: UIImage(named: "Apple-48")!, value: 1, name: "Apple")
-    let avocado = Card(flippedCard: UIImage(named: "Avocado-48")!, value: 2, name: "Avocado")
-    let banana = Card(flippedCard: UIImage(named: "Banana-48")!, value: 3, name: "Banana")
-    let corn = Card(flippedCard: UIImage(named: "Corn-48")!, value: 4, name: "Corn")
-    let dragonfruit = Card(flippedCard: UIImage(named: "Dragon Fruit-48")!, value: 5, name: "Dragon Fruit")
-    let eggplant = Card(flippedCard: UIImage(named: "Eggplant-48")!, value: 6, name: "Eggplant")
-    let kiwi = Card(flippedCard: UIImage(named: "Kiwi-48")!, value: 7, name: "Kiwi")
-    let pineapple = Card(flippedCard: UIImage(named: "Pineapple-48")!, value: 8, name: "Pineapple")
-    let strawberry = Card(flippedCard: UIImage(named: "Strawberry-48")!, value: 9, name: "Strawberry")
-    let pomegranate = Card(flippedCard: UIImage(named: "Pomegranate-48")!, value: 10, name: "Pomegranate")
-    let watermelon = Card(flippedCard: UIImage(named: "Watermelon-48")!, value: 11, name: "Watermelon")
-    let grapes = Card(flippedCard: UIImage(named: "Grapes-48")!, value: 12, name: "Grapes")
-    let potato = Card(flippedCard: UIImage(named: "Potato-48")!, value: 13, name: "Potato")
-    let carrot = Card(flippedCard: UIImage(named: "Carrot-48")!, value: 14, name: "Carrot")
-    let pear = Card(flippedCard: UIImage(named: "Pear-48")!, value: 15, name: "Pear")
+    let alligator = Card(flippedCard: UIImage(named: "Alligator-48")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 1, name: "Alligator")
+    let bear = Card(flippedCard: UIImage(named: "Bear-48")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 2, name: "Bear")
+    let butterfly = Card(flippedCard: UIImage(named: "Butterfly-48")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 3, name: "Butterfly")
+    let elephant = Card(flippedCard: UIImage(named: "Elephant-48")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 4, name: "Elephant")
+    let giraffe = Card(flippedCard: UIImage(named: "Giraffe-48")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 5, name: "Giraffe")
+    let gorilla = Card(flippedCard: UIImage(named: "Gorilla-48")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 6, name: "Gorilla")
+    let hummingbird = Card(flippedCard: UIImage(named: "Hummingbird-48")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 7, name: "Hummingbird")
+    let kangaroo = Card(flippedCard: UIImage(named: "Kangaroo-48")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 8, name: "Kangaroo")
+    let ladybug = Card(flippedCard: UIImage(named: "Ladybird-48")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 9, name: "Ladybug")
+    let leopard = Card(flippedCard: UIImage(named: "Leopard-48")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 10, name: "Leopard")
+    let panda = Card(flippedCard: UIImage(named: "Panda-48")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 11, name: "Panda")
+    let snake = Card(flippedCard: UIImage(named: "Snake-48")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 12, name: "Snake")
+    let horse = Card(flippedCard: UIImage(named: "Horse-48")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 13, name: "Horse")
+    let unicorn = Card(flippedCard: UIImage(named: "Unicorn-48")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 14, name: "Unicorn")
+    let wolf = Card(flippedCard: UIImage(named: "Wolf-48")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 15, name: "Wolf")
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var image2: UIImageView!
@@ -112,7 +112,7 @@ class FoodViewController: UIViewController {
     }
     func resetDeck(){
         foodDeck = [Card]()
-        foodDeck = [apple, banana, avocado, corn, dragonfruit, eggplant, kiwi, pineapple, strawberry, pomegranate, watermelon, grapes, carrot, potato, pear, apple, banana, avocado, corn, dragonfruit, eggplant, kiwi, pineapple, strawberry, pomegranate, watermelon, grapes, carrot, potato, pear]
+        foodDeck = [alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, horse, unicorn, wolf, alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, horse, unicorn, wolf]
         for i in 0...foodDeck.count - 1 {
             let j = Int(arc4random_uniform(UInt32(foodDeck.count - i))) + i
             if j != i {
@@ -276,6 +276,7 @@ class FoodViewController: UIViewController {
                         }
                     }
                 }
+                loadRecognizers()
             } else {
                 fadeSecond(imagesArray[cardValuesDrawn[1]-1], number: cardValuesDrawn[0])
                 fadeSecond(imagesArray[cardValuesDrawn[3]-1], number: cardValuesDrawn[0])

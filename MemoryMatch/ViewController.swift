@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         for button in buttons {
             button.layer.cornerRadius = 10
             button.layer.masksToBounds = true
+            button.layer.borderColor = UIColor.whiteColor().CGColor
+            button.layer.borderWidth = 1
         }
     }
     

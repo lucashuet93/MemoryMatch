@@ -21,21 +21,21 @@ class AnimalViewController: UIViewController {
     var imagesArray = [UIImageView]()
     var recognizersArray = [UIGestureRecognizer]()
     var actionsArray = [String]()
-    let alligator = Card(flippedCard: UIImage(named: "Alligator-48")!, value: 1, name: "Alligator")
-    let bear = Card(flippedCard: UIImage(named: "Bear-48")!, value: 2, name: "Bear")
-    let butterfly = Card(flippedCard: UIImage(named: "Butterfly-48")!, value: 3, name: "Butterfly")
-    let elephant = Card(flippedCard: UIImage(named: "Elephant-48")!, value: 4, name: "Elephant")
-    let giraffe = Card(flippedCard: UIImage(named: "Giraffe-48")!, value: 5, name: "Giraffe")
-    let gorilla = Card(flippedCard: UIImage(named: "Gorilla-48")!, value: 6, name: "Gorilla")
-    let hummingbird = Card(flippedCard: UIImage(named: "Hummingbird-48")!, value: 7, name: "Hummingbird")
-    let kangaroo = Card(flippedCard: UIImage(named: "Kangaroo-48")!, value: 8, name: "Kangaroo")
-    let ladybug = Card(flippedCard: UIImage(named: "Ladybird-48")!, value: 9, name: "Ladybug")
-    let leopard = Card(flippedCard: UIImage(named: "Leopard-48")!, value: 10, name: "Leopard")
-    let panda = Card(flippedCard: UIImage(named: "Panda-48")!, value: 11, name: "Panda")
-    let snake = Card(flippedCard: UIImage(named: "snake")!, value: 12, name: "Snake")
-    let turtle = Card(flippedCard: UIImage(named: "Turtle-48")!, value: 13, name: "Turtle")
-    let unicorn = Card(flippedCard: UIImage(named: "Unicorn-48")!, value: 14, name: "Unicorn")
-    let wolf = Card(flippedCard: UIImage(named: "Wolf-48")!, value: 15, name: "Wolf")
+    let alligator = Card(flippedCard: UIImage(named: "Alligator-48")!, unflippedCard: UIImage(named: "PurpleQ")!, value: 1, name: "Alligator")
+    let bear = Card(flippedCard: UIImage(named: "Bear-48")!, unflippedCard: UIImage(named: "PurpleQ")!, value: 2, name: "Bear")
+    let butterfly = Card(flippedCard: UIImage(named: "Butterfly-48")!, unflippedCard: UIImage(named: "PurpleQ")!, value: 3, name: "Butterfly")
+    let elephant = Card(flippedCard: UIImage(named: "Elephant-48")!, unflippedCard: UIImage(named: "PurpleQ")!, value: 4, name: "Elephant")
+    let giraffe = Card(flippedCard: UIImage(named: "Giraffe-48")!, unflippedCard: UIImage(named: "PurpleQ")!, value: 5, name: "Giraffe")
+    let gorilla = Card(flippedCard: UIImage(named: "Gorilla-48")!, unflippedCard: UIImage(named: "PurpleQ")!, value: 6, name: "Gorilla")
+    let hummingbird = Card(flippedCard: UIImage(named: "Hummingbird-48")!, unflippedCard: UIImage(named: "PurpleQ")!, value: 7, name: "Hummingbird")
+    let kangaroo = Card(flippedCard: UIImage(named: "Kangaroo-48")!, unflippedCard: UIImage(named: "PurpleQ")!, value: 8, name: "Kangaroo")
+    let ladybug = Card(flippedCard: UIImage(named: "Ladybird-48")!, unflippedCard: UIImage(named: "PurpleQ")!, value: 9, name: "Ladybug")
+    let leopard = Card(flippedCard: UIImage(named: "Leopard-48")!, unflippedCard: UIImage(named: "PurpleQ")!,value: 10, name: "Leopard")
+    let panda = Card(flippedCard: UIImage(named: "Panda-48")!, unflippedCard: UIImage(named: "PurpleQ")!,value: 11, name: "Panda")
+    let snake = Card(flippedCard: UIImage(named: "Snake-48")!, unflippedCard: UIImage(named: "PurpleQ")!,value: 12, name: "Snake")
+    let horse = Card(flippedCard: UIImage(named: "Horse-48")!, unflippedCard: UIImage(named: "PurpleQ")!, value: 13, name: "Horse")
+    let unicorn = Card(flippedCard: UIImage(named: "Unicorn-48")!, unflippedCard: UIImage(named: "PurpleQ")!,value: 14, name: "Unicorn")
+    let wolf = Card(flippedCard: UIImage(named: "Wolf-48")!, unflippedCard: UIImage(named: "PurpleQ")!, value: 15, name: "Wolf")
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var image2: UIImageView!
@@ -112,7 +112,7 @@ class AnimalViewController: UIViewController {
     }
     func resetDeck(){
         animalsDeck = [Card]()
-        animalsDeck = [alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, turtle, unicorn, wolf, alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, turtle, unicorn, wolf]
+        animalsDeck = [alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, horse, unicorn, wolf, alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, horse, unicorn, wolf]
         for i in 0...animalsDeck.count - 1 {
             let j = Int(arc4random_uniform(UInt32(animalsDeck.count - i))) + i
             if j != i {
