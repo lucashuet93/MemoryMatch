@@ -76,11 +76,11 @@ class SeaViewController: UIViewController {
             imagesArray[i].hidden = false
         }
     }
+    @IBOutlet weak var seaLabel: UILabel!
     @IBAction func menuButtonPressed(sender: UIButton) {
         delegate.dismissViewControllerAnimated(true) {
         }
     }
-    @IBOutlet weak var animalLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeLabelsAndCards()
@@ -98,7 +98,7 @@ class SeaViewController: UIViewController {
         count = 0
         score = ("\(playerOneScore) - \(playerTwoScore)")
         scoreLabel.text = score
-        animalLabel.text = ""
+        seaLabel.text = ""
     }
     func assignbackground(){
         let background = UIImage(named: "under-ocean-background")
@@ -172,7 +172,7 @@ class SeaViewController: UIViewController {
             image.image = self.animalsDeck[number-1].flippedCard
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
-                self.animalLabel.text = self.animalsDeck[number-1].name
+                self.seaLabel.text = self.animalsDeck[number-1].name
                 self.update(number)
             })
             
@@ -184,7 +184,7 @@ class SeaViewController: UIViewController {
             image.image = self.animalsDeck[number-1].unflippedCard
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
-                self.animalLabel.text = ""
+                self.seaLabel.text = ""
                 if self.player == 1 {
                     let alert = showAlert("Player 2's Turn!", message: "")
                     self.presentViewController(alert, animated: true, completion: {
@@ -205,7 +205,7 @@ class SeaViewController: UIViewController {
     }
     func printText(player: Int){
         self.view.bringSubviewToFront(winnerLabel);
-        animalLabel.hidden = true
+        seaLabel.hidden = true
         winnerLabel.hidden = false
         if player == 1 {
             winnerLabel.text = "Player 1 Wins"
@@ -239,7 +239,7 @@ class SeaViewController: UIViewController {
                         self.cardValuesDrawn = [Int]()
                         self.scoreLabel.text = self.score
                     })
-                    animalLabel.text = ""
+                    seaLabel.text = ""
                     if count == 15 {
                         if playerTwoScore > playerOneScore {
                             printText(2)
@@ -258,7 +258,7 @@ class SeaViewController: UIViewController {
                         self.cardValuesDrawn = [Int]()
                         self.scoreLabel.text = self.score
                     })
-                    animalLabel.text = ""
+                    seaLabel.text = ""
                     if count == 15 {
                         print("I'm Here2")
                         if playerTwoScore > playerOneScore {

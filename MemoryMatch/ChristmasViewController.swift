@@ -80,7 +80,7 @@ class ChristmasViewController: UIViewController {
         delegate.dismissViewControllerAnimated(true) {
         }
     }
-    @IBOutlet weak var animalLabel: UILabel!
+    @IBOutlet weak var christmasLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeLabelsAndCards()
@@ -98,7 +98,7 @@ class ChristmasViewController: UIViewController {
         count = 0
         score = ("\(playerOneScore) - \(playerTwoScore)")
         scoreLabel.text = score
-        animalLabel.text = ""
+        christmasLabel.text = ""
     }
     func assignbackground(){
         let background = UIImage(named: "winterbgblue")
@@ -172,7 +172,7 @@ class ChristmasViewController: UIViewController {
             image.image = self.animalsDeck[number-1].flippedCard
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
-                self.animalLabel.text = self.animalsDeck[number-1].name
+                self.christmasLabel.text = self.animalsDeck[number-1].name
                 self.update(number)
             })
             
@@ -184,7 +184,7 @@ class ChristmasViewController: UIViewController {
             image.image = self.animalsDeck[number-1].unflippedCard
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
-                self.animalLabel.text = ""
+                self.christmasLabel.text = ""
                 if self.player == 1 {
                     let alert = showAlert("Player 2's Turn!", message: "")
                     self.presentViewController(alert, animated: true, completion: {
@@ -205,7 +205,7 @@ class ChristmasViewController: UIViewController {
     }
     func printText(player: Int){
         self.view.bringSubviewToFront(winnerLabel);
-        animalLabel.hidden = true
+        christmasLabel.hidden = true
         winnerLabel.hidden = false
         if player == 1 {
             winnerLabel.text = "Player 1 Wins"
@@ -239,7 +239,7 @@ class ChristmasViewController: UIViewController {
                         self.cardValuesDrawn = [Int]()
                         self.scoreLabel.text = self.score
                     })
-                    animalLabel.text = ""
+                    christmasLabel.text = ""
                     if count == 15 {
                         if playerTwoScore > playerOneScore {
                             printText(2)
@@ -258,7 +258,7 @@ class ChristmasViewController: UIViewController {
                         self.cardValuesDrawn = [Int]()
                         self.scoreLabel.text = self.score
                     })
-                    animalLabel.text = ""
+                    christmasLabel.text = ""
                     if count == 15 {
                         print("I'm Here2")
                         if playerTwoScore > playerOneScore {
