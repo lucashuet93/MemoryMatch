@@ -100,7 +100,7 @@ class AnimalViewController: UIViewController {
         animalLabel.text = ""
     }
     func assignbackground(){
-        let background = UIImage(named: "red_mountains")
+        let background = UIImage(named: "Mountains")
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIViewContentMode.ScaleAspectFill
