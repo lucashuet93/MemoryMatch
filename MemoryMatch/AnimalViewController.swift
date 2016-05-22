@@ -177,7 +177,7 @@ class AnimalViewController: UIViewController {
             
         })
     }
-    func fadeSecond(image: UIImageView, number: Int){
+    func fadeSecondWithAlert(image: UIImageView, number: Int){
         image.fadeOut(completion: {
             (finished: Bool) -> Void in
             image.image = self.animalsDeck[number-1].unflippedCard
@@ -199,6 +199,16 @@ class AnimalViewController: UIViewController {
                         self.turn = 1
                     })
                 }
+            })
+        })
+    }
+    func fadeSecond(image: UIImageView, number: Int){
+        image.fadeOut(completion: {
+            (finished: Bool) -> Void in
+            image.image = self.animalsDeck[number-1].unflippedCard
+            image.fadeIn(completion: {
+                (finished: Bool) -> Void in
+                self.animalLabel.text = ""
             })
         })
     }
@@ -268,7 +278,7 @@ class AnimalViewController: UIViewController {
                     }
                 }
             } else {
-                fadeSecond(imagesArray[cardValuesDrawn[1]-1], number: cardValuesDrawn[0])
+                fadeSecondWithAlert(imagesArray[cardValuesDrawn[1]-1], number: cardValuesDrawn[0])
                 fadeSecond(imagesArray[cardValuesDrawn[3]-1], number: cardValuesDrawn[0])
             }
         }

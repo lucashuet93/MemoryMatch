@@ -187,8 +187,8 @@ class SeaViewController: UIViewController {
             
         })
     }
-    func fadeSecond(image: UIImageView, number: Int){
-        image.fadeOutWithDelay(completion: {
+    func fadeSecondWithAlert(image: UIImageView, number: Int){
+        image.fadeOut(completion: {
             (finished: Bool) -> Void in
             image.image = self.foodDeck[number-1].unflippedCard
             image.fadeIn(completion: {
@@ -209,7 +209,16 @@ class SeaViewController: UIViewController {
                         self.turn = 1
                     })
                 }
-                self.loadRecognizers()
+            })
+        })
+    }
+    func fadeSecond(image: UIImageView, number: Int){
+        image.fadeOut(completion: {
+            (finished: Bool) -> Void in
+            image.image = self.foodDeck[number-1].unflippedCard
+            image.fadeIn(completion: {
+                (finished: Bool) -> Void in
+                self.seaLabel.text = ""
             })
         })
     }
@@ -278,7 +287,7 @@ class SeaViewController: UIViewController {
                     }
                 }
             } else {
-                fadeSecond(imagesArray[cardValuesDrawn[1]-1], number: cardValuesDrawn[0])
+                fadeSecondWithAlert(imagesArray[cardValuesDrawn[1]-1], number: cardValuesDrawn[0])
                 fadeSecond(imagesArray[cardValuesDrawn[3]-1], number: cardValuesDrawn[0])
             }
         }
