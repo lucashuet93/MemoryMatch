@@ -187,7 +187,7 @@ class FoodViewController: UIViewController {
         })
     }
     func fadeSecondWithAlert(image: UIImageView, number: Int){
-        image.fadeOut(completion: {
+        image.fadeOutWithDelay(completion: {
             (finished: Bool) -> Void in
             image.image = self.foodDeck[number-1].unflippedCard
             image.fadeIn(completion: {
@@ -212,7 +212,7 @@ class FoodViewController: UIViewController {
         })
     }
     func fadeSecond(image: UIImageView, number: Int){
-        image.fadeOut(completion: {
+        image.fadeOutWithDelay(completion: {
             (finished: Bool) -> Void in
             image.image = self.foodDeck[number-1].unflippedCard
             image.fadeIn(completion: {
