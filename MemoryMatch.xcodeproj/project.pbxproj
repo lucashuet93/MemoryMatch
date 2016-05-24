@@ -78,9 +78,9 @@
 		D8AD0E171CED072900E7CADF /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		D8AD0E1B1CED2DCF00E7CADF /* SeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeaViewController.swift; sourceTree = "<group>"; };
 		D8AD0E1D1CED2E9900E7CADF /* ChristmasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChristmasViewController.swift; sourceTree = "<group>"; };
-		D8FAC4C91CEE338200007171 /* Comic_White_Rabbit_.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comic_White_Rabbit_.otf; sourceTree = "<group>"; };
-		D8FAC4CB1CEE418400007171 /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
-		D8FAC4CF1CEE718100007171 /* Grinched.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Grinched.ttf; sourceTree = "<group>"; };
+		D8FAC4C91CEE338200007171 /* Comic_White_Rabbit_.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Comic_White_Rabbit_.otf; path = ../Comic_White_Rabbit_.otf; sourceTree = "<group>"; };
+		D8FAC4CB1CEE418400007171 /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Pacifico.ttf; path = ../Pacifico.ttf; sourceTree = "<group>"; };
+		D8FAC4CF1CEE718100007171 /* Grinched.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Grinched.ttf; path = ../Grinched.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,9 +124,6 @@
 		9857444B1CE63FC20006D852 = {
 			isa = PBXGroup;
 			children = (
-				D8FAC4C91CEE338200007171 /* Comic_White_Rabbit_.otf */,
-				D8FAC4CF1CEE718100007171 /* Grinched.ttf */,
-				D8FAC4CB1CEE418400007171 /* Pacifico.ttf */,
 				985744561CE63FC30006D852 /* MemoryMatch */,
 				9857446E1CE63FC30006D852 /* MemoryMatchTests */,
 				985744791CE63FC30006D852 /* MemoryMatchUITests */,
@@ -149,12 +146,11 @@
 		985744561CE63FC30006D852 /* MemoryMatch */ = {
 			isa = PBXGroup;
 			children = (
+				D8C53FAC1CF4E9A5001434E6 /* Storyboards */,
+				D8C53FAA1CF4E982001434E6 /* Resources */,
 				D8AD0E1A1CED17CA00E7CADF /* Controllers */,
 				D8AD0E191CED17C200E7CADF /* Models */,
 				985744571CE63FC30006D852 /* AppDelegate.swift */,
-				9857445B1CE63FC30006D852 /* Main.storyboard */,
-				985744611CE63FC30006D852 /* Assets.xcassets */,
-				985744631CE63FC30006D852 /* LaunchScreen.storyboard */,
 				985744661CE63FC30006D852 /* Info.plist */,
 				9857445E1CE63FC30006D852 /* MemoryMatch.xcdatamodeld */,
 			);
@@ -212,6 +208,34 @@
 				D8AD0E1D1CED2E9900E7CADF /* ChristmasViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D8C53FAA1CF4E982001434E6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D8C53FAB1CF4E98E001434E6 /* Fonts */,
+				985744611CE63FC30006D852 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D8C53FAB1CF4E98E001434E6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D8FAC4C91CEE338200007171 /* Comic_White_Rabbit_.otf */,
+				D8FAC4CF1CEE718100007171 /* Grinched.ttf */,
+				D8FAC4CB1CEE418400007171 /* Pacifico.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		D8C53FAC1CF4E9A5001434E6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9857445B1CE63FC30006D852 /* Main.storyboard */,
+				985744631CE63FC30006D852 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -16,21 +16,21 @@ class ChristmasViewController: UIViewController {
     // MARK: - Constants
     //--------------------------------------------------
     
-    let bell = Card(flippedCard: UIImage(named: "Bell")!, unflippedCard: UIImage(named: "BlueQ")!, value: 1, name: "Bell")
-    let candle = Card(flippedCard: UIImage(named: "Candle")!, unflippedCard: UIImage(named: "BlueQ")!, value: 2, name: "Candle")
-    let gingerbread = Card(flippedCard: UIImage(named: "Gingerbread")!, unflippedCard: UIImage(named: "BlueQ")!, value: 3, name: "Gingerbread")
-    let ornament = Card(flippedCard: UIImage(named: "Ornament")!, unflippedCard: UIImage(named: "BlueQ")!, value: 4, name: "Ornament")
-    let present = Card(flippedCard: UIImage(named: "Present")!, unflippedCard: UIImage(named: "BlueQ")!, value: 5, name: "Present")
-    let reindeer = Card(flippedCard: UIImage(named: "Reindeer")!, unflippedCard: UIImage(named: "BlueQ")!, value: 6, name: "Reindeer")
-    let santa = Card(flippedCard: UIImage(named: "Santa")!, unflippedCard: UIImage(named: "BlueQ")!, value: 7, name: "Santa")
-    let skate = Card(flippedCard: UIImage(named: "Skate")!, unflippedCard: UIImage(named: "BlueQ")!, value: 8, name: "Skate")
-    let sleigh = Card(flippedCard: UIImage(named: "Sleigh")!, unflippedCard: UIImage(named: "BlueQ")!, value: 9, name: "Sleigh")
-    let snowflake = Card(flippedCard: UIImage(named: "Snowflake")!, unflippedCard: UIImage(named: "BlueQ")!, value: 10, name: "Snowflake")
-    let star = Card(flippedCard: UIImage(named: "Star")!, unflippedCard: UIImage(named: "BlueQ")!, value: 11, name: "Star")
-    let stocking = Card(flippedCard: UIImage(named: "Stocking")!, unflippedCard: UIImage(named: "BlueQ")!, value: 12, name: "Stocking")
-    let tree = Card(flippedCard: UIImage(named: "Tree")!, unflippedCard: UIImage(named: "BlueQ")!, value: 13, name: "Tree")
-    let candy = Card(flippedCard: UIImage(named: "CandyCane")!, unflippedCard: UIImage(named: "BlueQ")!, value: 14, name: "Candy Cane")
-    let penguin = Card(flippedCard: UIImage(named: "Penguin")!, unflippedCard: UIImage(named: "BlueQ")!, value: 15, name: "Penguin")
+    let bell = Card(flippedCard: UIImage(named: "Bell")!, unflippedCard: UIImage(named: "GreenQ")!, value: 1, name: "Bell")
+    let candle = Card(flippedCard: UIImage(named: "Candle")!, unflippedCard: UIImage(named: "GreenQ")!, value: 2, name: "Candle")
+    let gingerbread = Card(flippedCard: UIImage(named: "Gingerbread")!, unflippedCard: UIImage(named: "GreenQ")!, value: 3, name: "Gingerbread")
+    let ornament = Card(flippedCard: UIImage(named: "Ornament")!, unflippedCard: UIImage(named: "GreenQ")!, value: 4, name: "Ornament")
+    let present = Card(flippedCard: UIImage(named: "Present")!, unflippedCard: UIImage(named: "GreenQ")!, value: 5, name: "Present")
+    let reindeer = Card(flippedCard: UIImage(named: "Reindeer")!, unflippedCard: UIImage(named: "GreenQ")!, value: 6, name: "Reindeer")
+    let santa = Card(flippedCard: UIImage(named: "Santa")!, unflippedCard: UIImage(named: "GreenQ")!, value: 7, name: "Santa")
+    let skate = Card(flippedCard: UIImage(named: "Skate")!, unflippedCard: UIImage(named: "GreenQ")!, value: 8, name: "Skate")
+    let sleigh = Card(flippedCard: UIImage(named: "Sleigh")!, unflippedCard: UIImage(named: "GreenQ")!, value: 9, name: "Sleigh")
+    let snowflake = Card(flippedCard: UIImage(named: "Snowflake")!, unflippedCard: UIImage(named: "GreenQ")!, value: 10, name: "Snowflake")
+    let star = Card(flippedCard: UIImage(named: "Star")!, unflippedCard: UIImage(named: "GreenQ")!, value: 11, name: "Star")
+    let stocking = Card(flippedCard: UIImage(named: "Stocking")!, unflippedCard: UIImage(named: "GreenQ")!, value: 12, name: "Stocking")
+    let tree = Card(flippedCard: UIImage(named: "Tree")!, unflippedCard: UIImage(named: "GreenQ")!, value: 13, name: "Tree")
+    let candy = Card(flippedCard: UIImage(named: "CandyCane")!, unflippedCard: UIImage(named: "GreenQ")!, value: 14, name: "Candy Cane")
+    let penguin = Card(flippedCard: UIImage(named: "Penguin")!, unflippedCard: UIImage(named: "GreenQ")!, value: 15, name: "Penguin")
     
     //--------------------------------------------------
     // MARK: - Variables
