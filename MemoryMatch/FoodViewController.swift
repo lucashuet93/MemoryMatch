@@ -237,7 +237,6 @@ class FoodViewController: UIViewController {
                         }
                     }
                 }
-                loadRecognizers()
             } else {
                 fadeSecondWithAlert(imagesArray[cardValuesDrawn[1]-1], number: cardValuesDrawn[0])
                 fadeSecond(imagesArray[cardValuesDrawn[3]-1], number: cardValuesDrawn[0])
