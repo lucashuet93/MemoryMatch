@@ -1422,7 +1422,7 @@
                                     <constraint firstAttribute="height" constant="26" id="kzc-f8-dFb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="NewUnicodeFont" family="NewUnicodeFont" pointSize="38"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1457,7 +1457,7 @@
                                     <constraint firstAttribute="height" constant="50" id="pBh-xg-nCm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="NewUnicodeFont" family="NewUnicodeFont" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
