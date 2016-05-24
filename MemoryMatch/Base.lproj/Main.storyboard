@@ -4744,7 +4744,7 @@
                                 <rect key="frame" x="531" y="28" width="49" height="40"/>
                                 <fontDescription key="fontDescription" name="NewUnicodeFont" family="NewUnicodeFont" pointSize="25"/>
                                 <state key="normal" title="Reset">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="0.01531143272" blue="0.4051439805" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="resetButtonPressed:" destination="fEu-mn-vRQ" eventType="touchUpInside" id="QW0-hu-usX"/>
@@ -4754,7 +4754,7 @@
                                 <rect key="frame" x="20" y="28" width="45" height="42"/>
                                 <fontDescription key="fontDescription" name="NewUnicodeFont" family="NewUnicodeFont" pointSize="26"/>
                                 <state key="normal" title="Menu">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="0.01531143272" blue="0.4051439805" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="menuButtonPressed:" destination="fEu-mn-vRQ" eventType="touchUpInside" id="mMj-zx-1SA"/>
@@ -4768,7 +4768,7 @@
                                     <constraint firstAttribute="height" constant="26" id="rYi-3N-sXi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="NewUnicodeFont" family="NewUnicodeFont" pointSize="38"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="0.015311432720935159" blue="0.40514398053649647" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -4803,7 +4803,7 @@
                                     <constraint firstAttribute="height" constant="50" id="qcJ-f6-UKU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="NewUnicodeFont" family="NewUnicodeFont" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="0.015311432720935159" blue="0.40514398053649647" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -4827,7 +4827,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2 Wins!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hA2-Y5-aZ4">
                                 <rect key="frame" x="160" y="269" width="280" height="61.5"/>
                                 <fontDescription key="fontDescription" name="NewUnicodeFont" family="NewUnicodeFont" pointSize="55"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="0.01531143272" blue="0.4051439805" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
