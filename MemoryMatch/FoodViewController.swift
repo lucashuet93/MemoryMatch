@@ -13,52 +13,6 @@ class FoodViewController: UIViewController {
     // MARK: - Constants
     //--------------------------------------------------
     
-    
-    //--------------------------------------------------
-    // MARK: - Variables
-    //--------------------------------------------------
-    
-    
-    //--------------------------------------------------
-    // MARK: - Outlets
-    //--------------------------------------------------
-    
-    
-    //--------------------------------------------------
-    // MARK: - View Lifecycle
-    //--------------------------------------------------
-    
-    
-    //--------------------------------------------------
-    // MARK: - Actions
-    //--------------------------------------------------
-    
-    
-    //--------------------------------------------------
-    // MARK: - Helper Functions
-    //--------------------------------------------------
-    
-    
-    //--------------------------------------------------
-    // MARK: - Initializers
-    //--------------------------------------------------
-    
-    
-    //--------------------------------------------------
-    // MARK: - Gestures
-    //--------------------------------------------------
-    var count = Int()
-    var player = Int()
-    var turn = Int()
-    var delegate = UIViewController()
-    var cardValuesDrawn = [Int]()
-    var playerOneScore = Int()
-    var playerTwoScore = Int()
-    var score = String()
-    var foodDeck = [Card]()
-    var imagesArray = [UIImageView]()
-    var recognizersArray = [UIGestureRecognizer]()
-    var actionsArray = [String]()
     let alligator = Card(flippedCard: UIImage(named: "Apple")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 1, name: "Apple")
     let bear = Card(flippedCard: UIImage(named: "Avocado")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 2, name: "Avocado")
     let butterfly = Card(flippedCard: UIImage(named: "Banana")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 3, name: "Banana")
@@ -74,6 +28,28 @@ class FoodViewController: UIViewController {
     let horse = Card(flippedCard: UIImage(named: "Watermelon")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 13, name: "Watermelon")
     let unicorn = Card(flippedCard: UIImage(named: "Wheat")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 14, name: "Wheat")
     let wolf = Card(flippedCard: UIImage(named: "Tractor")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 15, name: "Tractor")
+    
+    //--------------------------------------------------
+    // MARK: - Variables
+    //--------------------------------------------------
+    
+    var count = Int()
+    var player = Int()
+    var turn = Int()
+    var delegate = UIViewController()
+    var cardValuesDrawn = [Int]()
+    var playerOneScore = Int()
+    var playerTwoScore = Int()
+    var score = String()
+    var foodDeck = [Card]()
+    var imagesArray = [UIImageView]()
+    var recognizersArray = [UIGestureRecognizer]()
+    var actionsArray = [String]()
+    
+    //--------------------------------------------------
+    // MARK: - Outlets
+    //--------------------------------------------------
+    
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var image2: UIImageView!
@@ -106,6 +82,22 @@ class FoodViewController: UIViewController {
     @IBOutlet weak var image29: UIImageView!
     @IBOutlet weak var image30: UIImageView!
     @IBOutlet weak var winnerLabel: UILabel!
+    @IBOutlet weak var foodLabel: UILabel!
+    
+    //--------------------------------------------------
+    // MARK: - View Lifecycle
+    //--------------------------------------------------
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initializeLabelsAndCards()
+        winnerLabel.hidden = true
+    }
+    
+    //--------------------------------------------------
+    // MARK: - Actions
+    //--------------------------------------------------
+    
     @IBAction func resetButtonPressed(sender: UIButton) {
         initializeLabelsAndCards()
         winnerLabel.hidden = true
@@ -117,37 +109,11 @@ class FoodViewController: UIViewController {
         delegate.dismissViewControllerAnimated(true) {
         }
     }
-    @IBOutlet weak var foodLabel: UILabel!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        initializeLabelsAndCards()
-        winnerLabel.hidden = true
-    }
-    func initializeLabelsAndCards() {
-        assignbackground()
-        resetDeck()
-        initializeImagesArray()
-        setRecognizers()
-        player = 1
-        turn = 1
-        playerOneScore = 0
-        playerTwoScore = 0
-        count = 0
-        score = ("\(playerOneScore) - \(playerTwoScore)")
-        scoreLabel.text = score
-        foodLabel.text = ""
-    }
-    func assignbackground(){
-        let background = UIImage(named: "HiRes-1")
-        var imageView : UIImageView!
-        imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode =  UIViewContentMode.ScaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.image = background
-        imageView.center = view.center
-        view.addSubview(imageView)
-        self.view.sendSubviewToBack(imageView)
-    }
+    
+    //--------------------------------------------------
+    // MARK: - Helper Functions
+    //--------------------------------------------------
+    
     func resetDeck(){
         foodDeck = [Card]()
         foodDeck = [alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, horse, unicorn, wolf, alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, horse, unicorn, wolf]
@@ -158,60 +124,8 @@ class FoodViewController: UIViewController {
             }
         }
     }
-    func initializeImagesArray(){
-        imagesArray = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image17, image18, image19, image20, image21, image22, image23, image24, image25, image26, image27, image28, image29, image30]
-        for i in 0...imagesArray.count - 1 {
-            imagesArray[i].image = foodDeck[i].unflippedCard
-        }
-    }
-    func setRecognizers(){
-        let recognizer1 = UITapGestureRecognizer()
-        let recognizer2 = UITapGestureRecognizer()
-        let recognizer3 = UITapGestureRecognizer()
-        let recognizer4 = UITapGestureRecognizer()
-        let recognizer5 = UITapGestureRecognizer()
-        let recognizer6 = UITapGestureRecognizer()
-        let recognizer7 = UITapGestureRecognizer()
-        let recognizer8 = UITapGestureRecognizer()
-        let recognizer9 = UITapGestureRecognizer()
-        let recognizer10 = UITapGestureRecognizer()
-        let recognizer11 = UITapGestureRecognizer()
-        let recognizer12 = UITapGestureRecognizer()
-        let recognizer13 = UITapGestureRecognizer()
-        let recognizer14 = UITapGestureRecognizer()
-        let recognizer15 = UITapGestureRecognizer()
-        let recognizer16 = UITapGestureRecognizer()
-        let recognizer17 = UITapGestureRecognizer()
-        let recognizer18 = UITapGestureRecognizer()
-        let recognizer19 = UITapGestureRecognizer()
-        let recognizer20 = UITapGestureRecognizer()
-        let recognizer21 = UITapGestureRecognizer()
-        let recognizer22 = UITapGestureRecognizer()
-        let recognizer23 = UITapGestureRecognizer()
-        let recognizer24 = UITapGestureRecognizer()
-        let recognizer25 = UITapGestureRecognizer()
-        let recognizer26 = UITapGestureRecognizer()
-        let recognizer27 = UITapGestureRecognizer()
-        let recognizer28 = UITapGestureRecognizer()
-        let recognizer29 = UITapGestureRecognizer()
-        let recognizer30 = UITapGestureRecognizer()
-        recognizersArray = [recognizer1, recognizer2, recognizer3, recognizer4, recognizer5, recognizer6, recognizer7, recognizer8, recognizer9, recognizer10, recognizer11, recognizer12, recognizer13, recognizer14, recognizer15, recognizer16, recognizer17, recognizer18, recognizer19, recognizer20, recognizer21, recognizer22, recognizer23, recognizer24, recognizer25, recognizer26, recognizer27, recognizer28, recognizer29, recognizer30]
-        actionsArray = ["image1HasBeenTapped", "image2HasBeenTapped", "image3HasBeenTapped", "image4HasBeenTapped", "image5HasBeenTapped", "image6HasBeenTapped", "image7HasBeenTapped", "image8HasBeenTapped", "image9HasBeenTapped", "image10HasBeenTapped", "image11HasBeenTapped", "image12HasBeenTapped", "image13HasBeenTapped", "image14HasBeenTapped", "image15HasBeenTapped", "image16HasBeenTapped", "image17HasBeenTapped", "image18HasBeenTapped", "image19HasBeenTapped", "image20HasBeenTapped", "image21HasBeenTapped", "image22HasBeenTapped", "image23HasBeenTapped", "image24HasBeenTapped", "image25HasBeenTapped", "image26HasBeenTapped", "image27HasBeenTapped", "image28HasBeenTapped", "image29HasBeenTapped", "image30HasBeenTapped"]
-        loadRecognizers()
-    }
-    func loadRecognizers() {
-        for i in 0...imagesArray.count-1 {
-            imagesArray[i].userInteractionEnabled = true
-            imagesArray[i].addGestureRecognizer(recognizersArray[i])
-            recognizersArray[i].addTarget(self, action: Selector(actionsArray[i]))
-        }
-    }
-    func removeRecognizers() {
-        for i in 0...imagesArray.count-1 {
-            imagesArray[i].userInteractionEnabled = true
-            recognizersArray[i].removeTarget(self, action: Selector(actionsArray[i]))
-        }
-    }
+    
+    
     func fadeFirst(image: UIImageView, number: Int){
         image.fadeOut(completion: {
             (finished: Bool) -> Void in
@@ -330,7 +244,101 @@ class FoodViewController: UIViewController {
             }
         }
     }
+}
     
+//--------------------------------------------------
+// MARK: - Initializers
+//--------------------------------------------------
+
+extension FoodViewController {
+    
+    func initializeLabelsAndCards() {
+        assignbackground()
+        resetDeck()
+        initializeImagesArray()
+        setRecognizers()
+        player = 1
+        turn = 1
+        playerOneScore = 0
+        playerTwoScore = 0
+        count = 0
+        score = ("\(playerOneScore) - \(playerTwoScore)")
+        scoreLabel.text = score
+        foodLabel.text = ""
+    }
+    func assignbackground(){
+        let background = UIImage(named: "HiRes-1")
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIViewContentMode.ScaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
+        self.view.sendSubviewToBack(imageView)
+    }
+    func initializeImagesArray(){
+        imagesArray = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image17, image18, image19, image20, image21, image22, image23, image24, image25, image26, image27, image28, image29, image30]
+        for i in 0...imagesArray.count - 1 {
+            imagesArray[i].image = foodDeck[i].unflippedCard
+        }
+    }
+}
+    
+//--------------------------------------------------
+// MARK: - Gestures
+//--------------------------------------------------
+
+extension FoodViewController {
+    
+    func setRecognizers(){
+        let recognizer1 = UITapGestureRecognizer()
+        let recognizer2 = UITapGestureRecognizer()
+        let recognizer3 = UITapGestureRecognizer()
+        let recognizer4 = UITapGestureRecognizer()
+        let recognizer5 = UITapGestureRecognizer()
+        let recognizer6 = UITapGestureRecognizer()
+        let recognizer7 = UITapGestureRecognizer()
+        let recognizer8 = UITapGestureRecognizer()
+        let recognizer9 = UITapGestureRecognizer()
+        let recognizer10 = UITapGestureRecognizer()
+        let recognizer11 = UITapGestureRecognizer()
+        let recognizer12 = UITapGestureRecognizer()
+        let recognizer13 = UITapGestureRecognizer()
+        let recognizer14 = UITapGestureRecognizer()
+        let recognizer15 = UITapGestureRecognizer()
+        let recognizer16 = UITapGestureRecognizer()
+        let recognizer17 = UITapGestureRecognizer()
+        let recognizer18 = UITapGestureRecognizer()
+        let recognizer19 = UITapGestureRecognizer()
+        let recognizer20 = UITapGestureRecognizer()
+        let recognizer21 = UITapGestureRecognizer()
+        let recognizer22 = UITapGestureRecognizer()
+        let recognizer23 = UITapGestureRecognizer()
+        let recognizer24 = UITapGestureRecognizer()
+        let recognizer25 = UITapGestureRecognizer()
+        let recognizer26 = UITapGestureRecognizer()
+        let recognizer27 = UITapGestureRecognizer()
+        let recognizer28 = UITapGestureRecognizer()
+        let recognizer29 = UITapGestureRecognizer()
+        let recognizer30 = UITapGestureRecognizer()
+        recognizersArray = [recognizer1, recognizer2, recognizer3, recognizer4, recognizer5, recognizer6, recognizer7, recognizer8, recognizer9, recognizer10, recognizer11, recognizer12, recognizer13, recognizer14, recognizer15, recognizer16, recognizer17, recognizer18, recognizer19, recognizer20, recognizer21, recognizer22, recognizer23, recognizer24, recognizer25, recognizer26, recognizer27, recognizer28, recognizer29, recognizer30]
+        actionsArray = ["image1HasBeenTapped", "image2HasBeenTapped", "image3HasBeenTapped", "image4HasBeenTapped", "image5HasBeenTapped", "image6HasBeenTapped", "image7HasBeenTapped", "image8HasBeenTapped", "image9HasBeenTapped", "image10HasBeenTapped", "image11HasBeenTapped", "image12HasBeenTapped", "image13HasBeenTapped", "image14HasBeenTapped", "image15HasBeenTapped", "image16HasBeenTapped", "image17HasBeenTapped", "image18HasBeenTapped", "image19HasBeenTapped", "image20HasBeenTapped", "image21HasBeenTapped", "image22HasBeenTapped", "image23HasBeenTapped", "image24HasBeenTapped", "image25HasBeenTapped", "image26HasBeenTapped", "image27HasBeenTapped", "image28HasBeenTapped", "image29HasBeenTapped", "image30HasBeenTapped"]
+        loadRecognizers()
+    }
+    func loadRecognizers() {
+        for i in 0...imagesArray.count-1 {
+            imagesArray[i].userInteractionEnabled = true
+            imagesArray[i].addGestureRecognizer(recognizersArray[i])
+            recognizersArray[i].addTarget(self, action: Selector(actionsArray[i]))
+        }
+    }
+    func removeRecognizers() {
+        for i in 0...imagesArray.count-1 {
+            imagesArray[i].userInteractionEnabled = true
+            recognizersArray[i].removeTarget(self, action: Selector(actionsArray[i]))
+        }
+    }
     func image1HasBeenTapped(){
         fadeFirst(image1, number: 1)
     }
@@ -421,4 +429,6 @@ class FoodViewController: UIViewController {
     func image30HasBeenTapped(){
         fadeFirst(image30, number: 30)
     }
+    
+    
 }

@@ -83,12 +83,17 @@ class AnimalViewController: UIViewController {
     @IBOutlet weak var image29: UIImageView!
     @IBOutlet weak var image30: UIImageView!
     @IBOutlet weak var winnerLabel: UILabel!
+    @IBOutlet weak var animalLabel: UILabel!
     
     //--------------------------------------------------
     // MARK: - View Lifecycle
     //--------------------------------------------------
     
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initializeLabelsAndCards()
+        winnerLabel.hidden = true
+    }
     
     //--------------------------------------------------
     // MARK: - Actions
@@ -104,12 +109,6 @@ class AnimalViewController: UIViewController {
     @IBAction func menuButtonPressed(sender: UIButton) {
         delegate.dismissViewControllerAnimated(true) {
         }
-    }
-    @IBOutlet weak var animalLabel: UILabel!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        initializeLabelsAndCards()
-        winnerLabel.hidden = true
     }
 
     //--------------------------------------------------
