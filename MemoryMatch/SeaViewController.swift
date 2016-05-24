@@ -14,21 +14,21 @@ class SeaViewController: UIViewController {
     // MARK: - Constants
     //--------------------------------------------------
     
-    let alligator = Card(flippedCard: UIImage(named: "Anchor")!, unflippedCard: UIImage(named: "BlueQ")!, value: 1, name: "Anchor")
-    let bear = Card(flippedCard: UIImage(named: "Coral")!, unflippedCard: UIImage(named: "BlueQ")!, value: 2, name: "Coral")
-    let butterfly = Card(flippedCard: UIImage(named: "Crab")!, unflippedCard: UIImage(named: "BlueQ")!, value: 3, name: "Crab")
-    let elephant = Card(flippedCard: UIImage(named: "Dolphin")!, unflippedCard: UIImage(named: "BlueQ")!, value: 4, name: "Dolphin")
-    let giraffe = Card(flippedCard: UIImage(named: "Fish")!, unflippedCard: UIImage(named: "BlueQ")!, value: 5, name: "Fish")
-    let gorilla = Card(flippedCard: UIImage(named: "Octopus")!, unflippedCard: UIImage(named: "BlueQ")!, value: 6, name: "Octopus")
-    let hummingbird = Card(flippedCard: UIImage(named: "Pelican")!, unflippedCard: UIImage(named: "BlueQ")!, value: 7, name: "Pelican")
-    let kangaroo = Card(flippedCard: UIImage(named: "Pirate")!, unflippedCard: UIImage(named: "BlueQ")!, value: 8, name: "Pirate")
-    let ladybug = Card(flippedCard: UIImage(named: "Seahorse")!, unflippedCard: UIImage(named: "BlueQ")!, value: 9, name: "Seahorse")
-    let leopard = Card(flippedCard: UIImage(named: "Shark")!, unflippedCard: UIImage(named: "BlueQ")!, value: 10, name: "Shark")
-    let panda = Card(flippedCard: UIImage(named: "Ship")!, unflippedCard: UIImage(named: "BlueQ")!, value: 11, name: "Ship")
-    let snake = Card(flippedCard: UIImage(named: "Shrimp")!, unflippedCard: UIImage(named: "BlueQ")!, value: 12, name: "Shrimp")
-    let horse = Card(flippedCard: UIImage(named: "Squid")!, unflippedCard: UIImage(named: "BlueQ")!, value: 13, name: "Squid")
-    let unicorn = Card(flippedCard: UIImage(named: "Starfish")!, unflippedCard: UIImage(named: "BlueQ")!, value: 14, name: "Starfish")
-    let wolf = Card(flippedCard: UIImage(named: "Whale")!, unflippedCard: UIImage(named: "BlueQ")!, value: 15, name: "Whale")
+    let anchor = Card(flippedCard: UIImage(named: "Anchor")!, unflippedCard: UIImage(named: "BlueQ")!, value: 1, name: "Anchor")
+    let coral = Card(flippedCard: UIImage(named: "Coral")!, unflippedCard: UIImage(named: "BlueQ")!, value: 2, name: "Coral")
+    let crab = Card(flippedCard: UIImage(named: "Crab")!, unflippedCard: UIImage(named: "BlueQ")!, value: 3, name: "Crab")
+    let dolphin = Card(flippedCard: UIImage(named: "Dolphin")!, unflippedCard: UIImage(named: "BlueQ")!, value: 4, name: "Dolphin")
+    let fish = Card(flippedCard: UIImage(named: "Fish")!, unflippedCard: UIImage(named: "BlueQ")!, value: 5, name: "Fish")
+    let octopus = Card(flippedCard: UIImage(named: "Octopus")!, unflippedCard: UIImage(named: "BlueQ")!, value: 6, name: "Octopus")
+    let pelican = Card(flippedCard: UIImage(named: "Pelican")!, unflippedCard: UIImage(named: "BlueQ")!, value: 7, name: "Pelican")
+    let pirate = Card(flippedCard: UIImage(named: "Pirate")!, unflippedCard: UIImage(named: "BlueQ")!, value: 8, name: "Pirate")
+    let seahorse = Card(flippedCard: UIImage(named: "Seahorse")!, unflippedCard: UIImage(named: "BlueQ")!, value: 9, name: "Seahorse")
+    let shark = Card(flippedCard: UIImage(named: "Shark")!, unflippedCard: UIImage(named: "BlueQ")!, value: 10, name: "Shark")
+    let ship = Card(flippedCard: UIImage(named: "Ship")!, unflippedCard: UIImage(named: "BlueQ")!, value: 11, name: "Ship")
+    let shrimp = Card(flippedCard: UIImage(named: "Shrimp")!, unflippedCard: UIImage(named: "BlueQ")!, value: 12, name: "Shrimp")
+    let squid = Card(flippedCard: UIImage(named: "Squid")!, unflippedCard: UIImage(named: "BlueQ")!, value: 13, name: "Squid")
+    let starfish = Card(flippedCard: UIImage(named: "Starfish")!, unflippedCard: UIImage(named: "BlueQ")!, value: 14, name: "Starfish")
+    let whale = Card(flippedCard: UIImage(named: "Whale")!, unflippedCard: UIImage(named: "BlueQ")!, value: 15, name: "Whale")
     
     //--------------------------------------------------
     // MARK: - Variables
@@ -42,7 +42,7 @@ class SeaViewController: UIViewController {
     var playerOneScore = Int()
     var playerTwoScore = Int()
     var score = String()
-    var foodDeck = [Card]()
+    var seaDeck = [Card]()
     var imagesArray = [UIImageView]()
     var recognizersArray = [UIGestureRecognizer]()
     var actionsArray = [String]()
@@ -116,22 +116,22 @@ class SeaViewController: UIViewController {
     //--------------------------------------------------
     
     func resetDeck(){
-        foodDeck = [Card]()
-        foodDeck = [alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, horse, unicorn, wolf, alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, horse, unicorn, wolf]
-        for i in 0...foodDeck.count - 1 {
-            let j = Int(arc4random_uniform(UInt32(foodDeck.count - i))) + i
+        seaDeck = [Card]()
+        seaDeck = [anchor, coral, crab, dolphin, fish, octopus, shark, shrimp, whale, ship, pelican, starfish, squid, pirate, seahorse, anchor, coral, crab, dolphin, fish, octopus, shark, shrimp, whale, ship, pelican, starfish, squid, pirate, seahorse]
+        for i in 0...seaDeck.count - 1 {
+            let j = Int(arc4random_uniform(UInt32(seaDeck.count - i))) + i
             if j != i {
-                swap(&foodDeck[i], &foodDeck[j])
+                swap(&seaDeck[i], &seaDeck[j])
             }
         }
     }
     func fadeFirst(image: UIImageView, number: Int){
         image.fadeOut(completion: {
             (finished: Bool) -> Void in
-            image.image = self.foodDeck[number-1].flippedCard
+            image.image = self.seaDeck[number-1].flippedCard
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
-                self.seaLabel.text = self.foodDeck[number-1].name
+                self.seaLabel.text = self.seaDeck[number-1].name
                 self.update(number)
             })
             
@@ -140,7 +140,7 @@ class SeaViewController: UIViewController {
     func fadeSecondWithAlert(image: UIImageView, number: Int){
         image.fadeOutWithDelay(completion: {
             (finished: Bool) -> Void in
-            image.image = self.foodDeck[number-1].unflippedCard
+            image.image = self.seaDeck[number-1].unflippedCard
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
                 self.seaLabel.text = ""
@@ -165,7 +165,7 @@ class SeaViewController: UIViewController {
     func fadeSecond(image: UIImageView, number: Int){
         image.fadeOutWithDelay(completion: {
             (finished: Bool) -> Void in
-            image.image = self.foodDeck[number-1].unflippedCard
+            image.image = self.seaDeck[number-1].unflippedCard
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
                 self.seaLabel.text = ""
@@ -188,12 +188,12 @@ class SeaViewController: UIViewController {
     }
     func update(number: Int){
         if turn == 1 {
-            cardValuesDrawn.append(foodDeck[number-1].value)
+            cardValuesDrawn.append(seaDeck[number-1].value)
             cardValuesDrawn.append(number)
             turn = 2
         } else {
             removeRecognizers()
-            cardValuesDrawn.append(foodDeck[number-1].value)
+            cardValuesDrawn.append(seaDeck[number-1].value)
             cardValuesDrawn.append(number)
             if cardValuesDrawn[0] == cardValuesDrawn[2] {
                 count += 1
@@ -278,7 +278,7 @@ extension SeaViewController {
     func initializeImagesArray(){
         imagesArray = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image17, image18, image19, image20, image21, image22, image23, image24, image25, image26, image27, image28, image29, image30]
         for i in 0...imagesArray.count - 1 {
-            imagesArray[i].image = foodDeck[i].unflippedCard
+            imagesArray[i].image = seaDeck[i].unflippedCard
         }
     }
 }

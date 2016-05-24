@@ -13,21 +13,21 @@ class FoodViewController: UIViewController {
     // MARK: - Constants
     //--------------------------------------------------
     
-    let alligator = Card(flippedCard: UIImage(named: "Apple")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 1, name: "Apple")
-    let bear = Card(flippedCard: UIImage(named: "Avocado")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 2, name: "Avocado")
-    let butterfly = Card(flippedCard: UIImage(named: "Banana")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 3, name: "Banana")
-    let elephant = Card(flippedCard: UIImage(named: "Barn")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 4, name: "Barn")
-    let giraffe = Card(flippedCard: UIImage(named: "Corn")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 5, name: "Corn")
-    let gorilla = Card(flippedCard: UIImage(named: "Eggplant")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 6, name: "Eggplant")
-    let hummingbird = Card(flippedCard: UIImage(named: "Grapes")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 7, name: "Grapes")
-    let kangaroo = Card(flippedCard: UIImage(named: "Melon")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 8, name: "Cantaloupe")
-    let ladybug = Card(flippedCard: UIImage(named: "Potato")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 9, name: "Potato")
-    let leopard = Card(flippedCard: UIImage(named: "Pumpkin")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 10, name: "Pumpkin")
-    let panda = Card(flippedCard: UIImage(named: "Radish")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 11, name: "Radish")
-    let snake = Card(flippedCard: UIImage(named: "Strawberry")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 12, name: "Strawberry")
-    let horse = Card(flippedCard: UIImage(named: "Watermelon")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 13, name: "Watermelon")
-    let unicorn = Card(flippedCard: UIImage(named: "Wheat")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 14, name: "Wheat")
-    let wolf = Card(flippedCard: UIImage(named: "Tractor")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 15, name: "Tractor")
+    let apple = Card(flippedCard: UIImage(named: "Apple")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 1, name: "Apple")
+    let avocado = Card(flippedCard: UIImage(named: "Avocado")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 2, name: "Avocado")
+    let banana = Card(flippedCard: UIImage(named: "Banana")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 3, name: "Banana")
+    let barn = Card(flippedCard: UIImage(named: "Barn")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 4, name: "Barn")
+    let corn = Card(flippedCard: UIImage(named: "Corn")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 5, name: "Corn")
+    let eggplant = Card(flippedCard: UIImage(named: "Eggplant")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 6, name: "Eggplant")
+    let grapes = Card(flippedCard: UIImage(named: "Grapes")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 7, name: "Grapes")
+    let melon = Card(flippedCard: UIImage(named: "Melon")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 8, name: "Cantaloupe")
+    let potato = Card(flippedCard: UIImage(named: "Potato")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 9, name: "Potato")
+    let pumpkin = Card(flippedCard: UIImage(named: "Pumpkin")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 10, name: "Pumpkin")
+    let radish = Card(flippedCard: UIImage(named: "Radish")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 11, name: "Radish")
+    let strawberry = Card(flippedCard: UIImage(named: "Strawberry")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 12, name: "Strawberry")
+    let watermelon = Card(flippedCard: UIImage(named: "Watermelon")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 13, name: "Watermelon")
+    let wheat = Card(flippedCard: UIImage(named: "Wheat")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 14, name: "Wheat")
+    let tractor = Card(flippedCard: UIImage(named: "Tractor")!, unflippedCard: UIImage(named: "OrangeQ")!, value: 15, name: "Tractor")
     
     //--------------------------------------------------
     // MARK: - Variables
@@ -116,7 +116,7 @@ class FoodViewController: UIViewController {
     
     func resetDeck(){
         foodDeck = [Card]()
-        foodDeck = [alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, horse, unicorn, wolf, alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, horse, unicorn, wolf]
+        foodDeck = [apple, avocado, banana, barn, corn, eggplant, grapes, melon, potato, pumpkin, tractor, wheat, watermelon, strawberry, radish, apple, avocado, banana, barn, corn, eggplant, grapes, melon, potato, pumpkin, tractor, wheat, watermelon, strawberry, radish]
         for i in 0...foodDeck.count - 1 {
             let j = Int(arc4random_uniform(UInt32(foodDeck.count - i))) + i
             if j != i {

@@ -16,21 +16,21 @@ class ChristmasViewController: UIViewController {
     // MARK: - Constants
     //--------------------------------------------------
     
-    let alligator = Card(flippedCard: UIImage(named: "Bell")!, unflippedCard: UIImage(named: "BlueQ")!, value: 1, name: "Bell")
-    let bear = Card(flippedCard: UIImage(named: "Candle")!, unflippedCard: UIImage(named: "BlueQ")!, value: 2, name: "Candle")
-    let butterfly = Card(flippedCard: UIImage(named: "Gingerbread")!, unflippedCard: UIImage(named: "BlueQ")!, value: 3, name: "Gingerbread")
-    let elephant = Card(flippedCard: UIImage(named: "Ornament")!, unflippedCard: UIImage(named: "BlueQ")!, value: 4, name: "Ornament")
-    let giraffe = Card(flippedCard: UIImage(named: "Present")!, unflippedCard: UIImage(named: "BlueQ")!, value: 5, name: "Present")
-    let gorilla = Card(flippedCard: UIImage(named: "Reindeer")!, unflippedCard: UIImage(named: "BlueQ")!, value: 6, name: "Reindeer")
-    let hummingbird = Card(flippedCard: UIImage(named: "Santa")!, unflippedCard: UIImage(named: "BlueQ")!, value: 7, name: "Santa")
-    let kangaroo = Card(flippedCard: UIImage(named: "Skate")!, unflippedCard: UIImage(named: "BlueQ")!, value: 8, name: "Skate")
-    let ladybug = Card(flippedCard: UIImage(named: "Sleigh")!, unflippedCard: UIImage(named: "BlueQ")!, value: 9, name: "Sleigh")
-    let leopard = Card(flippedCard: UIImage(named: "Snowflake")!, unflippedCard: UIImage(named: "BlueQ")!, value: 10, name: "Snowflake")
-    let panda = Card(flippedCard: UIImage(named: "Star")!, unflippedCard: UIImage(named: "BlueQ")!, value: 11, name: "Star")
-    let snake = Card(flippedCard: UIImage(named: "Stocking")!, unflippedCard: UIImage(named: "BlueQ")!, value: 12, name: "Stocking")
-    let horse = Card(flippedCard: UIImage(named: "Tree")!, unflippedCard: UIImage(named: "BlueQ")!, value: 13, name: "Tree")
-    let unicorn = Card(flippedCard: UIImage(named: "CandyCane")!, unflippedCard: UIImage(named: "BlueQ")!, value: 14, name: "Candy Cane")
-    let wolf = Card(flippedCard: UIImage(named: "Penguin")!, unflippedCard: UIImage(named: "BlueQ")!, value: 15, name: "Penguin")
+    let bell = Card(flippedCard: UIImage(named: "Bell")!, unflippedCard: UIImage(named: "BlueQ")!, value: 1, name: "Bell")
+    let candle = Card(flippedCard: UIImage(named: "Candle")!, unflippedCard: UIImage(named: "BlueQ")!, value: 2, name: "Candle")
+    let gingerbread = Card(flippedCard: UIImage(named: "Gingerbread")!, unflippedCard: UIImage(named: "BlueQ")!, value: 3, name: "Gingerbread")
+    let ornament = Card(flippedCard: UIImage(named: "Ornament")!, unflippedCard: UIImage(named: "BlueQ")!, value: 4, name: "Ornament")
+    let present = Card(flippedCard: UIImage(named: "Present")!, unflippedCard: UIImage(named: "BlueQ")!, value: 5, name: "Present")
+    let reindeer = Card(flippedCard: UIImage(named: "Reindeer")!, unflippedCard: UIImage(named: "BlueQ")!, value: 6, name: "Reindeer")
+    let santa = Card(flippedCard: UIImage(named: "Santa")!, unflippedCard: UIImage(named: "BlueQ")!, value: 7, name: "Santa")
+    let skate = Card(flippedCard: UIImage(named: "Skate")!, unflippedCard: UIImage(named: "BlueQ")!, value: 8, name: "Skate")
+    let sleigh = Card(flippedCard: UIImage(named: "Sleigh")!, unflippedCard: UIImage(named: "BlueQ")!, value: 9, name: "Sleigh")
+    let snowflake = Card(flippedCard: UIImage(named: "Snowflake")!, unflippedCard: UIImage(named: "BlueQ")!, value: 10, name: "Snowflake")
+    let star = Card(flippedCard: UIImage(named: "Star")!, unflippedCard: UIImage(named: "BlueQ")!, value: 11, name: "Star")
+    let stocking = Card(flippedCard: UIImage(named: "Stocking")!, unflippedCard: UIImage(named: "BlueQ")!, value: 12, name: "Stocking")
+    let tree = Card(flippedCard: UIImage(named: "Tree")!, unflippedCard: UIImage(named: "BlueQ")!, value: 13, name: "Tree")
+    let candy = Card(flippedCard: UIImage(named: "CandyCane")!, unflippedCard: UIImage(named: "BlueQ")!, value: 14, name: "Candy Cane")
+    let penguin = Card(flippedCard: UIImage(named: "Penguin")!, unflippedCard: UIImage(named: "BlueQ")!, value: 15, name: "Penguin")
     
     //--------------------------------------------------
     // MARK: - Variables
@@ -44,7 +44,7 @@ class ChristmasViewController: UIViewController {
     var playerOneScore = Int()
     var playerTwoScore = Int()
     var score = String()
-    var foodDeck = [Card]()
+    var christmasDeck = [Card]()
     var imagesArray = [UIImageView]()
     var recognizersArray = [UIGestureRecognizer]()
     var actionsArray = [String]()
@@ -118,22 +118,22 @@ class ChristmasViewController: UIViewController {
     //--------------------------------------------------
 
     func resetDeck(){
-        foodDeck = [Card]()
-        foodDeck = [alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, horse, unicorn, wolf, alligator, bear, butterfly, elephant, giraffe, gorilla, hummingbird, kangaroo, ladybug, leopard, panda, snake, horse, unicorn, wolf]
-        for i in 0...foodDeck.count - 1 {
-            let j = Int(arc4random_uniform(UInt32(foodDeck.count - i))) + i
+        christmasDeck = [Card]()
+        christmasDeck = [bell, candle, gingerbread, ornament, present, reindeer, santa, sleigh, snowflake, star, stocking, tree, penguin, candy, skate, bell, candle, gingerbread, ornament, present, reindeer, santa, sleigh, snowflake, star, stocking, tree, penguin, candy, skate]
+        for i in 0...christmasDeck.count - 1 {
+            let j = Int(arc4random_uniform(UInt32(christmasDeck.count - i))) + i
             if j != i {
-                swap(&foodDeck[i], &foodDeck[j])
+                swap(&christmasDeck[i], &christmasDeck[j])
             }
         }
     }
     func fadeFirst(image: UIImageView, number: Int){
         image.fadeOut(completion: {
             (finished: Bool) -> Void in
-            image.image = self.foodDeck[number-1].flippedCard
+            image.image = self.christmasDeck[number-1].flippedCard
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
-                self.christmasLabel.text = self.foodDeck[number-1].name
+                self.christmasLabel.text = self.christmasDeck[number-1].name
                 self.update(number)
             })
             
@@ -142,7 +142,7 @@ class ChristmasViewController: UIViewController {
     func fadeSecondWithAlert(image: UIImageView, number: Int){
         image.fadeOutWithDelay(completion: {
             (finished: Bool) -> Void in
-            image.image = self.foodDeck[number-1].unflippedCard
+            image.image = self.christmasDeck[number-1].unflippedCard
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
                 self.christmasLabel.text = ""
@@ -167,7 +167,7 @@ class ChristmasViewController: UIViewController {
     func fadeSecond(image: UIImageView, number: Int){
         image.fadeOutWithDelay(completion: {
             (finished: Bool) -> Void in
-            image.image = self.foodDeck[number-1].unflippedCard
+            image.image = self.christmasDeck[number-1].unflippedCard
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
                 self.christmasLabel.text = ""
@@ -190,12 +190,12 @@ class ChristmasViewController: UIViewController {
     }
     func update(number: Int){
         if turn == 1 {
-            cardValuesDrawn.append(foodDeck[number-1].value)
+            cardValuesDrawn.append(christmasDeck[number-1].value)
             cardValuesDrawn.append(number)
             turn = 2
         } else {
             removeRecognizers()
-            cardValuesDrawn.append(foodDeck[number-1].value)
+            cardValuesDrawn.append(christmasDeck[number-1].value)
             cardValuesDrawn.append(number)
             if cardValuesDrawn[0] == cardValuesDrawn[2] {
                 count += 1
@@ -278,7 +278,7 @@ extension ChristmasViewController {
     func initializeImagesArray(){
         imagesArray = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image17, image18, image19, image20, image21, image22, image23, image24, image25, image26, image27, image28, image29, image30]
         for i in 0...imagesArray.count - 1 {
-            imagesArray[i].image = foodDeck[i].unflippedCard
+            imagesArray[i].image = christmasDeck[i].unflippedCard
         }
     }
 }
