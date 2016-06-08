@@ -129,6 +129,10 @@ class FoodViewController: UIViewController {
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
                 self.foodLabel.text = self.foodDeck[number-1].name
+                print(self.turn)
+                if self.turn == 1 {
+                    self.view.userInteractionEnabled = true
+                }
                 self.update(number)
             })
             
@@ -140,10 +144,10 @@ class FoodViewController: UIViewController {
             image.image = self.foodDeck[number-1].unflippedCard
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
-                self.foodLabel.text = ""
-                self.view.userInteractionEnabled = true
-                self.cardValuesDrawn = [Int]()
                 self.turn = 1
+                self.foodLabel.text = ""
+                self.cardValuesDrawn = [Int]()
+                self.view.userInteractionEnabled = true
             })
         })
     }
@@ -278,183 +282,123 @@ extension FoodViewController {
         view.userInteractionEnabled = false
     }
     func image1HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image1, number: 1)
     }
     func image2HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image2, number: 2)
     }
     func image3HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image3, number: 3)
     }
     func image4HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image4, number: 4)
     }
     func image5HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image5, number: 5)
     }
     func image6HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image6, number: 6)
     }
     func image7HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image7, number: 7)
     }
     func image8HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image8, number: 8)
     }
     func image9HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image9, number: 9)
     }
     func image10HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image10, number: 10)
     }
     func image11HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image11, number: 11)
     }
     func image12HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image12, number: 12)
     }
     func image13HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image13, number: 13)
     }
     func image14HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image14, number: 14)
     }
     func image15HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image15, number: 15)
     }
     func image16HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image16, number: 16)
     }
     func image17HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image17, number: 17)
     }
     func image18HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image18, number: 18)
     }
     func image19HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image19, number: 19)
     }
     func image20HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image20, number: 20)
     }
     func image21HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image21, number: 21)
     }
     func image22HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image22, number: 22)
     }
     func image23HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image23, number: 23)
     }
     func image24HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image24, number: 24)
     }
     func image25HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image25, number: 25)
     }
     func image26HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image26, number: 26)
     }
     func image27HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image27, number: 27)
     }
     func image28HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image28, number: 28)
     }
     func image29HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image29, number: 29)
     }
     func image30HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image30, number: 30)
     }
 }

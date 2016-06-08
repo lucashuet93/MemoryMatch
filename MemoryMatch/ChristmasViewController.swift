@@ -37,13 +37,10 @@ class ChristmasViewController: UIViewController {
     //--------------------------------------------------
     
     var count = Int()
-    var player = Int()
     var turn = Int()
     var delegate = UIViewController()
     var cardValuesDrawn = [Int]()
-    var playerOneScore = Int()
-    var playerTwoScore = Int()
-    var score = String()
+    var score = Int()
     var christmasDeck = [Card]()
     var imagesArray = [UIImageView]()
     var recognizersArray = [UIGestureRecognizer]()
@@ -134,34 +131,13 @@ class ChristmasViewController: UIViewController {
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
                 self.christmasLabel.text = self.christmasDeck[number-1].name
+                print(self.turn)
+                if self.turn == 1 {
+                    self.view.userInteractionEnabled = true
+                }
                 self.update(number)
             })
             
-        })
-    }
-    func fadeSecondWithAlert(image: UIImageView, number: Int){
-        image.fadeOutWithDelay(completion: {
-            (finished: Bool) -> Void in
-            image.image = self.christmasDeck[number-1].unflippedCard
-            image.fadeIn(completion: {
-                (finished: Bool) -> Void in
-                self.christmasLabel.text = ""
-                if self.player == 1 {
-                    let alert = showAlert("Player 2's Turn!", message: "")
-                    self.presentViewController(alert, animated: true, completion: {
-                        self.cardValuesDrawn = [Int]()
-                        self.player = 2
-                        self.turn = 1
-                    })
-                } else {
-                    let alert = showAlert("Player 1's Turn!", message: "")
-                    self.presentViewController(alert, animated: true, completion: {
-                        self.cardValuesDrawn = [Int]()
-                        self.player = 1
-                        self.turn = 1
-                    })
-                }
-            })
         })
     }
     func fadeSecond(image: UIImageView, number: Int){
@@ -170,19 +146,18 @@ class ChristmasViewController: UIViewController {
             image.image = self.christmasDeck[number-1].unflippedCard
             image.fadeIn(completion: {
                 (finished: Bool) -> Void in
+                self.turn = 1
                 self.christmasLabel.text = ""
+                self.cardValuesDrawn = [Int]()
+                self.view.userInteractionEnabled = true
             })
         })
     }
-    func printText(player: Int){
+    func printText(){
         self.view.bringSubviewToFront(winnerLabel);
         christmasLabel.hidden = true
         winnerLabel.hidden = false
-        if player == 1 {
-            winnerLabel.text = "Player 1 Wins"
-        } else {
-            winnerLabel.text = "Player 2 Wins"
-        }
+        winnerLabel.text = "\(score) turns!"
         for i in 0...imagesArray.count-1{
             imagesArray[i].hidden = true
         }
@@ -194,74 +169,48 @@ class ChristmasViewController: UIViewController {
             cardValuesDrawn.append(number)
             turn = 2
         } else {
-            removeRecognizers()
+            score += 1
             cardValuesDrawn.append(christmasDeck[number-1].value)
             cardValuesDrawn.append(number)
             if cardValuesDrawn[0] == cardValuesDrawn[2] {
                 count += 1
-                if player == 1 {
-                    playerTwoScore += 1
-                    score = ("\(playerOneScore) - \(playerTwoScore)")
-                    let alert = showAlert("Match!", message: score)
-                    presentViewController(alert, animated: true, completion: {
-                        self.turn = 1
-                        self.imagesArray[(self.cardValuesDrawn[1])-1].hidden = true
-                        self.imagesArray[(self.cardValuesDrawn[3])-1].hidden = true
-                        self.cardValuesDrawn = [Int]()
-                        self.scoreLabel.text = self.score
-                    })
-                    christmasLabel.text = ""
-                    if count == 15 {
-                        if playerTwoScore > playerOneScore {
-                            printText(2)
-                        } else {
-                            printText(1)
-                        }
-                    }
-                } else {
-                    playerTwoScore += 1
-                    score = ("\(playerOneScore) - \(playerTwoScore)")
-                    let alert = showAlert("Match!", message: score)
-                    presentViewController(alert, animated: true, completion: {
-                        self.turn = 1
-                        self.imagesArray[(self.cardValuesDrawn[1])-1].hidden = true
-                        self.imagesArray[(self.cardValuesDrawn[3])-1].hidden = true
-                        self.cardValuesDrawn = [Int]()
-                        self.scoreLabel.text = self.score
-                    })
-                    christmasLabel.text = ""
-                    if count == 15 {
-                        if playerTwoScore > playerOneScore {
-                            printText(2)
-                        } else {
-                            printText(1)
-                        }
-                    }
+                let alert = showAlert("Match!", message: "\(count) matches")
+                presentViewController(alert, animated: true, completion: {
+                    self.turn = 1
+                    self.imagesArray[(self.cardValuesDrawn[1])-1].hidden = true
+                    self.imagesArray[(self.cardValuesDrawn[3])-1].hidden = true
+                    self.cardValuesDrawn = [Int]()
+                    self.scoreLabel.text = String(self.score)
+                    self.view.userInteractionEnabled = true
+                })
+                christmasLabel.text = ""
+                if count == 15 {
+                    printText()
                 }
             } else {
-                fadeSecondWithAlert(imagesArray[cardValuesDrawn[1]-1], number: cardValuesDrawn[0])
+                fadeSecond(imagesArray[cardValuesDrawn[1]-1], number: cardValuesDrawn[0])
                 fadeSecond(imagesArray[cardValuesDrawn[3]-1], number: cardValuesDrawn[0])
+                self.scoreLabel.text = String(self.score)
             }
         }
     }
 }
+
 //--------------------------------------------------
 // MARK: - Initializers
 //--------------------------------------------------
 
 extension ChristmasViewController {
+    
     func initializeLabelsAndCards() {
         assignbackground()
         resetDeck()
         initializeImagesArray()
         setRecognizers()
-        player = 1
         turn = 1
-        playerOneScore = 0
-        playerTwoScore = 0
         count = 0
-        score = ("\(playerOneScore) - \(playerTwoScore)")
-        scoreLabel.text = score
+        score = 0
+        scoreLabel.text = String(self.score)
         christmasLabel.text = ""
     }
     func assignbackground(){
@@ -286,7 +235,7 @@ extension ChristmasViewController {
 //--------------------------------------------------
 // MARK: - Gestures
 //--------------------------------------------------
-    
+
 extension ChristmasViewController {
     
     func setRecognizers(){
@@ -332,189 +281,126 @@ extension ChristmasViewController {
         }
     }
     func removeRecognizers() {
-        for i in 0...imagesArray.count-1 {
-            imagesArray[i].userInteractionEnabled = true
-            recognizersArray[i].removeTarget(self, action: Selector(actionsArray[i]))
-        }
+        view.userInteractionEnabled = false
     }
     func image1HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image1, number: 1)
     }
     func image2HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image2, number: 2)
     }
     func image3HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image3, number: 3)
     }
     func image4HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image4, number: 4)
     }
     func image5HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image5, number: 5)
     }
     func image6HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image6, number: 6)
     }
     func image7HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image7, number: 7)
     }
     func image8HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image8, number: 8)
     }
     func image9HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image9, number: 9)
     }
     func image10HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image10, number: 10)
     }
     func image11HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image11, number: 11)
     }
     func image12HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image12, number: 12)
     }
     func image13HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image13, number: 13)
     }
     func image14HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image14, number: 14)
     }
     func image15HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image15, number: 15)
     }
     func image16HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image16, number: 16)
     }
     func image17HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image17, number: 17)
     }
     func image18HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image18, number: 18)
     }
     func image19HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image19, number: 19)
     }
     func image20HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image20, number: 20)
     }
     func image21HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image21, number: 21)
     }
     func image22HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image22, number: 22)
     }
     func image23HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image23, number: 23)
     }
     func image24HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image24, number: 24)
     }
     func image25HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image25, number: 25)
     }
     func image26HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image26, number: 26)
     }
     func image27HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image27, number: 27)
     }
     func image28HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image28, number: 28)
     }
     func image29HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image29, number: 29)
     }
     func image30HasBeenTapped(){
-        if turn == 2 {
-            removeRecognizers()
-        }
+        removeRecognizers()
         fadeFirst(image30, number: 30)
     }
 }
