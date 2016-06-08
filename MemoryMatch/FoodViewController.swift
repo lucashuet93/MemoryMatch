@@ -38,9 +38,7 @@ class FoodViewController: UIViewController {
     var turn = Int()
     var delegate = UIViewController()
     var cardValuesDrawn = [Int]()
-    var playerOneScore = Int()
-    var playerTwoScore = Int()
-    var score = String()
+    var score = Int()
     var foodDeck = [Card]()
     var imagesArray = [UIImageView]()
     var recognizersArray = [UIGestureRecognizer]()
@@ -125,7 +123,6 @@ class FoodViewController: UIViewController {
         }
     }
     
-    
     func fadeFirst(image: UIImageView, number: Int){
         image.fadeOut(completion: {
             (finished: Bool) -> Void in
@@ -146,14 +143,14 @@ class FoodViewController: UIViewController {
                 (finished: Bool) -> Void in
                 self.foodLabel.text = ""
                 if self.player == 1 {
-                    let alert = showAlert("Player 2's Turn!", message: "")
+                    let alert = showAlert("Turn \((self.score + 1))!", message: "")
                     self.presentViewController(alert, animated: true, completion: {
                         self.cardValuesDrawn = [Int]()
                         self.player = 2
                         self.turn = 1
                     })
                 } else {
-                    let alert = showAlert("Player 1's Turn!", message: "")
+                    let alert = showAlert("Turn \((self.score + 1))!", message: "")
                     self.presentViewController(alert, animated: true, completion: {
                         self.cardValuesDrawn = [Int]()
                         self.player = 1
@@ -174,15 +171,11 @@ class FoodViewController: UIViewController {
             })
         })
     }
-    func printText(player: Int){
+    func printText(){
         self.view.bringSubviewToFront(winnerLabel);
         foodLabel.hidden = true
         winnerLabel.hidden = false
-        if player == 1 {
-            winnerLabel.text = "Player 1 Wins"
-        } else {
-            winnerLabel.text = "Player 2 Wins"
-        }
+        winnerLabel.text = "\(score) turns!"
         for i in 0...imagesArray.count-1{
             imagesArray[i].hidden = true
         }
@@ -194,53 +187,45 @@ class FoodViewController: UIViewController {
             cardValuesDrawn.append(number)
             turn = 2
         } else {
+            score += 1
             removeRecognizers()
             cardValuesDrawn.append(foodDeck[number-1].value)
             cardValuesDrawn.append(number)
             if cardValuesDrawn[0] == cardValuesDrawn[2] {
                 count += 1
                 if player == 1 {
-                    playerTwoScore += 1
-                    score = ("\(playerOneScore) - \(playerTwoScore)")
-                    let alert = showAlert("Match!", message: score)
+                    let alert = showAlert("Match!", message: "\(count) matches")
                     presentViewController(alert, animated: true, completion: {
                         self.turn = 1
                         self.imagesArray[(self.cardValuesDrawn[1])-1].hidden = true
                         self.imagesArray[(self.cardValuesDrawn[3])-1].hidden = true
                         self.cardValuesDrawn = [Int]()
-                        self.scoreLabel.text = self.score
+                        self.scoreLabel.text = String(self.score)
+                        self.loadRecognizers()
                     })
                     foodLabel.text = ""
                     if count == 15 {
-                        if playerTwoScore > playerOneScore {
-                            printText(2)
-                        } else {
-                            printText(1)
-                        }
+                        printText()
                     }
                 } else {
-                    playerTwoScore += 1
-                    score = ("\(playerOneScore) - \(playerTwoScore)")
-                    let alert = showAlert("Match!", message: score)
+                    let alert = showAlert("Match!", message: "\(count) matches")
                     presentViewController(alert, animated: true, completion: {
                         self.turn = 1
                         self.imagesArray[(self.cardValuesDrawn[1])-1].hidden = true
                         self.imagesArray[(self.cardValuesDrawn[3])-1].hidden = true
                         self.cardValuesDrawn = [Int]()
-                        self.scoreLabel.text = self.score
+                        self.scoreLabel.text = String(self.score)
+                        self.loadRecognizers()
                     })
                     foodLabel.text = ""
                     if count == 15 {
-                        if playerTwoScore > playerOneScore {
-                            printText(2)
-                        } else {
-                            printText(1)
-                        }
+                        printText()
                     }
                 }
             } else {
                 fadeSecondWithAlert(imagesArray[cardValuesDrawn[1]-1], number: cardValuesDrawn[0])
                 fadeSecond(imagesArray[cardValuesDrawn[3]-1], number: cardValuesDrawn[0])
+                self.scoreLabel.text = String(self.score)
             }
         }
     }
@@ -259,11 +244,9 @@ extension FoodViewController {
         setRecognizers()
         player = 1
         turn = 1
-        playerOneScore = 0
-        playerTwoScore = 0
         count = 0
-        score = ("\(playerOneScore) - \(playerTwoScore)")
-        scoreLabel.text = score
+        score = 0
+        scoreLabel.text = String(self.score)
         foodLabel.text = ""
     }
     func assignbackground(){
