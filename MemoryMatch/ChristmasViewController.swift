@@ -51,6 +51,7 @@ class ChristmasViewController: UIViewController {
     //--------------------------------------------------
     
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var highScoreLabel: UILabel!
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var image2: UIImageView!
     @IBOutlet weak var image3: UIImageView!
@@ -161,6 +162,7 @@ class ChristmasViewController: UIViewController {
         for i in 0...imagesArray.count-1{
             imagesArray[i].hidden = true
         }
+        //if score < highScore then switch high score in Core Data
         
     }
     func update(number: Int){
@@ -203,6 +205,7 @@ class ChristmasViewController: UIViewController {
 extension ChristmasViewController {
     
     func initializeLabelsAndCards() {
+        highScoreLabel.text = "Record - 1"
         assignbackground()
         resetDeck()
         initializeImagesArray()

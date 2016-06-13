@@ -48,6 +48,7 @@ class FoodViewController: UIViewController {
     //--------------------------------------------------
     
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var highScoreLabel: UILabel!
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var image2: UIImageView!
     @IBOutlet weak var image3: UIImageView!
@@ -201,6 +202,7 @@ class FoodViewController: UIViewController {
 extension FoodViewController {
     
     func initializeLabelsAndCards() {
+        highScoreLabel.text = "Record - 1"
         assignbackground()
         resetDeck()
         initializeImagesArray()
