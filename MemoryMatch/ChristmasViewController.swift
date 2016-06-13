@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class ChristmasViewController: UIViewController {
     
@@ -45,6 +46,7 @@ class ChristmasViewController: UIViewController {
     var imagesArray = [UIImageView]()
     var recognizersArray = [UIGestureRecognizer]()
     var actionsArray = [String]()
+    var highScore = Int()
     
     //--------------------------------------------------
     // MARK: - Outlets
@@ -141,6 +143,41 @@ class ChristmasViewController: UIViewController {
             
         })
     }
+    func getHighScore(board: String){
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let scoreRequest = NSFetchRequest(entityName: "Scores")
+        scoreRequest.predicate = NSPredicate(format: "board==%@", board)
+        do {
+            let result = try managedObjectContext.executeFetchRequest(scoreRequest)
+            if (result.count > 0) {
+                let entry = result[0] as! NSManagedObject
+                
+                if let retrievedScore = entry.valueForKey("score") {
+                    self.highScore = Int(retrievedScore as! NSNumber)
+                    print(highScore)
+                    highScoreLabel.text = "Record - \(highScore)"
+                }
+            }
+        } catch {
+            print(error)
+        }
+    }
+    func updateHighScore(board: String, newHigh: Int) {
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let scoreRequest = NSFetchRequest(entityName: "Scores")
+        scoreRequest.predicate = NSPredicate(format: "board==%@", board)
+        do {
+            let result = try managedObjectContext.executeFetchRequest(scoreRequest)
+            let entry = result[0] as! NSManagedObject
+            entry.setValue(newHigh, forKey: "score")
+        } catch {
+            do {
+                try managedObjectContext.save()
+            } catch {
+                print(error)
+            }
+        }
+    }
     func fadeSecond(image: UIImageView, number: Int){
         image.fadeOutWithDelay(completion: {
             (finished: Bool) -> Void in
@@ -188,6 +225,13 @@ class ChristmasViewController: UIViewController {
                 christmasLabel.text = ""
                 if count == 15 {
                     printText()
+                    if highScore == 0 {
+                        updateHighScore("Christmas", newHigh: score)
+                    } else {
+                        if score < highScore {
+                            updateHighScore("Christmas", newHigh: score)
+                        }
+                    }
                 }
             } else {
                 fadeSecond(imagesArray[cardValuesDrawn[1]-1], number: cardValuesDrawn[0])
@@ -205,7 +249,6 @@ class ChristmasViewController: UIViewController {
 extension ChristmasViewController {
     
     func initializeLabelsAndCards() {
-        highScoreLabel.text = "Record - 1"
         assignbackground()
         resetDeck()
         initializeImagesArray()
@@ -215,6 +258,7 @@ extension ChristmasViewController {
         score = 0
         scoreLabel.text = String(self.score)
         christmasLabel.text = ""
+        getHighScore("Christmas")
     }
     func assignbackground(){
         let background = UIImage(named: "winterbgblue")

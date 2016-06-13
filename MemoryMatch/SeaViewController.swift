@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class SeaViewController: UIViewController {
     //--------------------------------------------------
@@ -43,6 +44,7 @@ class SeaViewController: UIViewController {
     var imagesArray = [UIImageView]()
     var recognizersArray = [UIGestureRecognizer]()
     var actionsArray = [String]()
+    var highScore = Int()
     
     //--------------------------------------------------
     // MARK: - Outlets
@@ -123,6 +125,41 @@ class SeaViewController: UIViewController {
             }
         }
     }
+    func getHighScore(board: String){
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let scoreRequest = NSFetchRequest(entityName: "Scores")
+        scoreRequest.predicate = NSPredicate(format: "board==%@", board)
+        do {
+            let result = try managedObjectContext.executeFetchRequest(scoreRequest)
+            if (result.count > 0) {
+                let entry = result[0] as! NSManagedObject
+                
+                if let retrievedScore = entry.valueForKey("score") {
+                    self.highScore = Int(retrievedScore as! NSNumber)
+                    print(highScore)
+                    highScoreLabel.text = "Record - \(highScore)"
+                }
+            }
+        } catch {
+            print(error)
+        }
+    }
+    func updateHighScore(board: String, newHigh: Int) {
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let scoreRequest = NSFetchRequest(entityName: "Scores")
+        scoreRequest.predicate = NSPredicate(format: "board==%@", board)
+        do {
+            let result = try managedObjectContext.executeFetchRequest(scoreRequest)
+            let entry = result[0] as! NSManagedObject
+            entry.setValue(newHigh, forKey: "score")
+        } catch {
+            do {
+                try managedObjectContext.save()
+            } catch {
+                print(error)
+            }
+        }
+    }
     func fadeFirst(image: UIImageView, number: Int){
         image.fadeOut(completion: {
             (finished: Bool) -> Void in
@@ -185,6 +222,13 @@ class SeaViewController: UIViewController {
                 seaLabel.text = ""
                 if count == 15 {
                     printText()
+                    if highScore == 0 {
+                        updateHighScore("Sea", newHigh: score)
+                    } else {
+                        if score < highScore {
+                            updateHighScore("Sea", newHigh: score)
+                        }
+                    }
                 }
             } else {
                 fadeSecond(imagesArray[cardValuesDrawn[1]-1], number: cardValuesDrawn[0])
@@ -202,10 +246,10 @@ class SeaViewController: UIViewController {
 extension SeaViewController {
     
     func initializeLabelsAndCards() {
-        highScoreLabel.text = "Record - 1"
         assignbackground()
         resetDeck()
         initializeImagesArray()
+        getHighScore("Sea")
         setRecognizers()
         turn = 1
         count = 0
