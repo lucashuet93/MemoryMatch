@@ -16,9 +16,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        print(UIFont.familyNames())
+        
+//        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+//        let entity = NSEntityDescription.entityForName("Scores", inManagedObjectContext: managedObjectContext)
+//        let scoreInstance = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
+//        scoreInstance.setValue("Christmas", forKey: "board")
+//        scoreInstance.setValue(0, forKey: "score")
+//        let scoreInstance2 = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
+//        scoreInstance2.setValue("Sea", forKey: "board")
+//        scoreInstance2.setValue(0, forKey: "score")
+//        let scoreInstance3 = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
+//        scoreInstance3.setValue("Farm", forKey: "board")
+//        scoreInstance3.setValue(0, forKey: "score")
+//        let scoreInstance4 = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
+//        scoreInstance4.setValue("Animals", forKey: "board")
+//        scoreInstance4.setValue(0, forKey: "score")
+//        do {
+//            try self.managedObjectContext.save()
+//        } catch {
+//            print(error)
+//        }
+        
+        let scoreRequest = NSFetchRequest(entityName: "Scores")
+        do {
+            let fetchedEntities = try self.managedObjectContext.executeFetchRequest(scoreRequest)
+            let scores = fetchedEntities
+            print(scores)
+        } catch {
+            print(error)
+        }
+        
         // Override point for customization after application launch.
         return true
+        
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {
