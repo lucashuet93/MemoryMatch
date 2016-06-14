@@ -25,7 +25,6 @@
 		D8AD0E181CED072900E7CADF /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AD0E171CED072900E7CADF /* Alert.swift */; };
 		D8AD0E1C1CED2DCF00E7CADF /* SeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AD0E1B1CED2DCF00E7CADF /* SeaViewController.swift */; };
 		D8AD0E1E1CED2E9900E7CADF /* ChristmasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AD0E1D1CED2E9900E7CADF /* ChristmasViewController.swift */; };
-		D8F24E721D0F5FE30012D584 /* HighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F24E711D0F5FE30012D584 /* HighScore.swift */; };
 		D8FAC4CA1CEE338200007171 /* Comic_White_Rabbit_.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8FAC4C91CEE338200007171 /* Comic_White_Rabbit_.otf */; };
 		D8FAC4CC1CEE418400007171 /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8FAC4CB1CEE418400007171 /* Pacifico.ttf */; };
 		D8FAC4D01CEE718100007171 /* Grinched.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8FAC4CF1CEE718100007171 /* Grinched.ttf */; };
@@ -79,7 +78,6 @@
 		D8AD0E171CED072900E7CADF /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		D8AD0E1B1CED2DCF00E7CADF /* SeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeaViewController.swift; sourceTree = "<group>"; };
 		D8AD0E1D1CED2E9900E7CADF /* ChristmasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChristmasViewController.swift; sourceTree = "<group>"; };
-		D8F24E711D0F5FE30012D584 /* HighScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScore.swift; sourceTree = "<group>"; };
 		D8FAC4C91CEE338200007171 /* Comic_White_Rabbit_.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Comic_White_Rabbit_.otf; path = ../Comic_White_Rabbit_.otf; sourceTree = "<group>"; };
 		D8FAC4CB1CEE418400007171 /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Pacifico.ttf; path = ../Pacifico.ttf; sourceTree = "<group>"; };
 		D8FAC4CF1CEE718100007171 /* Grinched.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Grinched.ttf; path = ../Grinched.ttf; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 				98E5676F1CE659850058B56B /* UIViewExtensions.swift */,
 				988CBD961CE6DAFF0092ACFF /* Card.swift */,
 				D8AD0E171CED072900E7CADF /* Alert.swift */,
-				D8F24E711D0F5FE30012D584 /* HighScore.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -514,7 +511,6 @@
 				D8AD0E161CEAB3D900E7CADF /* FoodViewController.swift in Sources */,
 				988CBD971CE6DAFF0092ACFF /* Card.swift in Sources */,
 				98E567701CE659850058B56B /* UIViewExtensions.swift in Sources */,
-				D8F24E721D0F5FE30012D584 /* HighScore.swift in Sources */,
 				D8AD0E1E1CED2E9900E7CADF /* ChristmasViewController.swift in Sources */,
 				985744891CE64A780006D852 /* AnimalViewController.swift in Sources */,
 				9857445A1CE63FC30006D852 /* ViewController.swift in Sources */,
