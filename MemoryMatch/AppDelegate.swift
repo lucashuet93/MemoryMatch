@@ -13,9 +13,28 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        let launchedBefore = NSUserDefaults.standardUserDefaults().boolForKey("launchedBefore")
+        if launchedBefore  {
+            print("Not first launch.")
+        }else {
+            print("First launch, setting NSUserDefault.")
+            let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+            let entity = NSEntityDescription.entityForName("Scores", inManagedObjectContext: managedObjectContext)
+            let christmasInstance = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
+            christmasInstance.setValue(0, forKey: "score")
+            christmasInstance.setValue("Christmas", forKey: "board")
+            let farmInstance = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
+            farmInstance.setValue(0, forKey: "score")
+            farmInstance.setValue("Farm", forKey: "board")
+            let animalsInstance = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
+            animalsInstance.setValue(0, forKey: "score")
+            animalsInstance.setValue("Animals", forKey: "board")
+            let seaInstance = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
+            seaInstance.setValue(0, forKey: "score")
+            seaInstance.setValue("Sea", forKey: "board")
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "launchedBefore")
+        }
         // Override point for customization after application launch.
         return true
         

@@ -132,7 +132,6 @@ class FoodViewController: UIViewController {
             let result = try managedObjectContext.executeFetchRequest(scoreRequest)
             if (result.count > 0) {
                 let entry = result[0] as! NSManagedObject
-                
                 if let retrievedScore = entry.valueForKey("score") {
                     self.highScore = Int(retrievedScore as! NSNumber)
                     print(highScore)
