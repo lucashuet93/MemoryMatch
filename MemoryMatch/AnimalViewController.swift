@@ -126,6 +126,7 @@ class AnimalViewController: UIViewController {
         }
     }
     func getHighScore(board: String){
+        print("here")
         let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         let scoreRequest = NSFetchRequest(entityName: "Scores")
         scoreRequest.predicate = NSPredicate(format: "board==%@", board)
@@ -138,6 +139,16 @@ class AnimalViewController: UIViewController {
                     self.highScore = Int(retrievedScore as! NSNumber)
                     print(highScore)
                     highScoreLabel.text = "Record - \(highScore)"
+                }
+            } else {
+                let entity = NSEntityDescription.entityForName("Scores", inManagedObjectContext: managedObjectContext)
+                let animalsInstance = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
+                animalsInstance.setValue(0, forKey: "score")
+                animalsInstance.setValue("Animals", forKey: "board")
+                do {
+                    try managedObjectContext.save()
+                } catch {
+                    print(error)
                 }
             }
         } catch {

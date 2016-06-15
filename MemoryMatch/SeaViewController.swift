@@ -139,6 +139,16 @@ class SeaViewController: UIViewController {
                     print(highScore)
                     highScoreLabel.text = "Record - \(highScore)"
                 }
+            } else {
+                let entity = NSEntityDescription.entityForName("Scores", inManagedObjectContext: managedObjectContext)
+                let seaInstance = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
+                seaInstance.setValue(0, forKey: "score")
+                seaInstance.setValue("Sea", forKey: "board")
+                do {
+                    try managedObjectContext.save()
+                } catch {
+                    print(error)
+                }
             }
         } catch {
             print(error)

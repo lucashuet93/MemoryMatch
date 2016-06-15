@@ -13,26 +13,24 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    //What I need to do:
+    //Delete the User defaults. Change the updateHighScore function in the controllers to query the core data. If results.count == 0, then create the NSManagedObject with the high score. The high score label defaults to record - 0, so it doesnt matter if it finds one initially (with a score of 0, set in app delegate) in the get high score method
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let launchedBefore = NSUserDefaults.standardUserDefaults().boolForKey("launchedBefore")
         if launchedBefore  {
             print("Not first launch.")
+            let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+            let scoresRequest = NSFetchRequest(entityName: "Scores")
+            do {
+                let fetchedEntities = try self.managedObjectContext.executeFetchRequest(scoresRequest)
+                print(fetchedEntities)
+            } catch {
+                print(error)
+            }
+            
         }else {
             print("First launch, setting NSUserDefault.")
-            let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-            let entity = NSEntityDescription.entityForName("Scores", inManagedObjectContext: managedObjectContext)
-            let christmasInstance = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
-            christmasInstance.setValue(0, forKey: "score")
-            christmasInstance.setValue("Christmas", forKey: "board")
-            let farmInstance = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
-            farmInstance.setValue(0, forKey: "score")
-            farmInstance.setValue("Farm", forKey: "board")
-            let animalsInstance = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
-            animalsInstance.setValue(0, forKey: "score")
-            animalsInstance.setValue("Animals", forKey: "board")
-            let seaInstance = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
-            seaInstance.setValue(0, forKey: "score")
-            seaInstance.setValue("Sea", forKey: "board")
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "launchedBefore")
         }
         // Override point for customization after application launch.

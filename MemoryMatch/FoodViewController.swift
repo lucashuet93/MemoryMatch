@@ -137,6 +137,16 @@ class FoodViewController: UIViewController {
                     print(highScore)
                     highScoreLabel.text = "Record - \(highScore)"
                 }
+            } else {
+                let entity = NSEntityDescription.entityForName("Scores", inManagedObjectContext: managedObjectContext)
+                let farmInstance = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
+                farmInstance.setValue(0, forKey: "score")
+                farmInstance.setValue("Farm", forKey: "board")
+                do {
+                    try managedObjectContext.save()
+                } catch {
+                    print(error)
+                }
             }
         } catch {
             print(error)

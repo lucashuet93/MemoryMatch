@@ -157,6 +157,16 @@ class ChristmasViewController: UIViewController {
                     print(highScore)
                     highScoreLabel.text = "Record - \(highScore)"
                 }
+            } else {
+                let entity = NSEntityDescription.entityForName("Scores", inManagedObjectContext: managedObjectContext)
+                let christmasInstance = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
+                christmasInstance.setValue(0, forKey: "score")
+                christmasInstance.setValue("Christmas", forKey: "board")
+                do {
+                    try managedObjectContext.save()
+                } catch {
+                    print(error)
+                }
             }
         } catch {
             print(error)
